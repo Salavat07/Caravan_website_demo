@@ -20,6 +20,12 @@
     padding: 0;
 }
 
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
 body{
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -345,10 +351,16 @@ header nav ul li.btn a:hover{
     padding-bottom: 100px;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .hero--info {
-    width: 530px;
+    max-width: 530px;
+    width: 100%;
     padding-top: 70px;
 }
 
@@ -405,21 +417,23 @@ header nav ul li.btn a:hover{
 }
 
 .hero img {
-    position: absolute;
-    top: 70px;        /* было -450 — слишком много */
-    right: 60px;
-
-    width: 660px;       /* нормальный размер */
-    max-width: 60vw;    /* адаптация под экран */
+    flex: 1 1 360px;
+    width: 100%;
+    max-width: 580px;
     height: auto;
-
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 4%;
+    position: relative;
+    top: auto;
+    right: auto;
 }
 
 
 .trending{
     padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 /* Section with games */
@@ -433,8 +447,9 @@ color: var(--color-text);
 background: rgba(255,255,255,0.05);
 border-radius: 5px;
 padding: 12px 23px;
-float: right;
-display: block;
+align-self: flex-end;
+display: inline-flex;
+justify-content: center;
 transition: all 500ms ease;
 }
 
@@ -949,10 +964,12 @@ margin-top: 20px;
 .work .blocks {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .work .blocks .block {
-    width: 25%;
+    flex: 1 1 240px;
     border-radius: 16px;
     padding: 50px 35px;
     background: var(--color-card);
@@ -1023,16 +1040,19 @@ color: var(--color-text);
 
 .feedback form {
     margin: 80px auto;
-    width: 600px;
+    width: min(100%, 600px);
 }
 
 .feedback form .inline {
 display: flex;
 justify-content: space-between;
+gap: 20px;
+flex-wrap: wrap;
 }
 
 .feedback form .inline > div {
-width: 50%;
+width: 48%;
+flex: 1 1 220px;
 }
 
 .feedback form label{
@@ -1046,7 +1066,7 @@ width: 50%;
 border-radius: 10px;
 border: 0.6px solid rgba(255,255,255,0.08);
 display: block;
-width: 90%;
+width: 100%;
 padding: 15px 10px;
 outline: none;
 color: #fff;
@@ -1659,6 +1679,7 @@ body.modal-open {
 
     .hero{
         padding-bottom: 40px;
+        justify-content: center;
     }
 
     .portfolio-content{
@@ -1731,6 +1752,84 @@ body.modal-open {
 
     .trending .games{
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px){
+    header{
+        align-items: stretch;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .lang-switcher{
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .hero{
+        text-align: center;
+        padding-bottom: 40px;
+        justify-content: center;
+    }
+
+    .hero--info{
+        padding-top: 30px;
+    }
+
+    .hero img{
+        max-width: 100%;
+    }
+
+    .trending .see-all{
+        width: 100%;
+        align-self: center;
+    }
+
+    .features .info{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .faq-popup{
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .faq-popup::before{
+        display: none;
+    }
+
+    .work .blocks{
+        flex-direction: column;
+    }
+
+    .hero-about .info{
+        width: 100%;
+        padding: 80px 0 20px;
+    }
+
+    .hero-about img{
+        position: static;
+        width: 70%;
+        max-width: 320px;
+        margin: 0 auto 40px;
+        display: block;
+    }
+
+    .feedback form .inline > div{
+        width: 100%;
+    }
+
+    footer .blocks{
+        flex-direction: column;
     }
 }
 
@@ -1819,10 +1918,12 @@ footer{
 footer .blocks{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 footer .blocks p{
-width: 300px;
+max-width: 400px;
 margin: 15px 0;
 color: var(--color-muted);
 }
