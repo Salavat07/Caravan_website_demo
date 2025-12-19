@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caravan Logistics — автомобильные, железнодорожные и авиа перевозки по СНГ и миру с полным сопровождением.">
+    <title>Caravan Logistics — международные перевозки</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body data-page="index">
+    <div class="wrapper">
+    <header class = "container">
+       <a class = "logo" href="index.html">
+        <img src="img/Caravan/caravan logo.png" alt="Caravan Logistics логотип">
+       </a> 
+        <nav>
+            <ul>
+                <li class = "active"><a href="index.html" data-i18n="nav.home">Главная</a></li>
+                <li><a href ="about.html" data-i18n="nav.about">О нас</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
+                <li><a href ="portfolio.html" data-i18n="nav.news">Новости</a></li>
+                <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switcher">
+            <button type="button" class="active" data-lang="ru" data-i18n="lang.ru">RU</button>
+            <button type="button" data-lang="en" data-i18n="lang.en">EN</button>
+            <button type="button" data-lang="zh" data-i18n="lang.zh">中文</button>
+        </div>
+    </header>
+
+    <div class = "hero container">
+        <div class="hero--info">
+        <h1 data-i18n="hero.title">Транспортно-экспедиторская компания</h1>
+        <p data-i18n="hero.line1">С 2008 года организуем автомобильные, железнодорожные и авиа перевозки по СНГ и всему миру.</p>
+        <p data-i18n="hero.line2">Более 10 000 доставленных грузов и свыше 2 000 вагонов ежегодно.</p> 
+        <p data-i18n="hero.line3">Строим маршруты «под ключ» с полным таможенным сопровождением.</p>
+            <button class = "btn" data-modal="callback" data-i18n="hero.cta">Получить консультацию</button>
+
+    </div>
+        <img src="img/ Main_images/shaah-shahidh--subrrYxv8A-unsplash.jpg" alt="Логистический центр Caravan Logistics">
+    </div>
+    <div class="container trending">  
+        <a href="#services" class="see-all" data-i18n="services.more">Все услуги</a>
+        <h3 data-i18n="services.title">Наши услуги</h3>
+
+        <div class="games" id="services">
+        <a class="block service-card" href="service-auto.html">
+            <img src="img/ Main_images/kazem-hussein-Kq1ERpkH0eQ-unsplash.jpg" alt="">
+            <span data-i18n="services.item1">Автоперевозки по СНГ</span>
+        </a>
+         <a class="block service-card" href="service-rail.html">
+            <img src="img/ Main_images/shui-miles-IWPTBX8ugjs-unsplash.jpg" alt="">
+            <span data-i18n="services.item2">ЖД маршруты и вагоны</span>
+        </a>
+         <a class="block service-card" href="service-broker.html">
+            <img src="img/ Main_images/vlad-deep-mCqi3MljC4E-unsplash.jpg" alt="">
+            <span data-i18n="services.item3">Таможенный брокер</span>
+        </a>
+         <a class="block service-card" href="service-china.html">
+            <img src="img/ Main_images/h-co-3JFVNo4ukKQ-unsplash.jpg" alt="">
+            <span data-i18n="services.item4">Китай и международные проекты</span>
+        </a>
+      </div>
+    </div>
+    <section class="trust">
+        <div class="trust__content container">
+            <p class="trust__eyebrow" data-i18n="big-text">Почему доверяют Caravan Logistics?</p>
+            <h3 data-i18n="banner.title">Сертифицированная команда</h3>
+            <p data-i18n="banner.text">Берём на себя таможенное оформление любой сложности, оформляем разрешительные документы и страхуем грузы. Для каждого клиента разрабатываем оптимальный маршрут — от магистральных автоколонн до мультимодальных схем с авиа и морем.</p>
+        </div>
+    </section>
+  </div>   
+  
+  <div class="features">
+    <div class="container">
+        <h3 data-i18n="faq.title">Ответы на популярные вопросы</h3>
+        <p data-i18n="faq.text">Мы подготовили краткие подсказки по стоимости, срокам и документам. Не нашли нужный ответ — оставьте заявку, и логист свяжется с вами в течение нескольких минут.</p>
+        <div class="info">
+            <div class="block faq-card" style="--popup-accent:#f97316;">
+                <img src="img/Features/feature1.svg" alt="">
+                <div class="faq-question">
+                    <p data-i18n="faq.q1">Сколько стоит доставка фуры по СНГ?</p>
+                    <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
+                        <img src="img/Icons/arrow.png" alt="">
+                    </button>
+                </div>
+                <div class="faq-popup" role="dialog" aria-hidden="true">
+                    <p data-i18n="faq.a1">Стоимость зависит от маршрута, типа груза и страховки. Средний тариф от 1,2 € за км, точный расчёт готовим за 15 минут.</p>
+                </div>
+            </div>
+            <div class="block faq-card" style="--popup-accent:#facc15;">
+                <img src="img/Features/feature2.svg" alt="">
+                <div class="faq-question">
+                    <p data-i18n="faq.q2">Сколько времени занимает оформление вагонов на границе?</p>
+                    <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
+                        <img src="img/Icons/arrow.png" alt="">
+                    </button>
+                </div>
+                <div class="faq-popup" role="dialog" aria-hidden="true">
+                    <p data-i18n="faq.a2">При готовых документах контроль занимает 2–6 часов. Мы резервируем «окна» заранее, поэтому составы не простаивают сутками.</p>
+                </div>
+            </div>
+            <div class="block faq-card" style="--popup-accent:#22d3ee;">
+                <img src="img/Features/feature3.svg" alt="">
+                <div class="faq-question">
+                    <p data-i18n="faq.q3">Какие документы нужны для авиа и мультимодальных перевозок?</p>
+                    <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
+                        <img src="img/Icons/arrow.png" alt="">
+                    </button>
+                </div>
+                <div class="faq-popup" role="dialog" aria-hidden="true">
+                    <p data-i18n="faq.a3">Авианакладная, инвойс, паковочный лист, сертификаты и доверенности. Мы собираем полный пакет и проверяем его до отправки.</p>
+                </div>
+            </div>
+            <div class="block faq-card" style="--popup-accent:#a855f7;">
+                <img src="img/Features/feature4.svg" alt="">
+                <div class="faq-question">
+                    <p data-i18n="faq.q4">Можно ли рассчитать сборный груз из Китая?</p>
+                    <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
+                        <img src="img/Icons/arrow.png" alt="">
+                    </button>
+                </div>
+                <div class="faq-popup" role="dialog" aria-hidden="true">
+                    <p data-i18n="faq.a4">Да, консолидируем грузы на наших складах в Китае. Отправки 2–3 раза в неделю, тариф считаем по кг и кубометрам.</p>
+                </div>
+            </div>
+            <div class="block faq-card" style="--popup-accent:#34d399;">
+                <img src="img/Features/feature5.svg" alt="">
+                <div class="faq-question">
+                    <p data-i18n="faq.q5">Помогаете ли с кодами ТН ВЭД и сертификацией?</p>
+                    <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
+                        <img src="img/Icons/arrow.png" alt="">
+                    </button>
+                </div>
+                <div class="faq-popup" role="dialog" aria-hidden="true">
+                    <p data-i18n="faq.a5">Подбираем коды, оформляем сертификаты соответствия и помогаем получить СТ-1 или сертификаты происхождения.</p>
+                </div>
+            </div>
+            <div class="block faq-card" style="--popup-accent:#fb7185;">
+                <img src="img/Features/feature6.svg" alt="">
+                <div class="faq-question">
+                    <p data-i18n="faq.q6">Как отследить груз онлайн?</p>
+                    <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
+                        <img src="img/Icons/arrow.png" alt="">
+                    </button>
+                </div>
+                <div class="faq-popup" role="dialog" aria-hidden="true">
+                    <p data-i18n="faq.a6">Даём доступ в онлайн-кабинет с GPS-маршрутом и статусами этапов, плюс отправляем уведомления в Telegram или email.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <section class="upcoming-tools container">
+        <div class="upcoming-tools__intro">
+            <p class="upcoming-tools__eyebrow">Цифровые сервисы</p>
+            <h3>Мы готовим к запуску умные инструменты</h3>
+            <p>Автоматизируем расчёт таможни и поиск кодов ТН ВЭД, чтобы вы получали ответ за секунды прямо на сайте.</p>
+        </div>
+        <div class="upcoming-tools__grid">
+            <article class="tool-card">
+                <span class="tool-card__badge">Скоро</span>
+                <h4>Калькулятор — таможенный ассистент</h4>
+                <p>Укажите страну отправления, тип груза и дополнительные услуги, а система моментально оценит пошлины и выдаст готовый чек-лист.</p>
+                <div class="tool-card__placeholder">
+                    <div class="pill">Тип груза</div>
+                    <div class="pill">Страна → страна</div>
+                    <div class="pill">Страховка</div>
+                </div>
+                <small>Мы тестируем формулы и подключаем AI-подсказки.</small>
+            </article>
+            <article class="tool-card">
+                <span class="tool-card__badge">Скоро</span>
+                <h4>Поиск кодов ТН ВЭД</h4>
+                <p>Введите название товара или отрасль — сервис предложит актуальные коды, требования и ограничения по поставке.</p>
+                <div class="tool-card__placeholder blur">
+                    <div class="pill">Название товара</div>
+                    <div class="pill">Коды ТН ВЭД</div>
+                    <div class="pill">Документы</div>
+                </div>
+                <small>Добавим быстрый поиск по каталогу из 10 000 позиций.</small>
+            </article>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="container">
+            <div class="partners__intro">
+                <p class="partners__eyebrow">Нам доверяют</p>
+                <h3>Бренды и корпорации</h3>
+                <p>Работаем с производителями техники, FMCG и строительными холдингами по всему СНГ.</p>
+            </div>
+            <div class="partners__grid">
+                <div class="partners__logo"><img src="img/Logos/Kulikov.png" alt="Kulikov"></div>
+                <div class="partners__logo"><img src="img/Logos/KantTSP.png" alt="Kant TSP"></div>
+                <div class="partners__logo"><img src="img/Logos/TransLogista.png" alt="TransLogistica Kazakhstan"></div>
+                <div class="partners__logo"><img src="img/Logos/Shoro.png" alt="Шоро"></div>
+                <div class="partners__logo"><img src="img/Logos/cola.png" alt="Coca-Cola"></div>
+                <div class="partners__logo"><img src="img/Logos/nestle.png" alt="Nestle"></div>
+                <div class="partners__logo"><img src="img/Logos/Knauf.png" alt="Knauf"></div>
+                <div class="partners__logo"><img src="img/Logos/Shatura.png" alt="Шатура"></div>
+                <div class="partners__logo"><img src="img/Logos/wold_class.png" alt="World Class"></div>
+                <div class="partners__logo"><img src="img/Logos/Keramin.png" alt="Керамин"></div>
+                <div class="partners__logo"><img src="img/Logos/borusan.png" alt="Borusan"></div>
+                <div class="partners__logo"><img src="img/Logos/bellona.png" alt="Bellona"></div>
+                <div class="partners__logo"><img src="img/Logos/tesladoor.png" alt="Tesladoor"></div>
+                <div class="partners__logo"><img src="img/Logos/DHL.png" alt="DHL"></div>
+                <div class="partners__logo"><img src="img/Logos/LG.png" alt="LG"></div>
+                <div class="partners__logo"><img src="img/Logos/termoplex.png" alt="Termoplex"></div>
+                <div class="partners__logo"><img src="img/Logos/fabrika_okon.png" alt="Фабрика окон"></div>
+                <div class="partners__logo"><img src="img/Logos/AUgrand.png" alt="AU Grand"></div>
+                <div class="partners__logo"><img src="img/Logos/anto.png" alt="ANTO.KG"></div>
+                <div class="partners__logo"><img src="img/Logos/kumtor.png" alt="Кумтор"></div>
+            </div>
+        </div>
+    </section>
+  </div>
+
+<footer>
+    <div class="blocks container">
+        <div>
+          <a class="logo footer-logo" href="index.html">
+            <img src="img/Caravan/caravan logo.png" alt="Caravan Logistics">
+          </a>
+          <p data-i18n="footer.description">Откройте для себя наш широкий спектр услуг по доставке грузов, включая наземные, морские и воздушные перевозки. Благодаря передовым технологиям и глобальной сети мы обеспечиваем вам товар прибывает в целости и сохранности и вовремя. </p>
+        </div>
+             <div>
+                <h4 data-i18n="footer.addressTitle">Наш адрес</h4>
+                <ul>
+                    <li data-i18n="footer.addressLine1">г.ул. Чынгыза Айтматова 243, 3 этаж</li>
+                    <li data-i18n="footer.addressLine2">+996 555 11 33 33</li>
+                    <li data-i18n="footer.addressLine3">Бишкек</li>
+                    <li data-i18n="footer.addressLine4">Кыргызстан</li>
+                </ul>
+             </div>
+             <div>
+                <h4 data-i18n="footer.contactsTitle">Наши социальные сети</h4>
+                <p data-i18n="footer.email">info@caravan-logistics.com </p>
+                <p data-i18n="footer.phone">+996 555 11 33 33</p>
+             </div>
+    </div>
+    <hr>
+    <p data-i18n="footer.copyright">Copyright ® Kaliev Salavat All rights Reserved</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+
+</html>  
