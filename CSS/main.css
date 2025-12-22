@@ -61,8 +61,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 16px;
     position: relative;
     z-index: 3;
 }
@@ -174,6 +174,40 @@ header nav ul li.btn a{
 
 header nav ul li.btn a:hover{
     filter: brightness(1.05);
+}
+
+.nav-toggle{
+    display: none;
+    width: 46px;
+    height: 42px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.05);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 8px;
+    transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+.nav-toggle span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+}
+
+.nav-toggle:hover{
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.35);
+    transform: translateY(-1px);
+}
+
+.nav-toggle:active{
+    transform: translateY(1px);
 }
 
 .email .block button{
@@ -597,6 +631,13 @@ gap: 30px;
     box-shadow: 0 25px 50px rgba(5,9,17,0.45);
 }
 
+.hero > *,
+.services-hero .container > *,
+.service-hero__inner > *,
+.subscribe-card > *{
+    min-width: 0;
+}
+
 .features .info .block > img{
     margin-bottom: 5px;
     width: 82px;
@@ -608,11 +649,13 @@ gap: 30px;
     align-items: center;
     gap: 14px;
     width: 100%;
+    min-width: 0;
 }
 
 .faq-question p{
     flex: 1;
     margin: 0;
+    word-break: break-word;
 }
 
 .faq-trigger{
@@ -922,12 +965,17 @@ gap: 30px;
 
 .hero-about {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 200px 0;
 } 
 
 .hero-about .info{
-    width: 500px;
-    padding: 200px 0;
-
+    flex: 1 1 460px;
+    max-width: 560px;
+    padding-left: 20px;
 }
 
 .hero-about .info p{
@@ -937,7 +985,7 @@ gap: 30px;
 
 .hero-about .info h1{
     margin-bottom: 15px;
-    font-size: 30px;
+    font-size: 36px;
     
 }
 
@@ -946,10 +994,11 @@ margin-top: 20px;
 } 
 
 .hero-about img{
-    position: absolute;
-    right: -50px;
-    top: 0;
+    flex: 1 1 45%;
+    max-width: 45%;
     border-radius: 90%;
+    display: block;
+    position: static;
 }
 
 .work {
@@ -1666,15 +1715,79 @@ body.modal-open {
     }
 }
 
-@media (max-width: 992px){
+@media (max-width: 1024px){
+    .hero-about{
+        padding: 80px 0;
+    }
+
+    .hero-about .info{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
     header{
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 12px;
     }
 
     header nav{
-        flex: 1 1 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(360px, calc(100vw - 40px));
         max-width: 100%;
+        background: var(--color-bg-soft);
+        padding: 90px 28px 36px;
+        box-shadow: -12px 0 40px rgba(0,0,0,0.55);
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 240ms ease, opacity 240ms ease;
+        margin-left: 0;
+        flex: 0 0 auto;
+        z-index: 2000;
+        overflow-y: auto;
+    }
+
+    body.nav-open header nav{
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        gap: 14px;
+        padding-top: 0;
+    }
+
+    .lang-switcher{
+        margin-left: auto;
+        flex-wrap: nowrap;
+    }
+
+    .nav-toggle{
+        display: inline-flex;
+        margin-left: 8px;
+        z-index: 1300;
+        flex-shrink: 0;
+    }
+
+    body.nav-open{
+        overflow: hidden;
+    }
+
+    body.nav-open::after{
+        content:'';
+        position: fixed;
+        inset: 0;
+        background: transparent;
+        z-index: 1100;
+        pointer-events: none;
     }
 
     .hero{
@@ -1756,34 +1869,83 @@ body.modal-open {
 }
 
 @media (max-width: 768px){
-    header{
-        align-items: stretch;
+    :root{
+        --mobile-safe: 20px;
     }
 
-    header nav ul{
-        flex-direction: column;
-        gap: 10px;
-        padding-top: 10px;
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero.container,
+    .hero-about.container,
+    .services-hero > .container,
+    .service-hero__inner,
+    .services-grid-section > .container,
+    .service-detail__inner,
+    .portfolio-hero.container,
+    .portfolio-content.container,
+    .portfolio-subscribe.container,
+    .feedback > .container,
+    .hero-contacts,
+    .upcoming-tools.container,
+    .features > .container,
+    .partners > .container{
+        padding-left: var(--mobile-safe);
+        padding-right: var(--mobile-safe);
+        box-sizing: border-box;
+    }
+
+    header{
+        align-items: center;
+        justify-content: space-between;
     }
 
     .lang-switcher{
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        width: auto;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        gap: 10px;
     }
 
-    .hero{
+    .hero,
+    .hero-about,
+    .services-hero .container,
+    .service-hero__inner,
+    .subscribe-card,
+    .work .blocks,
+    .features .info,
+    .subscribe-form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero,
+    .hero-about{
         text-align: center;
-        padding-bottom: 40px;
-        justify-content: center;
     }
 
-    .hero--info{
+    .hero--info,
+    .hero-about .info{
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+        text-align: center;
         padding-top: 30px;
+    }
+
+    .hero--info h1{
+        font-size: 40px;
+        line-height: 1.2;
     }
 
     .hero img{
         max-width: 100%;
+        position: relative;
+        top: 0;
+        margin-top: 20px;
+        width: 100%;
     }
 
     .trending .see-all{
@@ -1792,15 +1954,47 @@ body.modal-open {
     }
 
     .features .info{
-        flex-direction: column;
         align-items: stretch;
+        gap: 20px;
+    }
+
+    .features .info .block{
+        max-width: 100%;
+        width: 100%;
+        min-width: 100%;
+        margin: 0;
+        padding: 22px 18px 26px;
+    }
+
+    .trust{
+        padding-left: var(--mobile-safe);
+        padding-right: var(--mobile-safe);
+        box-sizing: border-box;
+    }
+
+    .trust .container{
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .faq-popup{
-        position: static;
+        position: relative;
         transform: none;
         width: 100%;
-        margin-top: 12px;
+        max-width: 100%;
+        margin: 12px 0 0;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        padding: 16px 18px;
+        box-sizing: border-box;
+        border-radius: 16px;
+    }
+
+    .faq-popup.is-visible{
+        transform: none;
     }
 
     .faq-popup::before{
@@ -1808,20 +2002,18 @@ body.modal-open {
     }
 
     .work .blocks{
-        flex-direction: column;
+        gap: 18px;
     }
 
-    .hero-about .info{
-        width: 100%;
-        padding: 80px 0 20px;
+    .hero-about{
+        gap: 30px;
+        padding: 60px 0;
     }
 
     .hero-about img{
-        position: static;
-        width: 70%;
         max-width: 320px;
-        margin: 0 auto 40px;
-        display: block;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .feedback form .inline > div{
@@ -1831,41 +2023,9 @@ body.modal-open {
     footer .blocks{
         flex-direction: column;
     }
-}
 
-@media (max-width: 640px){
-    .container{
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    header nav ul{
-        justify-content: flex-start;
-    }
-
-    .hero{
-        text-align: center;
-    }
-
-    .hero img{
-        position: relative;
-        top: 0;
-        margin-top: 30px;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .portfolio-search{
-        max-width: 100%;
-    }
-
-    .subscribe-card{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .email .block input{
-        max-width: 100%;
+    .service-nav{
+        min-width: 0;
     }
 
     .service-nav ul{
@@ -1873,7 +2033,7 @@ body.modal-open {
     }
 
     .service-content{
-        padding: 25px;
+        padding: 28px;
     }
 
     .services-hero__text h1,
@@ -1883,6 +2043,16 @@ body.modal-open {
 
     .services-grid-section h2{
         font-size: 32px;
+    }
+
+    .services-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .partners__grid,
+    .upcoming-tools__grid{
+        grid-template-columns: 1fr;
     }
 
     .trending .games{
@@ -1907,6 +2077,107 @@ body.modal-open {
         width: calc(100vw - 36px);
     }
 
+    .portfolio-search{
+        max-width: 100%;
+    }
+
+    .subscribe-card{
+        padding: 24px 22px;
+        gap: 20px;
+    }
+
+    .subscribe-form{
+        gap: 12px;
+        width: 100%;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button{
+        width: 100%;
+    }
+
+    .modal-window{
+        max-width: 90vw;
+        margin: 28px auto;
+        padding: 18px;
+    }
+
+    .portfolio-hero{
+        margin-top: 0;
+        padding-top: 40px;
+    }
+
+    .hero-contacts img{
+        width: 100%;
+        max-width: 520px;
+        margin: 40px auto 0;
+    }
+}
+
+@media (max-width: 480px){
+    :root{
+        --mobile-safe: 16px;
+    }
+
+    .container{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    header{
+        padding: 32px 0;
+    }
+
+    .hero,
+    .services-hero,
+    .service-hero,
+    .work,
+    .partners,
+    .services-grid-section,
+    .upcoming-tools{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .subscribe-card{
+        padding: 20px 18px;
+        gap: 18px;
+    }
+
+    .services-grid,
+    .trending .games,
+    .upcoming-tools__grid{
+        gap: 16px;
+    }
+
+    .btn-primary,
+    .hero--info .btn,
+    .hero-about .info .btn,
+    .subscribe-form button,
+    .feedback form button{
+        width: 100%;
+        text-align: center;
+    }
+
+    .lang-switcher button,
+    .portfolio-search,
+    .feedback form input,
+    .feedback form textarea{
+        width: 100%;
+    }
+
+    .hero--info h1{
+        font-size: 34px;
+    }
+
+    .service-content{
+        padding: 24px;
+    }
+
+    .upcoming-tools.container{
+        padding-left: var(--mobile-safe);
+        padding-right: var(--mobile-safe);
+    }
 }
 
 /* Footer */

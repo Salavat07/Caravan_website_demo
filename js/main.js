@@ -56,7 +56,7 @@ const translations = {
       'services.item3': 'Таможенный брокер',
       'services.item4': 'Китай и международные проекты',
       'big-text': 'Почему доверяют Caravan Logistics?',
-      'banner.title': 'Сертифицированная команда',
+      'banner.title': 'Проверенная команда',
       'banner.text':
         'Берём на себя таможенное оформление любой сложности, оформляем разрешительные документы и страхуем грузы. Для каждого клиента разрабатываем оптимальный маршрут — от магистральных автоколонн до мультимодальных схем с авиа и морем.',
       'faq.title': 'Ответы на популярные вопросы',
@@ -790,6 +790,58 @@ const translations = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  const initMobileNav = () => {
+    const header = document.querySelector('header');
+    const nav = header?.querySelector('nav');
+    if (!header || !nav) return;
+
+    let toggle = header.querySelector('.nav-toggle');
+    if (!toggle) {
+      toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'nav-toggle';
+      toggle.setAttribute('aria-label', 'Открыть меню');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.innerHTML = '<span></span><span></span><span></span>';
+      header.appendChild(toggle);
+    }
+
+    const closeNav = () => {
+      document.body.classList.remove('nav-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = !document.body.classList.contains('nav-open');
+      document.body.classList.toggle('nav-open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (document.body.classList.contains('nav-open') && !header.contains(event.target)) {
+        closeNav();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeNav();
+      }
+    });
+
+    const mqDesktop = window.matchMedia('(min-width: 993px)');
+    mqDesktop.addEventListener('change', (event) => {
+      if (event.matches) {
+        closeNav();
+      }
+    });
+  };
+
   const ensureModal = () => {
     let existing = document.getElementById('callbackModal');
     if (existing) return existing;
@@ -821,16 +873,6 @@ document.addEventListener('DOMContentLoaded', () => {
               >
             </label>
             <label>
-              <span data-i18n="modal.label.company">Компания</span>
-              <input
-                type="text"
-                name="company"
-                placeholder="Название компании"
-                data-i18n="modal.placeholder.company"
-                data-i18n-attr="placeholder"
-              >
-            </label>
-            <label>
               <span data-i18n="modal.label.phone">Телефон</span>
               <input
                 type="tel"
@@ -838,16 +880,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 required
                 placeholder="+996 ___ ___ ___"
                 data-i18n="modal.placeholder.phone"
-                data-i18n-attr="placeholder"
-              >
-            </label>
-            <label>
-              <span data-i18n="modal.label.email">Email</span>
-              <input
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-                data-i18n="modal.placeholder.email"
                 data-i18n-attr="placeholder"
               >
             </label>
@@ -1205,14 +1237,12 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     const formData = new FormData(form);
     const name = formData.get('name') || 'Без имени';
-    const company = formData.get('company') || 'Не указана';
     const phone = formData.get('phone') || 'Не указан';
-    const email = formData.get('email') || 'Не указан';
     const details = formData.get('details') || 'Нет описания';
 
     const subject = encodeURIComponent('Заявка с сайта Caravan Logistics');
     const body = encodeURIComponent(
-      `Имя: ${name}\nКомпания: ${company}\nТелефон: ${phone}\nEmail: ${email}\nОписание: ${details}`
+      `Имя: ${name}\nТелефон: ${phone}\nОписание: ${details}`
     );
 
     window.location.href = `mailto:info@caravan-logistics.com?subject=${subject}&body=${body}`;
@@ -1275,5 +1305,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initFeatureThumbHeights();
   initPartnerPopups();
   initContactWidget();
+  initMobileNav();
   applyLanguage(currentLang);
 });
