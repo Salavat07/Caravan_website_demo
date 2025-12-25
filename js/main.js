@@ -13,13 +13,16 @@ const translations = {
       'footer.description':
         'Откройте для себя наш широкий спектр услуг по доставке грузов, включая наземные, морские и воздушные перевозки. Благодаря передовым технологиям и глобальной сети мы обеспечиваем вам товар прибывает в целости и сохранности и вовремя.',
       'footer.addressTitle': 'Наш адрес',
-      'footer.addressLine1': 'г.ул. Чынгыза Айтматова 243, 3 этаж',
+      'footer.addressLine1': 'г. Бишкек, ул. Чынгыза Айтматова 243, 3 этаж',
       'footer.addressLine2': '+996 555 11 33 33',
       'footer.addressLine3': 'Бишкек',
       'footer.addressLine4': 'Кыргызстан',
       'footer.contactsTitle': 'Наши социальные сети',
       'footer.email': 'info@caravan-logistics.com ',
       'footer.phone': '+996 555 11 33 33',
+      'partners.eyebrow': 'Наши партнёры',
+      'partners.title': 'Наши партнёры',
+      'partners.text': 'Работаем с производителями техники, FMCG и строительными холдингами по всему СНГ.',
       'modal.title': 'Оставьте заявку',
       'modal.description':
         'Укажите контакты и кратко опишите груз — мы подготовим предложение и свяжемся в течение 15 минут.',
@@ -44,7 +47,7 @@ const translations = {
     },
     index: {
       'hero.tagline': 'Caravan Logistics',
-      'hero.title': 'Транспортно-экспедиторская компания',
+      'hero.title': 'Мы - Логистическая компания',
       'hero.line1': 'С 2008 года организуем автомобильные, железнодорожные и авиа перевозки по СНГ и всему миру.',
       'hero.line2': 'Более 10 000 доставленных грузов и свыше 2 000 вагонов ежегодно.',
       'hero.line3': 'Строим маршруты «под ключ» с полным таможенным сопровождением.',
@@ -80,6 +83,25 @@ const translations = {
         'Подбираем коды, оформляем сертификаты соответствия и помогаем получить СТ-1 или сертификаты происхождения.',
       'faq.a6':
         'Даём доступ в онлайн-кабинет с GPS-маршрутом и статусами этапов, плюс отправляем уведомления в Telegram или email.',
+      'index.upcoming.eyebrow': 'Цифровые сервисы',
+      'index.upcoming.title': 'Мы готовим к запуску умные инструменты',
+      'index.upcoming.text': 'Автоматизируем расчёт таможни и поиск кодов ТН ВЭД, чтобы вы получали ответ за секунды прямо на сайте.',
+      'index.upcoming.card1.badge': 'Скоро',
+      'index.upcoming.card1.title': 'Калькулятор — таможенный ассистент',
+      'index.upcoming.card1.text':
+        'Укажите страну отправления, тип груза и дополнительные услуги, а система моментально оценит пошлины и выдаст готовый чек-лист.',
+      'index.upcoming.card1.pill1': 'Тип груза',
+      'index.upcoming.card1.pill2': 'Страна → страна',
+      'index.upcoming.card1.pill3': 'Страховка',
+      'index.upcoming.card1.small': 'Мы тестируем формулы и подключаем AI-подсказки.',
+      'index.upcoming.card2.badge': 'Скоро',
+      'index.upcoming.card2.title': 'Поиск кодов ТН ВЭД',
+      'index.upcoming.card2.text':
+        'Введите название товара или отрасль — сервис предложит актуальные коды, требования и ограничения по поставке.',
+      'index.upcoming.card2.pill1': 'Название товара',
+      'index.upcoming.card2.pill2': 'Коды ТН ВЭД',
+      'index.upcoming.card2.pill3': 'Документы',
+      'index.upcoming.card2.small': 'Добавим быстрый поиск по каталогу из 10 000 позиций.',
       'projects.title': 'Нам доверяют',
       'projects.text': 'Производители оборудования, FMCG-компании и IT-проекты по всему СНГ',
       'projects.more': 'Кейсы',
@@ -88,7 +110,56 @@ const translations = {
       'email.subtitle': 'Связаться со специалистом',
       'email.description': 'Оставьте контакты, и наш логист вернётся с предложением в течение 5 минут.',
       'email.placeholder': 'Введите email',
-      'email.button': 'Отправить'
+      'email.button': 'Отправить',
+      'contact.widget.title': 'Всегда на связи',
+      'contact.widget.text': 'Ответим в мессенджерах или по телефону.',
+      'contact.widget.whatsapp.label': 'WhatsApp',
+      'contact.widget.whatsapp.desc': 'Написать в мессенджер',
+      'contact.widget.telegram.label': 'Telegram',
+      'contact.widget.telegram.desc': 'Обсудить проект',
+      'contact.widget.phone.label': '+996 555 11 33 33',
+      'contact.widget.phone.desc': 'Позвонить напрямую',
+      'contact.widget.toggle': 'Написать нам',
+      'partner.kulikov.since': 'С 2016 года',
+      'partner.kulikov.stats': 'оформили 90 рейсов с премиальной мебелью.',
+      'partner.kant.since': 'С 2018 года',
+      'partner.kant.stats': 'перевозим по 1200 тонн стройматериалов ежегодно.',
+      'partner.translogistica.since': 'С 2015 года',
+      'partner.translogistica.stats': 'организовали 65 мультимодальных цепочек.',
+      'partner.shoro.since': 'С 2017 года',
+      'partner.shoro.stats': 'поддерживаем FMCG-доставки в 30 городов.',
+      'partner.cocacola.since': 'С 2014 года',
+      'partner.cocacola.stats': 'выполнили 150 рефрижераторных рейсов.',
+      'partner.nestle.since': 'С 2013 года',
+      'partner.nestle.stats': 'консолидировали 200+ партий ингредиентов.',
+      'partner.knauf.since': 'С 2016 года',
+      'partner.knauf.stats': 'доставили 3 500 тонн гипсокартона.',
+      'partner.shatura.since': 'С 2019 года',
+      'partner.shatura.stats': 'обеспечиваем 40 шоурумов мебелью.',
+      'partner.worldclass.since': 'С 2020 года',
+      'partner.worldclass.stats': 'логистика спортивного оборудования для 15 клубов.',
+      'partner.keramin.since': 'С 2012 года',
+      'partner.keramin.stats': 'ежегодно перевозим 1 800 паллет плитки.',
+      'partner.borusan.since': 'С 2011 года',
+      'partner.borusan.stats': 'организовали 75 тяжеловесных перевозок.',
+      'partner.bellona.since': 'С 2015 года',
+      'partner.bellona.stats': 'выполнили 110 контейнерных отправок.',
+      'partner.tesladoor.since': 'С 2019 года',
+      'partner.tesladoor.stats': 'доставили 6 000 дверных комплектов.',
+      'partner.dhl.since': 'С 2010 года',
+      'partner.dhl.stats': 'помогаем с наземной частью экспресс-доставок.',
+      'partner.lg.since': 'С 2014 года',
+      'partner.lg.stats': 'перевезли 1,2 млн единиц электроники.',
+      'partner.termoplex.since': 'С 2017 года',
+      'partner.termoplex.stats': 'организуем 50 температурных маршрутов в год.',
+      'partner.fabrika.since': 'С 2018 года',
+      'partner.fabrika.stats': 'закрыли 90 проектов девелоперов.',
+      'partner.augrand.since': 'С 2013 года',
+      'partner.augrand.stats': 'сопровождаем экспорт мебели на 8 рынков.',
+      'partner.anto.since': 'С 2011 года',
+      'partner.anto.stats': 'доставили 400 партий металлоконструкций.',
+      'partner.kumtor.since': 'С 2009 года',
+      'partner.kumtor.stats': 'ведём горнопромышленные поставки без простоев.'
     },
     services: {
       'services.heroTitle': 'Комплексные логистические услуги',
@@ -154,17 +225,19 @@ const translations = {
         'Рассказываем о тарифах, маршрутах и технологиях Caravan Logistics для авто, ЖД и авиа направлений.',
       'portfolio.search': 'Поиск по новостям',
       'portfolio.feature1.badge': 'Caravan Аналитика',
-      'portfolio.feature1.time': '5 мин',
-      'portfolio.feature1.title': 'Автоколонны Caravan Logistics ускоряют поставки сборных грузов',
+      'portfolio.feature1.time': '2 мин',
+      'portfolio.feature1.title': 'Компания Caravan Logistics поздравила партнёров с наступающим Новым годом',
       'portfolio.feature1.text1':
-        'Мы расширили сеть автомобильных маршрутов по Казахстану, Кыргызстану и России. Сборные грузы консолидируются на наших терминалах и отправляются каждые 48 часов, что сокращает сроки на 3–4 дня.',
+        'Традиционно в декабре мы подводим итоги и готовим персональные подарки для клиентов. В 2024 году команда оформила праздничные коробки с символикой Caravan и доставила их во все ключевые офисы.',
       'portfolio.feature1.text2':
-        'Все машины оснащены GPS-мониторингом и проходят таможенное оформление до выезда, поэтому клиенты получают прозрачный статус и точные ETA.',
+        'Поздравление сопровождается благодарственными письмами и приглашением в закрытый клуб партнёров, где обсуждаем планы на следующий год.',
       'portfolio.feature2.badge': 'Отдел проектов',
-      'portfolio.feature2.time': '4 мин',
-      'portfolio.feature2.title': 'Железнодорожная и авиа доставка в едином сервисе',
+      'portfolio.feature2.time': '2 мин',
+      'portfolio.feature2.title': 'Caravan Logistics поздравила партнёров с наступающим Новым годом',
       'portfolio.feature2.text1':
-        'Для срочных грузов мы комбинируем авиаплечо из Китая и ЖД-доставку по СНГ. Такой подход даёт до 30% экономии относительно чистой авиа и сохраняет скорость поставки.',
+        'Команда подготовила серию видеороликов и открыток, в которых поделилась ключевыми достижениями и пожеланиями на 2025 год. Праздничные сюрпризы сопровождаются купонами на дополнительные услуги.',
+      'portfolio.feature2.text2':
+        'Мы благодарим клиентов за доверие и обещаем ещё больше вовлечённости в совместные проекты.',
       'portfolio.block1.title': 'Фокус на инфраструктуре СНГ',
       'portfolio.block1.text':
         'Работаем с крупнейшими терминалами и погранпереходами региона, резервируем мощности и проводим грузы без задержек даже в высокий сезон.',
@@ -289,6 +362,9 @@ const translations = {
       'footer.contactsTitle': 'Stay in touch',
       'footer.email': 'info@caravan-logistics.com ',
       'footer.phone': '+996 555 11 33 33',
+      'partners.eyebrow': 'Our partners',
+      'partners.title': 'Our partners',
+      'partners.text': 'We work with equipment makers, FMCG companies, and construction groups across the CIS.',
       'modal.title': 'Leave a request',
       'modal.description':
         'Share your contacts and briefly describe the cargo — we will prepare a proposal and call back within 15 minutes.',
@@ -313,7 +389,7 @@ const translations = {
     },
     index: {
       'hero.tagline': 'Caravan Logistics',
-      'hero.title': 'Transport forwarding company',
+      'hero.title': 'We are a logistics company',
       'hero.line1': 'Since 2008 we arrange road, rail and air freight across the CIS and worldwide.',
       'hero.line2': 'Over 10,000 shipments delivered and more than 2,000 wagons each year.',
       'hero.line3': 'We build turnkey routes with full customs support.',
@@ -349,6 +425,25 @@ const translations = {
         'We select HS codes, arrange conformity certificates and deliver ST-1 or other certificates of origin.',
       'faq.a6':
         'You get an online dashboard with GPS tracking and milestones plus optional Telegram or email alerts.',
+      'index.upcoming.eyebrow': 'Digital services',
+      'index.upcoming.title': 'We are preparing smart tools for launch',
+      'index.upcoming.text': 'We automate customs calculations and HS code search so you get answers in seconds on the site.',
+      'index.upcoming.card1.badge': 'Coming soon',
+      'index.upcoming.card1.title': 'Calculator — customs assistant',
+      'index.upcoming.card1.text':
+        'Select origin, cargo type and extras — the tool instantly estimates duties and gives you a ready checklist.',
+      'index.upcoming.card1.pill1': 'Cargo type',
+      'index.upcoming.card1.pill2': 'Country → country',
+      'index.upcoming.card1.pill3': 'Insurance',
+      'index.upcoming.card1.small': 'We are testing formulas and adding AI tips.',
+      'index.upcoming.card2.badge': 'Coming soon',
+      'index.upcoming.card2.title': 'HS code finder',
+      'index.upcoming.card2.text':
+        'Enter a product name or industry — the service suggests valid codes, requirements, and supply restrictions.',
+      'index.upcoming.card2.pill1': 'Product name',
+      'index.upcoming.card2.pill2': 'HS codes',
+      'index.upcoming.card2.pill3': 'Documents',
+      'index.upcoming.card2.small': 'We will add fast search across a catalog of 10,000 items.',
       'projects.title': 'Clients who trust us',
       'projects.text': 'Equipment makers, FMCG brands and IT companies throughout the CIS',
       'projects.more': 'Cases',
@@ -358,7 +453,56 @@ const translations = {
       'email.subtitle': 'Talk to a specialist',
       'email.description': 'Leave your contacts and our logistics manager will respond within 5 minutes.',
       'email.placeholder': 'Enter email',
-      'email.button': 'Send'
+      'email.button': 'Send',
+      'contact.widget.title': 'Always in touch',
+      'contact.widget.text': 'We reply in messengers or by phone.',
+      'contact.widget.whatsapp.label': 'WhatsApp',
+      'contact.widget.whatsapp.desc': 'Write in messenger',
+      'contact.widget.telegram.label': 'Telegram',
+      'contact.widget.telegram.desc': 'Discuss the project',
+      'contact.widget.phone.label': '+996 555 11 33 33',
+      'contact.widget.phone.desc': 'Call directly',
+      'contact.widget.toggle': 'Message us',
+      'partner.kulikov.since': 'Since 2016',
+      'partner.kulikov.stats': '90 premium furniture shipments.',
+      'partner.kant.since': 'Since 2018',
+      'partner.kant.stats': '1,200 tons of construction materials per year.',
+      'partner.translogistica.since': 'Since 2015',
+      'partner.translogistica.stats': '65 multimodal chains delivered.',
+      'partner.shoro.since': 'Since 2017',
+      'partner.shoro.stats': 'FMCG deliveries to 30 cities.',
+      'partner.cocacola.since': 'Since 2014',
+      'partner.cocacola.stats': '150 refrigerated runs completed.',
+      'partner.nestle.since': 'Since 2013',
+      'partner.nestle.stats': 'Consolidated 200+ ingredient batches.',
+      'partner.knauf.since': 'Since 2016',
+      'partner.knauf.stats': 'Moved 3,500 tons of drywall.',
+      'partner.shatura.since': 'Since 2019',
+      'partner.shatura.stats': 'Supplying 40 furniture showrooms.',
+      'partner.worldclass.since': 'Since 2020',
+      'partner.worldclass.stats': 'Logistics for 15 fitness clubs.',
+      'partner.keramin.since': 'Since 2012',
+      'partner.keramin.stats': '1,800 pallets of tiles each year.',
+      'partner.borusan.since': 'Since 2011',
+      'partner.borusan.stats': 'Handled 75 heavy-haul projects.',
+      'partner.bellona.since': 'Since 2015',
+      'partner.bellona.stats': '110 container shipments completed.',
+      'partner.tesladoor.since': 'Since 2019',
+      'partner.tesladoor.stats': 'Delivered 6,000 door sets.',
+      'partner.dhl.since': 'Since 2010',
+      'partner.dhl.stats': 'Ground support for express deliveries.',
+      'partner.lg.since': 'Since 2014',
+      'partner.lg.stats': 'Shipped 1.2M electronics units.',
+      'partner.termoplex.since': 'Since 2017',
+      'partner.termoplex.stats': '50 temperature-controlled routes yearly.',
+      'partner.fabrika.since': 'Since 2018',
+      'partner.fabrika.stats': 'Completed 90 developer projects.',
+      'partner.augrand.since': 'Since 2013',
+      'partner.augrand.stats': 'Furniture export to 8 markets.',
+      'partner.anto.since': 'Since 2011',
+      'partner.anto.stats': 'Delivered 400 batches of steel structures.',
+      'partner.kumtor.since': 'Since 2009',
+      'partner.kumtor.stats': 'Supporting mining logistics without downtime.'
     },
     services: {
       'services.heroTitle': 'Integrated logistics services',
@@ -424,17 +568,19 @@ const translations = {
         'We share tariffs, routes and technology updates from Caravan Logistics for road, rail and air services.',
       'portfolio.search': 'Search news',
       'portfolio.feature1.badge': 'Caravan Analytics',
-      'portfolio.feature1.time': '5 min',
-      'portfolio.feature1.title': 'Truck convoys speed up groupage deliveries',
+      'portfolio.feature1.time': '2 min',
+      'portfolio.feature1.title': 'Caravan Logistics wished partners a Happy New Year',
       'portfolio.feature1.text1':
-        'We expanded our road network across Kazakhstan, Kyrgyzstan and Russia. Groupage cargo is consolidated at our terminals and departs every 48 hours, cutting transit by 3–4 days.',
+        'Each December we wrap up results and prepare personal gifts for clients. In 2024 the team created branded holiday boxes and delivered them to every key office.',
       'portfolio.feature1.text2':
-        'All trucks have GPS monitoring and clear customs before departure, so clients see transparent statuses and accurate ETAs.',
+        'The greetings include thank-you letters and an invitation to a private partners’ club to discuss plans for next year.',
       'portfolio.feature2.badge': 'Project team',
-      'portfolio.feature2.time': '4 min',
-      'portfolio.feature2.title': 'Rail + air delivery in one service',
+      'portfolio.feature2.time': '2 min',
+      'portfolio.feature2.title': 'Caravan Logistics congratulated partners on the New Year',
       'portfolio.feature2.text1':
-        'For urgent goods we combine air uplift from China with rail distribution across the CIS, saving up to 30% compared to pure airfreight while keeping speed.',
+        'The team prepared videos and postcards highlighting 2025 achievements and wishes. Holiday surprises include coupons for extra services.',
+      'portfolio.feature2.text2':
+        'We thank clients for their trust and promise even greater engagement in joint projects.',
       'portfolio.block1.title': 'Infrastructure focus in the CIS',
       'portfolio.block1.text':
         'We cooperate with major terminals and border transitions, reserve capacity and move cargo without delays even in peak season.',
@@ -559,6 +705,9 @@ const translations = {
       'footer.contactsTitle': '联系我们',
       'footer.email': 'info@caravan-logistics.com ',
       'footer.phone': '+996 555 11 33 33',
+      'partners.eyebrow': '合作伙伴',
+      'partners.title': '我们的合作伙伴',
+      'partners.text': '我们与独联体地区的设备制造商、快消品公司及建筑集团合作。',
       'modal.title': '提交申请',
       'modal.description': '留下联系方式并简要描述货物——我们将在15分钟内与您联系。',
       'modal.label.name': '姓名',
@@ -582,7 +731,7 @@ const translations = {
     },
     index: {
       'hero.tagline': 'Caravan Logistics',
-      'hero.title': '综合运输代理公司',
+      'hero.title': '我们是一家物流公司',
       'hero.line1': '自2008年以来，我们为独联体及全球客户组织公路、铁路和航空运输。',
       'hero.line2': '每年完成一万多票货物、两千多节铁路车厢的交付。',
       'hero.line3': '提供一站式路线设计与全程报关服务。',
@@ -612,6 +761,23 @@ const translations = {
       'faq.a4': '可以，我们在中国仓库拼箱，每周发车2-3次，并提供按立方/公斤计费的报价。',
       'faq.a5': '协助匹配海关编码、办理合格证，并准备ST-1等原产地证明。',
       'faq.a6': '提供带GPS轨迹和节点状态的在线看板，并可推送Telegram或邮箱提醒。',
+      'index.upcoming.eyebrow': '数字化服务',
+      'index.upcoming.title': '即将上线智能工具',
+      'index.upcoming.text': '自动化关税计算与HS编码搜索，让您在站内几秒获取答案。',
+      'index.upcoming.card1.badge': '即将上线',
+      'index.upcoming.card1.title': '关税助手计算器',
+      'index.upcoming.card1.text': '选择起运国、货物类型和附加服务，系统即时估算关税并给出清单。',
+      'index.upcoming.card1.pill1': '货物类型',
+      'index.upcoming.card1.pill2': '起运国 → 目的国',
+      'index.upcoming.card1.pill3': '保险',
+      'index.upcoming.card1.small': '我们正在测试计算公式并加入AI提示。',
+      'index.upcoming.card2.badge': '即将上线',
+      'index.upcoming.card2.title': 'HS编码搜索',
+      'index.upcoming.card2.text': '输入产品名称或行业，系统将推荐合适编码、要求及限制。',
+      'index.upcoming.card2.pill1': '产品名称',
+      'index.upcoming.card2.pill2': 'HS编码',
+      'index.upcoming.card2.pill3': '所需文件',
+      'index.upcoming.card2.small': '我们将提供覆盖一万条目的快速搜索。',
       'projects.title': '合作客户',
       'projects.text': '遍布独联体的设备制造商、快消品牌和IT企业',
       'projects.more': '成功案例',
@@ -620,7 +786,56 @@ const translations = {
       'email.subtitle': '联系物流顾问',
       'email.description': '留下联系方式，我们将在5分钟内与您取得联系。',
       'email.placeholder': '请输入邮箱',
-      'email.button': '发送'
+      'email.button': '发送',
+      'contact.widget.title': '随时联系',
+      'contact.widget.text': '可通过聊天或电话回复您。',
+      'contact.widget.whatsapp.label': 'WhatsApp',
+      'contact.widget.whatsapp.desc': '发送消息',
+      'contact.widget.telegram.label': 'Telegram',
+      'contact.widget.telegram.desc': '讨论项目',
+      'contact.widget.phone.label': '+996 555 11 33 33',
+      'contact.widget.phone.desc': '直接拨打',
+      'contact.widget.toggle': '给我们留言',
+      'partner.kulikov.since': '自2016年起合作',
+      'partner.kulikov.stats': '完成90票高端家具运输。',
+      'partner.kant.since': '自2018年起合作',
+      'partner.kant.stats': '每年承运约1200吨建材。',
+      'partner.translogistica.since': '自2015年起合作',
+      'partner.translogistica.stats': '执行65条多式联运链路。',
+      'partner.shoro.since': '自2017年起合作',
+      'partner.shoro.stats': '为30座城市提供FMCG配送。',
+      'partner.cocacola.since': '自2014年起合作',
+      'partner.cocacola.stats': '完成150次冷链运输。',
+      'partner.nestle.since': '自2013年起合作',
+      'partner.nestle.stats': '整合200+批配料运输。',
+      'partner.knauf.since': '自2016年起合作',
+      'partner.knauf.stats': '运输了3,500吨石膏板。',
+      'partner.shatura.since': '自2019年起合作',
+      'partner.shatura.stats': '为40家展厅供应家具。',
+      'partner.worldclass.since': '自2020年起合作',
+      'partner.worldclass.stats': '为15家健身会所提供设备物流。',
+      'partner.keramin.since': '自2012年起合作',
+      'partner.keramin.stats': '每年配送1,800托盘瓷砖。',
+      'partner.borusan.since': '自2011年起合作',
+      'partner.borusan.stats': '完成75次超大件运输。',
+      'partner.bellona.since': '自2015年起合作',
+      'partner.bellona.stats': '完成110票集装箱发运。',
+      'partner.tesladoor.since': '自2019年起合作',
+      'partner.tesladoor.stats': '交付6,000套门类产品。',
+      'partner.dhl.since': '自2010年起合作',
+      'partner.dhl.stats': '支持快件的地面运输环节。',
+      'partner.lg.since': '自2014年起合作',
+      'partner.lg.stats': '运输120万台电子设备。',
+      'partner.termoplex.since': '自2017年起合作',
+      'partner.termoplex.stats': '每年执行50条控温路线。',
+      'partner.fabrika.since': '自2018年起合作',
+      'partner.fabrika.stats': '完成90个地产项目配送。',
+      'partner.augrand.since': '自2013年起合作',
+      'partner.augrand.stats': '为8个市场出口家具。',
+      'partner.anto.since': '自2011年起合作',
+      'partner.anto.stats': '交付400批金属结构件。',
+      'partner.kumtor.since': '自2009年起合作',
+      'partner.kumtor.stats': '支持矿业供应链，无停滞。'
     },
     services: {
       'services.heroTitle': '一站式物流解决方案',
@@ -679,17 +894,19 @@ const translations = {
       'portfolio.heroText': '分享 Caravan Logistics 在公路、铁路与航空领域的费率、路线与技术更新。',
       'portfolio.search': '搜索资讯',
       'portfolio.feature1.badge': '分析',
-      'portfolio.feature1.time': '5 分钟',
-      'portfolio.feature1.title': '车队助力拼货更快送达',
+      'portfolio.feature1.time': '2 分钟',
+      'portfolio.feature1.title': 'Caravan Logistics 送上新年祝福',
       'portfolio.feature1.text1':
-        '我们扩展了哈萨克斯坦、吉尔吉斯斯坦和俄罗斯的公路网络，拼货每48小时发车，平均缩短3-4天时效。',
+        '每年12月我们都会总结成果并准备客户专属礼物。2024年团队制作了带有 Caravan 标识的节日礼盒，送达所有核心办公室。',
       'portfolio.feature1.text2':
-        '车辆配备GPS并提前完成报关，客户可实时查看状态与预计到达时间。',
+        '祝福中附上感谢信，并邀请合作伙伴加入私享俱乐部，共同规划新一年的项目。',
       'portfolio.feature2.badge': '项目团队',
-      'portfolio.feature2.time': '4 分钟',
-      'portfolio.feature2.title': '铁路+航空一体化服务',
+      'portfolio.feature2.time': '2 分钟',
+      'portfolio.feature2.title': 'Caravan Logistics 向合作伙伴致贺新年',
       'portfolio.feature2.text1':
-        '对时效敏感货物，我们采用中国航空加独联体铁路的组合方案，比纯航空节省约30%的成本且保持速度。',
+        '团队制作了视频与贺卡，分享2025年的主要成果与祝福，礼盒中还附赠额外服务优惠券。',
+      'portfolio.feature2.text2':
+        '感谢客户的信任，我们将在未来项目中投入更多支持与互动。',
       'portfolio.block1.title': '聚焦独联体基础设施',
       'portfolio.block1.text': '携手主要货运站和口岸，即使旺季也能预留舱位、避免延误。',
       'portfolio.block2.title': '全球线路',
@@ -1025,9 +1242,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.feature-card');
     if (!cards.length) return;
     let resizeTimer;
+    const stackedQuery = window.matchMedia('(max-width: 1024px)');
 
     const applyHeight = () => {
-      const stacked = window.innerWidth <= 992;
+      const stacked = stackedQuery.matches;
       cards.forEach((card) => {
         const mainImg = card.querySelector('.feature-main img');
         const thumbs = card.querySelector('.feature-thumbs');
@@ -1063,33 +1281,34 @@ document.addEventListener('DOMContentLoaded', () => {
       resizeTimer = setTimeout(applyHeight, 150);
     });
 
+    stackedQuery.addEventListener('change', applyHeight);
     applyHeight();
   };
 
   const initPartnerPopups = () => {
     const logos = document.querySelectorAll('.partners__logo');
     if (!logos.length) return;
-    const stories = {
-      Kulikov: { since: 'С 2016 года', stats: 'оформили 90 рейсов с премиальной мебелью.' },
-      'Kant TSP': { since: 'С 2018 года', stats: 'перевозим по 1200 тонн стройматериалов ежегодно.' },
-      'TransLogistica Kazakhstan': { since: 'С 2015 года', stats: 'организовали 65 мультимодальных цепочек.' },
-      Шоро: { since: 'С 2017 года', stats: 'поддерживаем FMCG-доставки в 30 городов.' },
-      'Coca-Cola': { since: 'С 2014 года', stats: 'выполнили 150 рефрижераторных рейсов.' },
-      Nestle: { since: 'С 2013 года', stats: 'консолидировали 200+ партий ингредиентов.' },
-      Knauf: { since: 'С 2016 года', stats: 'доставили 3 500 тонн гипсокартона.' },
-      Шатура: { since: 'С 2019 года', stats: 'обеспечиваем 40 шоурумов мебелью.' },
-      'World Class': { since: 'С 2020 года', stats: 'логистика спортивного оборудования для 15 клубов.' },
-      Керамин: { since: 'С 2012 года', stats: 'ежегодно перевозим 1 800 паллет плитки.' },
-      Borusan: { since: 'С 2011 года', stats: 'организовали 75 тяжеловесных перевозок.' },
-      Bellona: { since: 'С 2015 года', stats: 'выполнили 110 контейнерных отправок.' },
-      Tesladoor: { since: 'С 2019 года', stats: 'доставили 6 000 дверных комплектов.' },
-      DHL: { since: 'С 2010 года', stats: 'помогаем с наземной частью экспресс-доставок.' },
-      LG: { since: 'С 2014 года', stats: 'перевезли 1,2 млн единиц электроники.' },
-      Termoplex: { since: 'С 2017 года', stats: 'организуем 50 температурных маршрутов в год.' },
-      'Фабрика окон': { since: 'С 2018 года', stats: 'закрыли 90 проектов девелоперов.' },
-      'AU Grand': { since: 'С 2013 года', stats: 'сопровождаем экспорт мебели на 8 рынков.' },
-      'ANTO.KG': { since: 'С 2011 года', stats: 'доставили 400 партий металлоконструкций.' },
-      'Кумтор': { since: 'С 2009 года', stats: 'ведём горнопромышленные поставки без простоев.' }
+    const partnerKeys = {
+      Kulikov: 'partner.kulikov',
+      'Kant TSP': 'partner.kant',
+      'TransLogistica Kazakhstan': 'partner.translogistica',
+      Шоро: 'partner.shoro',
+      'Coca-Cola': 'partner.cocacola',
+      Nestle: 'partner.nestle',
+      Knauf: 'partner.knauf',
+      Шатура: 'partner.shatura',
+      'World Class': 'partner.worldclass',
+      Керамин: 'partner.keramin',
+      Borusan: 'partner.borusan',
+      Bellona: 'partner.bellona',
+      Tesladoor: 'partner.tesladoor',
+      DHL: 'partner.dhl',
+      LG: 'partner.lg',
+      Termoplex: 'partner.termoplex',
+      'Фабрика окон': 'partner.fabrika',
+      'AU Grand': 'partner.augrand',
+      'ANTO.KG': 'partner.anto',
+      'Кумтор': 'partner.kumtor'
     };
     let activePopup = null;
 
@@ -1102,8 +1321,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     logos.forEach((logo) => {
       const key = logo.querySelector('img')?.alt?.trim();
-      if (!key || !stories[key]) return;
-      const story = stories[key];
+      const storyKey = key ? partnerKeys[key] : null;
+      if (!storyKey) return;
+      const story = {
+        since: translate(`${storyKey}.since`),
+        stats: translate(`${storyKey}.stats`)
+      };
       const popup = document.createElement('div');
       popup.className = 'partner-popup';
       popup.setAttribute('role', 'dialog');
@@ -1146,33 +1369,33 @@ document.addEventListener('DOMContentLoaded', () => {
     widget.className = 'contact-widget';
     widget.innerHTML = `
       <div class="contact-widget__panel" aria-hidden="true">
-        <h4>Всегда на связи</h4>
-        <p>Ответим в мессенджерах или по телефону.</p>
+        <h4>${translate('contact.widget.title')}</h4>
+        <p>${translate('contact.widget.text')}</p>
         <div class="contact-widget__links">
           <a class="contact-widget__link whatsapp" href="https://wa.me/996555113333" target="_blank" rel="noopener">
             <span class="contact-widget__icon">WA</span>
             <div>
-              <span>WhatsApp</span>
-              <small>Написать в мессенджер</small>
+              <span>${translate('contact.widget.whatsapp.label')}</span>
+              <small>${translate('contact.widget.whatsapp.desc')}</small>
             </div>
           </a>
           <a class="contact-widget__link telegram" href="https://t.me/+996555113333" target="_blank" rel="noopener">
             <span class="contact-widget__icon">TG</span>
             <div>
-              <span>Telegram</span>
-              <small>Обсудить проект</small>
+              <span>${translate('contact.widget.telegram.label')}</span>
+              <small>${translate('contact.widget.telegram.desc')}</small>
             </div>
           </a>
           <a class="contact-widget__link phone" href="tel:+996555113333">
             <span class="contact-widget__icon">TEL</span>
             <div>
-              <span>+996 555 11 33 33</span>
-              <small>Позвонить напрямую</small>
+              <span>${translate('contact.widget.phone.label')}</span>
+              <small>${translate('contact.widget.phone.desc')}</small>
             </div>
           </a>
         </div>
       </div>
-      <button class="contact-widget__toggle" type="button" aria-label="Написать нам">
+      <button class="contact-widget__toggle" type="button" aria-label="${translate('contact.widget.toggle')}">
         <span class="contact-widget__toggle-icon">☎</span>
       </button>`;
     document.body.appendChild(widget);
