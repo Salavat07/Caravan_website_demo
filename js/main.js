@@ -43,11 +43,20 @@ const translations = {
       'email.validation.missingAt': 'Нет символа @',
       'email.validation.missingDot': 'Нет символа .',
       'email.validation.success': 'Все отлично!',
+      'contact.widget.title': 'Всегда на связи',
+      'contact.widget.text': 'Ответим в мессенджерах или по телефону.',
+      'contact.widget.whatsapp.label': 'WhatsApp',
+      'contact.widget.whatsapp.desc': 'Написать в мессенджер',
+      'contact.widget.telegram.label': 'Telegram',
+      'contact.widget.telegram.desc': 'Обсудить проект',
+      'contact.widget.phone.label': '+996 555 11 33 33',
+      'contact.widget.phone.desc': 'Позвонить напрямую',
+      'contact.widget.toggle': 'Написать нам',
       'footer.copyright': 'Copyright ® Kaliev Salavat All rights Reserved'
     },
     index: {
       'hero.tagline': 'Caravan Logistics',
-      'hero.title': 'Мы - Логистическая компания',
+      'hero.title': 'Мы - Caravan Logistics',
       'hero.line1': 'С 2008 года организуем автомобильные, железнодорожные и авиа перевозки по СНГ и всему миру.',
       'hero.line2': 'Более 10 000 доставленных грузов и свыше 2 000 вагонов ежегодно.',
       'hero.line3': 'Строим маршруты «под ключ» с полным таможенным сопровождением.',
@@ -58,6 +67,10 @@ const translations = {
       'services.item2': 'ЖД маршруты и вагоны',
       'services.item3': 'Таможенный брокер',
       'services.item4': 'Китай и международные проекты',
+      'services.item5': 'Мультимодальные перевозки',
+      'services.item6': 'Авиаперевозки',
+      'services.item7': 'Складские услуги',
+      'services.item8': 'Страхование грузов',
       'big-text': 'Почему доверяют Caravan Logistics?',
       'banner.title': 'Проверенная команда',
       'banner.text':
@@ -111,15 +124,6 @@ const translations = {
       'email.description': 'Оставьте контакты, и наш логист вернётся с предложением в течение 5 минут.',
       'email.placeholder': 'Введите email',
       'email.button': 'Отправить',
-      'contact.widget.title': 'Всегда на связи',
-      'contact.widget.text': 'Ответим в мессенджерах или по телефону.',
-      'contact.widget.whatsapp.label': 'WhatsApp',
-      'contact.widget.whatsapp.desc': 'Написать в мессенджер',
-      'contact.widget.telegram.label': 'Telegram',
-      'contact.widget.telegram.desc': 'Обсудить проект',
-      'contact.widget.phone.label': '+996 555 11 33 33',
-      'contact.widget.phone.desc': 'Позвонить напрямую',
-      'contact.widget.toggle': 'Написать нам',
       'partner.kulikov.since': 'С 2016 года',
       'partner.kulikov.stats': 'оформили 90 рейсов с премиальной мебелью.',
       'partner.kant.since': 'С 2018 года',
@@ -385,6 +389,15 @@ const translations = {
       'email.validation.missingAt': 'Missing @ symbol',
       'email.validation.missingDot': 'Missing dot',
       'email.validation.success': 'Looks good!',
+      'contact.widget.title': 'Always in touch',
+      'contact.widget.text': 'We reply in messengers or by phone.',
+      'contact.widget.whatsapp.label': 'WhatsApp',
+      'contact.widget.whatsapp.desc': 'Write in messenger',
+      'contact.widget.telegram.label': 'Telegram',
+      'contact.widget.telegram.desc': 'Discuss the project',
+      'contact.widget.phone.label': '+996 555 11 33 33',
+      'contact.widget.phone.desc': 'Call directly',
+      'contact.widget.toggle': 'Message us',
       'footer.copyright': 'Copyright ® Kaliev Salavat All rights Reserved'
     },
     index: {
@@ -400,6 +413,10 @@ const translations = {
       'services.item2': 'Rail routes and wagons',
       'services.item3': 'Customs brokerage',
       'services.item4': 'China and global projects',
+      'services.item5': 'Multimodal logistics',
+      'services.item6': 'Air freight',
+      'services.item7': 'Warehousing services',
+      'services.item8': 'Cargo insurance',
       'big-text': 'Why companies trust Caravan Logistics?',
       'banner.title': 'Certified team',
       'banner.text':
@@ -454,15 +471,6 @@ const translations = {
       'email.description': 'Leave your contacts and our logistics manager will respond within 5 minutes.',
       'email.placeholder': 'Enter email',
       'email.button': 'Send',
-      'contact.widget.title': 'Always in touch',
-      'contact.widget.text': 'We reply in messengers or by phone.',
-      'contact.widget.whatsapp.label': 'WhatsApp',
-      'contact.widget.whatsapp.desc': 'Write in messenger',
-      'contact.widget.telegram.label': 'Telegram',
-      'contact.widget.telegram.desc': 'Discuss the project',
-      'contact.widget.phone.label': '+996 555 11 33 33',
-      'contact.widget.phone.desc': 'Call directly',
-      'contact.widget.toggle': 'Message us',
       'partner.kulikov.since': 'Since 2016',
       'partner.kulikov.stats': '90 premium furniture shipments.',
       'partner.kant.since': 'Since 2018',
@@ -727,6 +735,15 @@ const translations = {
       'email.validation.missingAt': '邮箱缺少 @',
       'email.validation.missingDot': '邮箱缺少 .',
       'email.validation.success': '一切正常！',
+      'contact.widget.title': '随时联系',
+      'contact.widget.text': '可通过聊天或电话回复您。',
+      'contact.widget.whatsapp.label': 'WhatsApp',
+      'contact.widget.whatsapp.desc': '发送消息',
+      'contact.widget.telegram.label': 'Telegram',
+      'contact.widget.telegram.desc': '讨论项目',
+      'contact.widget.phone.label': '+996 555 11 33 33',
+      'contact.widget.phone.desc': '直接拨打',
+      'contact.widget.toggle': '给我们留言',
       'footer.copyright': 'Copyright ® Kaliev Salavat All rights Reserved'
     },
     index: {
@@ -742,6 +759,10 @@ const translations = {
       'services.item2': '铁路班列与车厢',
       'services.item3': '报关与合规',
       'services.item4': '中国及全球项目',
+      'services.item5': '多式联运',
+      'services.item6': '航空运输',
+      'services.item7': '仓储服务',
+      'services.item8': '货物保险',
       'big-text': '为什么选择 Caravan Logistics？',
       'banner.title': '认证运营团队',
       'banner.text':
@@ -787,15 +808,6 @@ const translations = {
       'email.description': '留下联系方式，我们将在5分钟内与您取得联系。',
       'email.placeholder': '请输入邮箱',
       'email.button': '发送',
-      'contact.widget.title': '随时联系',
-      'contact.widget.text': '可通过聊天或电话回复您。',
-      'contact.widget.whatsapp.label': 'WhatsApp',
-      'contact.widget.whatsapp.desc': '发送消息',
-      'contact.widget.telegram.label': 'Telegram',
-      'contact.widget.telegram.desc': '讨论项目',
-      'contact.widget.phone.label': '+996 555 11 33 33',
-      'contact.widget.phone.desc': '直接拨打',
-      'contact.widget.toggle': '给我们留言',
       'partner.kulikov.since': '自2016年起合作',
       'partner.kulikov.stats': '完成90票高端家具运输。',
       'partner.kant.since': '自2018年起合作',
@@ -1057,6 +1069,50 @@ document.addEventListener('DOMContentLoaded', () => {
         closeNav();
       }
     });
+  };
+
+  const initServicesSlider = () => {
+    const slider = document.querySelector('.services-slider');
+    if (!slider) return;
+    const track = slider.querySelector('.games');
+    if (!track) return;
+
+    const container = slider.closest('.trending') || slider.parentElement;
+    const buttons = container?.querySelectorAll('.services-arrow') || [];
+
+    const getStep = () => {
+      const card = track.querySelector('.block');
+      if (!card) return track.clientWidth;
+      const styles = window.getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap || styles.gap || '0');
+      return card.getBoundingClientRect().width + gap;
+    };
+
+    const updateButtons = () => {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      buttons.forEach((button) => {
+        const direction = button.dataset.direction;
+        if (direction === 'prev') {
+          button.disabled = track.scrollLeft <= 1;
+        } else if (direction === 'next') {
+          button.disabled = track.scrollLeft >= maxScroll - 1;
+        }
+      });
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const direction = button.dataset.direction === 'next' ? 1 : -1;
+        track.scrollBy({ left: direction * getStep(), behavior: 'smooth' });
+      });
+    });
+
+    track.addEventListener('scroll', () => {
+      window.requestAnimationFrame(updateButtons);
+    });
+
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
   };
 
   const ensureModal = () => {
@@ -1474,6 +1530,61 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(closeModal, 2500);
   });
 
+  const initBlurNumberHighlights = () => {
+    if (document.body.dataset.page !== 'index') return;
+
+    const containers = document.querySelectorAll(
+      '.hero--info, .features .info .block, .tool-card__placeholder.blur'
+    );
+
+    containers.forEach((container) => {
+      container.querySelectorAll('.digit-highlight').forEach((node) => {
+        node.replaceWith(document.createTextNode(node.textContent || ''));
+      });
+
+      const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+        acceptNode: (node) => {
+          if (!node.nodeValue || !/\d/.test(node.nodeValue)) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          const parent = node.parentElement;
+          if (!parent || parent.closest('.digit-highlight')) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(parent.tagName)) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+
+      const nodes = [];
+      while (walker.nextNode()) {
+        nodes.push(walker.currentNode);
+      }
+
+      nodes.forEach((node) => {
+        const text = node.nodeValue;
+        if (!text) return;
+        const parts = text.split(/(\d[\d\s.,–\/-]*)/g);
+        if (parts.length === 1) return;
+        const fragment = document.createDocumentFragment();
+        parts.forEach((part, index) => {
+          if (!part) return;
+          if (index % 2 === 1) {
+            const span = document.createElement('span');
+            span.className = 'digit-highlight';
+            span.textContent = part;
+            fragment.appendChild(span);
+          } else {
+            fragment.appendChild(document.createTextNode(part));
+          }
+        });
+        node.replaceWith(fragment);
+      });
+    });
+  };
+
   const applyLanguage = (lang) => {
     if (!translations[lang]) {
       lang = 'ru';
@@ -1501,6 +1612,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
     highlightServiceNav();
+    initBlurNumberHighlights();
   };
 
   document.body.addEventListener('click', (event) => {
@@ -1529,5 +1641,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initPartnerPopups();
   initContactWidget();
   initMobileNav();
+  initServicesSlider();
   applyLanguage(currentLang);
 });

@@ -32,8 +32,8 @@
     <div class="hero hero--full">
         <div class="hero__content container">
             <div class="hero--info">
-                <p class="hero__tag">Логистическая компания</p>
-                <h1 data-i18n="hero.title">Мы - Логистическая компания</h1>
+                <p class="hero__tag">Caravan Logistics</p>
+                <h1 data-i18n="hero.title">Мы - Caravan Logistics</h1>
                 <p data-i18n="hero.line1">С 2008 года организуем автомобильные, железнодорожные и авиа перевозки по СНГ и всему миру.</p>
                 <p data-i18n="hero.line2">Более 10 000 доставленных грузов и свыше 2 000 вагонов ежегодно.</p> 
                 <p data-i18n="hero.line3">Строим маршруты «под ключ» с полным таможенным сопровождением.</p>
@@ -41,28 +41,62 @@
             </div>
         </div>
     </div>
-    <div class="container trending">  
-        <a href="#services" class="see-all" data-i18n="services.more">Все услуги</a>
-        <h3 data-i18n="services.title">Наши услуги</h3>
+    <div class="container trending">
+        <div class="services-header">
+            <h3 data-i18n="services.title">Наши услуги</h3>
+            <div class="services-actions">
+                <a href="#services" class="see-all" data-i18n="services.more">Все услуги</a>
+                <div class="services-arrows">
+                    <button class="services-arrow" type="button" data-direction="prev" aria-label="Прокрутить услуги влево">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="services-arrow" type="button" data-direction="next" aria-label="Прокрутить услуги вправо">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-        <div class="games" id="services">
-        <a class="block service-card" href="service-auto.html">
-            <img loading="lazy" src="img/Main_images/kazem-hussein-Kq1ERpkH0eQ-unsplash.jpg" alt="Автоперевозки по СНГ">
-            <span data-i18n="services.item1">Автоперевозки по СНГ</span>
-        </a>
-         <a class="block service-card" href="service-rail.html">
-            <img loading="lazy" src="img/Main_images/shui-miles-IWPTBX8ugjs-unsplash.jpg" alt="ЖД маршруты и вагоны">
-            <span data-i18n="services.item2">ЖД маршруты и вагоны</span>
-        </a>
-         <a class="block service-card" href="service-broker.html">
-            <img loading="lazy" src="img/Main_images/vlad-deep-mCqi3MljC4E-unsplash.jpg" alt="Таможенный брокер">
-            <span data-i18n="services.item3">Таможенный брокер</span>
-        </a>
-         <a class="block service-card" href="service-china.html">
-            <img loading="lazy" src="img/Main_images/h-co-3JFVNo4ukKQ-unsplash.jpg" alt="Китай и международные проекты">
-            <span data-i18n="services.item4">Китай и международные проекты</span>
-        </a>
-      </div>
+        <div class="services-slider" id="services">
+            <div class="games">
+                <a class="block service-card" href="service-auto.html">
+                    <img loading="lazy" src="img/Main_images/kazem-hussein-Kq1ERpkH0eQ-unsplash.jpg" alt="Автоперевозки по СНГ">
+                    <span data-i18n="services.item1">Автоперевозки по СНГ</span>
+                </a>
+                <a class="block service-card" href="service-rail.html">
+                    <img loading="lazy" src="img/Main_images/shui-miles-IWPTBX8ugjs-unsplash.jpg" alt="ЖД маршруты и вагоны">
+                    <span data-i18n="services.item2">ЖД маршруты и вагоны</span>
+                </a>
+                <a class="block service-card" href="service-broker.html">
+                    <img loading="lazy" src="img/Main_images/vlad-deep-mCqi3MljC4E-unsplash.jpg" alt="Таможенный брокер">
+                    <span data-i18n="services.item3">Таможенный брокер</span>
+                </a>
+                <a class="block service-card" href="service-china.html">
+                    <img loading="lazy" src="img/Main_images/h-co-3JFVNo4ukKQ-unsplash.jpg" alt="Китай и международные проекты">
+                    <span data-i18n="services.item4">Китай и международные проекты</span>
+                </a>
+                <a class="block service-card" href="service-multimodal.html">
+                    <img loading="lazy" src="img/Main_images/shaah-shahidh--subrrYxv8A-unsplash.jpg" alt="Мультимодальные перевозки">
+                    <span data-i18n="services.item5">Мультимодальные перевозки</span>
+                </a>
+                <a class="block service-card" href="service-air.html">
+                    <img loading="lazy" src="img/Main_images/jake-weirick-mwXtmsTGlzE-unsplash.jpg" alt="Авиаперевозки">
+                    <span data-i18n="services.item6">Авиаперевозки</span>
+                </a>
+                <a class="block service-card" href="service-warehousing.html">
+                    <img loading="lazy" src="img/Main_images/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg" alt="Складские услуги">
+                    <span data-i18n="services.item7">Складские услуги</span>
+                </a>
+                <a class="block service-card" href="service-insurance.html">
+                    <img loading="lazy" src="img/Main_images/vlad-deep-mCqi3MljC4E-unsplash.jpg" alt="Страхование грузов">
+                    <span data-i18n="services.item8">Страхование грузов</span>
+                </a>
+            </div>
+        </div>
     </div>
     <section class="trust">
         <div class="trust__content container">
