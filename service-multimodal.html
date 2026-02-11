@@ -20,20 +20,40 @@
                     <li class="active"><a href="services.html" data-i18n="nav.services">Услуги</a></li>
                     <li><a href="portfolio.html" data-i18n="nav.news">Новости</a></li>
                     <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+                
+                    <li class="nav-services nav-services--mobile">
+                        <div class="mobile-menu__divider"></div>
+                        <button class="mobile-menu__accordion" type="button" aria-expanded="true" data-accordion="services">Услуги <span class="mobile-menu__chev">▾</span></button>
+                        <div class="mobile-menu__submenu is-open" data-submenu="services">
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-auto.html">Автоперевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-rail.html">Железнодорожные перевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-multimodal.html">Мультимодальные перевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-broker.html">Таможенный брокер</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-china.html">Китай</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-air.html">Авиаперевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-warehousing.html">Складские услуги</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-insurance.html">Страхование</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
-            <div class="lang-switcher">
-                <button type="button" class="active" data-lang="ru" data-i18n="lang.ru">RU</button>
-                <button type="button" data-lang="en" data-i18n="lang.en">EN</button>
-                <button type="button" data-lang="zh" data-i18n="lang.zh">中文</button>
+            <div class="lang">
+            <button class="lang__btn" id="langBtn" type="button" aria-expanded="false">
+                <span class="lang__current" id="langCurrent">RU</span>
+                <span class="lang__chev">▾</span>
+            </button>
+            <div class="lang__menu" id="langMenu" role="menu">
+                <button class="lang__item" data-lang="ru" role="menuitem" data-i18n="lang.ru">RU</button>
+                <button class="lang__item" data-lang="en" role="menuitem" data-i18n="lang.en">EN</button>
+                <button class="lang__item" data-lang="zh" role="menuitem" data-i18n="lang.zh">中文</button>
             </div>
+        </div>
         </header>
 
         <section class="service-hero">
             <div class="container service-hero__inner">
                 <div class="service-hero__content">
-                    <span class="badge purple" data-i18n="services.cards.multimodal.title">Мультимодальные перевозки</span>
-                    <h1 data-i18n="service.heroTitle">Мультимодальные перевозки</h1>
+                                        <h1 data-i18n="service.heroTitle">Мультимодальные перевозки</h1>
                     <p data-i18n="service.heroText">Комбинируем авто, ЖД, авиа и море, чтобы сократить сроки и сохранить бюджет для международных проектов.</p>
                     <button class="btn-primary" data-modal="callback" data-i18n="services.heroButton">Связаться со специалистом</button>
                 </div>
@@ -98,14 +118,14 @@
     </section>
 
 <footer>
-        <div class="blocks container">
-            <div>
-                <a class="logo footer-logo" href="index.html">
-                    <img loading="lazy" src="img/Caravan/caravan logo.png" alt="Caravan Logistics">
-                </a>
-                <p data-i18n="footer.description">Откройте для себя наш широкий спектр услуг по доставке грузов, включая наземные, морские и воздушные перевозки. Благодаря передовым технологиям и глобальной сети мы обеспечиваем вам товар прибывает в целости и сохранности и вовремя. </p>
-            </div>
-            <div>
+    <div class="blocks container">
+        <div>
+          <a class="logo footer-logo" href="index.html">
+            <img loading="lazy" src="img/Caravan/caravan logo.png" alt="Caravan Logistics">
+          </a>
+          <p data-i18n="footer.description">Откройте для себя наш широкий спектр услуг по доставке грузов, включая наземные, морские и воздушные перевозки. Благодаря передовым технологиям и глобальной сети мы обеспечиваем вам товар прибывает в целости и сохранности и вовремя. </p>
+        </div>
+             <div>
                 <h4 data-i18n="footer.addressTitle">Наш адрес</h4>
                 <ul>
                     <li data-i18n="footer.addressLine1">г. Бишкек, ул. Чынгыза Айтматова 243, 3 этаж</li>
@@ -113,16 +133,45 @@
                     <li data-i18n="footer.addressLine3">Бишкек</li>
                     <li data-i18n="footer.addressLine4">Кыргызстан</li>
                 </ul>
-            </div>
-            <div>
-                <h4 data-i18n="footer.contactsTitle">Наши социальные сети</h4>
-                <p data-i18n="footer.email">info@caravan-logistics.com </p>
-                <p data-i18n="footer.phone">+996 555 11 33 33</p>
-            </div>
-        </div>
-        <hr>
-        <p data-i18n="footer.copyright">Copyright ® Kaliev Salavat All rights Reserved</p>
-    </footer>
+             </div>
+             <div>
+                <div class="footer-social">
+                  <h3 class="footer-social__title">Наши социальные сети</h3>
+                  <div class="footer-social__icons">
+                    <a class="footer-social__icon" href="https://wa.me/996555113333" target="_blank" rel="noopener" aria-label="WhatsApp">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7.2 19.5l.6-3.1a7.1 7.1 0 1 1 3.1 1.6l-3.7 1.5z" />
+                        <path d="M9.5 9.4c.2-.4.3-.4.5-.4h.5c.2 0 .3 0 .4.3l.6 1.5c0 .1.1.3 0 .4l-.2.4c-.1.1-.2.2 0 .4.2.3.6 1 1.4 1.6.8.7 1.5.9 1.8 1 .2.1.3 0 .4-.1l.5-.6c.1-.2.3-.2.5-.1l1.6.7c.2.1.3.2.3.3 0 .2-.1.6-.4.9-.3.3-.7.6-1.2.6-.5 0-1-.1-2-.5-1-.4-1.9-1.1-2.8-2.1-.9-1-1.5-2-1.8-2.8-.3-.8-.3-1.3-.3-1.7 0-.4.1-.8.3-1z" />
+                      </svg>
+                    </a>
+                    <a class="footer-social__icon" href="https://t.me/+996555113333" target="_blank" rel="noopener" aria-label="Telegram">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.6 4.6L3.6 11.4c-.8.3-.8 1.4.1 1.6l4.5 1.4 1.7 5.2c.2.7 1.1.9 1.6.4l2.6-2.4 4.6 3.4c.6.4 1.4.1 1.5-.6l2.6-14.1c.2-.8-.6-1.4-1.3-1.1z" />
+                      </svg>
+                    </a>
+                    <a class="footer-social__icon" href="https://www.instagram.com/caravan_logistics_com?igsh=dWprNTB4MnB4MjVp" target="_blank" rel="noopener" aria-label="Instagram">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="5" y="5" width="14" height="14" rx="4" />
+                        <circle cx="12" cy="12" r="3.5" />
+                        <circle cx="16.5" cy="7.5" r="1" />
+                      </svg>
+                    </a>
+                  </div>
+                  <a class="footer-social__email" href="mailto:info@caravan-logistics.com">info@caravan-logistics.com</a>
+                  <a class="footer-social__phone" href="tel:+996555113333">+996 555 11 33 33</a>
+                  <div class="footer-social__bitrix">
+                    <a href="https://crm.caravan-logistics.com" target="_blank" rel="noopener">
+                      <img src="img/Logos/bitrix24.svg" alt="Bitrix24">
+                    </a>
+                  </div>
+                </div>
+             </div>
+    </div>
+    <hr>
+    <p data-i18n="footer.copyright">Copyright ® Kaliev Salavat All rights Reserved</p>
+  </footer>
+
+
     <script src="js/main.js"></script>
 </body>
 </html>

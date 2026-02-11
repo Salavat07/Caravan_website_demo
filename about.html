@@ -20,12 +20,33 @@
                 <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
                 <li><a href ="portfolio.html" data-i18n="nav.news">Новости</a></li>
                 <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
-            </ul>
+            
+                    <li class="nav-services nav-services--mobile">
+                        <div class="mobile-menu__divider"></div>
+                        <button class="mobile-menu__accordion" type="button" aria-expanded="true" data-accordion="services">Услуги <span class="mobile-menu__chev">▾</span></button>
+                        <div class="mobile-menu__submenu is-open" data-submenu="services">
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-auto.html">Автоперевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-rail.html">Железнодорожные перевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-multimodal.html">Мультимодальные перевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-broker.html">Таможенный брокер</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-china.html">Китай</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-air.html">Авиаперевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-warehousing.html">Складские услуги</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-insurance.html">Страхование</a>
+                        </div>
+                    </li>
+                </ul>
         </nav>
-        <div class="lang-switcher">
-            <button type="button" class="active" data-lang="ru" data-i18n="lang.ru">RU</button>
-            <button type="button" data-lang="en" data-i18n="lang.en">EN</button>
-            <button type="button" data-lang="zh" data-i18n="lang.zh">中文</button>
+        <div class="lang">
+            <button class="lang__btn" id="langBtn" type="button" aria-expanded="false">
+                <span class="lang__current" id="langCurrent">RU</span>
+                <span class="lang__chev">▾</span>
+            </button>
+            <div class="lang__menu" id="langMenu" role="menu">
+                <button class="lang__item" data-lang="ru" role="menuitem" data-i18n="lang.ru">RU</button>
+                <button class="lang__item" data-lang="en" role="menuitem" data-i18n="lang.en">EN</button>
+                <button class="lang__item" data-lang="zh" role="menuitem" data-i18n="lang.zh">中文</button>
+            </div>
         </div>
     </header>
 
@@ -38,26 +59,315 @@
       <img loading="lazy" src="img/Main_images/Снимок экрана 2025-12-18 в 12.18.30.png" alt="Сотрудники Caravan Logistics на складе"> 
     </div>
 
-    <div class="container work">
-      <h2 data-i18n="about.whyTitle">Почему работают с нами</h2>
-      <div class="blocks">
-        <div class="block">
-          <span class="badge purple" data-i18n="about.card1.badge">Авто</span>
-          <h3 data-i18n="about.card1.title">Собственный автопарк</h3>
-          <p data-i18n="about.card1.text">Подбираем тент, реф и спецтехнику под конкретный проект, контролируем водителей 24/7 и берём на себя согласование пропусков.</p>
+    <section class="history">
+      <div class="container">
+        <div class="history__head">
+          <h2>История и развитие</h2>
+          <p>От небольшой команды до надёжного логистического партнёра.</p>
         </div>
-        <div class="block">
-          <span class="badge brown" data-i18n="about.card2.badge">ЖД</span>
-          <h3 data-i18n="about.card2.title">Доступ к подвижному составу</h3>
-          <p data-i18n="about.card2.text">Резервируем вагоны и платформы, оформляем накладные ЭТРАН и проводим груз через погранпереходы без простоев.</p>
+
+        <div class="history__slider" aria-label="История компании">
+          <button class="history__nav history__nav--prev" type="button" aria-label="Назад"></button>
+
+          <div class="history__track" tabindex="0">
+            <article class="history__card" data-year="2008">
+              <div class="history__media">
+                <img loading="lazy" src="img/Caravan/comanda5.png" alt="2008 — начало пути">
+              </div>
+              <div class="history__body">
+                <div class="history__year">2008</div>
+                <div class="history__progress" aria-hidden="true"></div>
+                <h3>Начало пути</h3>
+                <p>На рынке с 2008 года. Стартовали с простой идеи — надёжная логистика без лишних обещаний.</p>
+              </div>
+            </article>
+
+            <article class="history__card" data-year="2010">
+              <div class="history__media">
+                <img loading="lazy" src="img/Caravan/Comanda1.png" alt="Офис в Авангарде">
+              </div>
+              <div class="history__body">
+                <div class="history__year">2010</div>
+                <div class="history__progress" aria-hidden="true"></div>
+                <h3>Офис в «Авангарде»</h3>
+                <p>Работали в бизнес-центре «Авангард», выстраивали процессы и закрепляли доверие первых клиентов.</p>
+              </div>
+            </article>
+
+            <article class="history__card" data-year="2012">
+              <div class="history__media">
+                <img loading="lazy" src="img/Caravan/comanda6.png" alt="Команда из 3 человек">
+              </div>
+              <div class="history__body">
+                <div class="history__year">2012</div>
+                <div class="history__progress" aria-hidden="true"></div>
+                <h3>Команда из 3 человек</h3>
+                <p>Начинали втроём: продажи, логистика и документы. Делали всё сами и отвечали за результат.</p>
+              </div>
+            </article>
+
+            <article class="history__card" data-year="2015">
+              <div class="history__media">
+                <img loading="lazy" src="img/Caravan/comanda4.png" alt="Рост и расширение">
+              </div>
+              <div class="history__body">
+                <div class="history__year">2015</div>
+                <div class="history__progress" aria-hidden="true"></div>
+                <h3>Расширение направлений</h3>
+                <p>Добавили новые маршруты и сервисы: авто, ЖД и авиа. Команда стала расти.</p>
+              </div>
+            </article>
+
+            <article class="history__card" data-year="2018">
+              <div class="history__media">
+                <img loading="lazy" src="img/Caravan/comanda2.png" alt="Новые партнёры и масштаб">
+              </div>
+              <div class="history__body">
+                <div class="history__year">2018</div>
+                <div class="history__progress" aria-hidden="true"></div>
+                <h3>Сильные партнёры</h3>
+                <p>Укрепили партнёрскую сеть, стали вести проекты с более сложной географией и требованиями.</p>
+              </div>
+            </article>
+
+            <article class="history__card" data-year="2021">
+              <div class="history__media">
+                <img loading="lazy" src="img/Caravan/comanda3.png" alt="Цифровизация процессов">
+              </div>
+              <div class="history__body">
+                <div class="history__year">2021</div>
+                <div class="history__progress" aria-hidden="true"></div>
+                <h3>Цифровизация процессов</h3>
+                <p>Автоматизировали внутренние процессы и коммуникации, ускорили обработку запросов.</p>
+              </div>
+            </article>
+
+            <article class="history__card" data-year="2024">
+              <div class="history__media">
+                <img loading="lazy" src="img/Caravan/Caravan_office.jpg" alt="Сегодняшний этап">
+              </div>
+              <div class="history__body">
+                <div class="history__year">Сегодня</div>
+                <div class="history__progress" aria-hidden="true"></div>
+                <h3>Caravan Logistics сейчас</h3>
+                <p>Команда выросла, сервис стал шире, а фокус прежний — надёжность, скорость и прозрачность.</p>
+              </div>
+            </article>
+          </div>
+
+          <button class="history__nav history__nav--next" type="button" aria-label="Вперёд"></button>
         </div>
-        <div class="block">
-          <span class="badge green" data-i18n="about.card3.badge">Авиа и море</span>
-          <h3 data-i18n="about.card3.title">Мультимодальные решения</h3>
-          <p data-i18n="about.card3.text">Сочетаем авиадоставку с автодоставкой «последней мили», организуем консолидацию грузов и страхуем риски на каждом плече.</p>
+
+        <div class="history__dots" role="tablist" aria-label="Навигация по этапам"></div>
+      </div>
+    </section>
+
+    <section class="team">
+      <div class="container">
+        <div class="team__head">
+          <h2>Наша команда</h2>
+          <p>Люди, которые стоят за развитием Caravan Logistics и ежедневно отвечают за результат.</p>
+        </div>
+
+        <div class="team__timeline">
+          <div class="team__line" aria-hidden="true"></div>
+
+          <article class="team__item">
+            <div class="team__photo">
+              <img loading="lazy" src="img/О%20нас_сотрудники/Сыргак.png" alt="Сыргак, CEO Caravan Logistics">
+            </div>
+            <div class="team__content">
+              <h3>Сыргак Орозалиев</h3>
+              <span class="team__role">CEO</span>
+              <p>Определяет стратегию развития компании, ключевые направления роста и партнёрские отношения.</p>
+            </div>
+          </article>
+
+          <article class="team__item">
+            <div class="team__photo">
+              <img loading="lazy" src="img/О%20нас_сотрудники/Мээрим.png" alt="Мээрим, генеральный директор">
+            </div>
+            <div class="team__content">
+              <h3>Мээрим Усубалиева</h3>
+              <span class="team__role">Генеральный директор</span>
+              <p>Координирует ключевые подразделения, отвечает за стабильность операционной модели и качество сервиса.</p>
+            </div>
+          </article>
+
+         
+          <article class="team__item">
+            <div class="team__photo">
+              <img loading="lazy" src="img/О%20нас_сотрудники/Индира.png" alt="Индира, Главный бухгалтер">
+            </div>
+            <div class="team__content">
+              <h3>Индира Турдалиева</h3>
+              <span class="team__role">Главный бухгалтер</span>
+              <p>Обеспечивает законность всех финансовых операций компании и несет персональную ответственность за правильность расчета налогов и сдачу отчетности перед государством.</p>
+            </div>
+
+          </article>
+          <article class="team__item">
+            <div class="team__photo">
+              <img loading="lazy" src="img/О%20нас_сотрудники/Рустам.png" alt="Рустам, руководитель логистики">
+            </div>
+            <div class="team__content">
+              <h3>Рустам Кадыркулов</h3>
+              <span class="team__role">Китай Отдел</span>
+              <p> Координирует всю цепочку поставок от китайских поставщиков до Кыргызстана и других стран СНГ, включая переговоры, контроль погрузки, расчет логистических маршрутов и решение вопросов на таможне..</p>
+            </div>
+          </article>
+
+        
+
+          <article class="team__item">
+            <div class="team__photo">
+              <img loading="lazy" src="img/О%20нас_сотрудники/Бермет.png" alt="Бермет, руководитель цифровых проектов">
+            </div>
+            <div class="team__content">
+              <h3>Бермет Султанова</h3>
+              <span class="team__role">Специалист по ТО</span>
+              <p> Готовит юридическую и финансовую документацию для легального перемещения груза через границу, минимизируя расходы и риски задержек..</p>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="testimonials__head">
+          <h2>Отзывы клиентов</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <article class="testimonial-card">
+            <div class="testimonial-card__top">
+              <div class="testimonial-avatar">
+                <img loading="lazy" src="img/Caravan/anonym.png" alt="Алексей Морозов">
+              </div>
+              <div>
+                <h3>Алексей Морозов</h3>
+                <span class="testimonial-role">Компания: Автозапчасти и комплектующие</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>Работаем с Caravan Logistics уже несколько лет. Всегда чёткие сроки, прозрачная стоимость и быстрая обратная связь. Отличный партнёр.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__top">
+              <div class="testimonial-avatar">
+                <img loading="lazy" src="img/Caravan/anonym.png" alt="Ольга Смирнова">
+              </div>
+              <div>
+                <h3>Ольга Смирнова</h3>
+                <span class="testimonial-role">Компания: Импорт товаров из Китая</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>Помогли выстроить поставки из Китая с нуля. Всё прошло быстро, без лишних затрат и с полным контролем на каждом этапе.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__top">
+              <div class="testimonial-avatar">
+                <img loading="lazy" src="img/Caravan/anonym.png" alt="Дмитрий Ковалёв">
+              </div>
+              <div>
+                <h3>Дмитрий Ковалёв</h3>
+                <span class="testimonial-role">Компания: Железнодорожные перевозки</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>Профессиональная команда, которая действительно разбирается в ЖД логистике. Все вопросы решаются оперативно.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__top">
+              <div class="testimonial-avatar">
+                <img loading="lazy" src="img/Caravan/anonym.png" alt="Анна Лебедева">
+              </div>
+              <div>
+                <h3>Анна Лебедева</h3>
+                <span class="testimonial-role">Компания: Интернет-магазин</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>Очень удобная коммуникация и понятные процессы. Сроки всегда соблюдаются, что критично для нашего бизнеса.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__top">
+              <div class="testimonial-avatar">
+                <img loading="lazy" src="img/Caravan/anonym.png" alt="Сергей Иванов">
+              </div>
+              <div>
+                <h3>Сергей Иванов</h3>
+                <span class="testimonial-role">Компания: Международные перевозки</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>Caravan Logistics помогли оптимизировать расходы и сократить время доставки. Результат превзошёл ожидания.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__top">
+              <div class="testimonial-avatar">
+                <img loading="lazy" src="img/Caravan/anonym.png" alt="Екатерина Петрова">
+              </div>
+              <div>
+                <h3>Екатерина Петрова</h3>
+                <span class="testimonial-role">Компания: FMCG-дистрибуция</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>Надёжность и ответственность — ключевые качества этой команды. Рекомендуем как долгосрочного партнёра.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__top">
+              <div class="testimonial-avatar">
+                <img loading="lazy" src="img/Caravan/anonym.png" alt="Руслан Ахметов">
+              </div>
+              <div>
+                <h3>Руслан Ахметов</h3>
+                <span class="testimonial-role">Компания: Автоперевозки</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>Чёткая организация, грамотные специалисты и честные цены. Работать с ними действительно комфортно.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__top">
+              <div class="testimonial-avatar">
+                <img loading="lazy" src="img/Caravan/anonym.png" alt="Мария Соколова">
+              </div>
+              <div>
+                <h3>Мария Соколова</h3>
+                <span class="testimonial-role">Компания: Экспорт продукции</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>Сложные маршруты были реализованы без задержек. Всегда чувствуется опыт и профессионализм.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__top">
+              <div class="testimonial-avatar">
+                <img loading="lazy" src="img/Caravan/anonym.png" alt="Андрей Волков">
+              </div>
+              <div>
+                <h3>Андрей Волков</h3>
+                <span class="testimonial-role">Компания: IT-проекты и оборудование</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>Перевозка чувствительного оборудования прошла идеально. Отдельное спасибо за внимательность к деталям.</p>
+          </article>
+
+         
+    </section>
 
   </div>  
 
@@ -113,14 +423,43 @@
                 </ul>
              </div>
              <div>
-                <h4 data-i18n="footer.contactsTitle">Наши социальные сети</h4>
-                <p data-i18n="footer.email">info@caravan-logistics.com </p>
-                <p data-i18n="footer.phone">+996 555 11 33 33</p>
+                <div class="footer-social">
+                  <h3 class="footer-social__title">Наши социальные сети</h3>
+                  <div class="footer-social__icons">
+                    <a class="footer-social__icon" href="https://wa.me/996555113333" target="_blank" rel="noopener" aria-label="WhatsApp">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7.2 19.5l.6-3.1a7.1 7.1 0 1 1 3.1 1.6l-3.7 1.5z" />
+                        <path d="M9.5 9.4c.2-.4.3-.4.5-.4h.5c.2 0 .3 0 .4.3l.6 1.5c0 .1.1.3 0 .4l-.2.4c-.1.1-.2.2 0 .4.2.3.6 1 1.4 1.6.8.7 1.5.9 1.8 1 .2.1.3 0 .4-.1l.5-.6c.1-.2.3-.2.5-.1l1.6.7c.2.1.3.2.3.3 0 .2-.1.6-.4.9-.3.3-.7.6-1.2.6-.5 0-1-.1-2-.5-1-.4-1.9-1.1-2.8-2.1-.9-1-1.5-2-1.8-2.8-.3-.8-.3-1.3-.3-1.7 0-.4.1-.8.3-1z" />
+                      </svg>
+                    </a>
+                    <a class="footer-social__icon" href="https://t.me/+996555113333" target="_blank" rel="noopener" aria-label="Telegram">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.6 4.6L3.6 11.4c-.8.3-.8 1.4.1 1.6l4.5 1.4 1.7 5.2c.2.7 1.1.9 1.6.4l2.6-2.4 4.6 3.4c.6.4 1.4.1 1.5-.6l2.6-14.1c.2-.8-.6-1.4-1.3-1.1z" />
+                      </svg>
+                    </a>
+                    <a class="footer-social__icon" href="https://www.instagram.com/caravan_logistics_com?igsh=dWprNTB4MnB4MjVp" target="_blank" rel="noopener" aria-label="Instagram">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="5" y="5" width="14" height="14" rx="4" />
+                        <circle cx="12" cy="12" r="3.5" />
+                        <circle cx="16.5" cy="7.5" r="1" />
+                      </svg>
+                    </a>
+                  </div>
+                  <a class="footer-social__email" href="mailto:info@caravan-logistics.com">info@caravan-logistics.com</a>
+                  <a class="footer-social__phone" href="tel:+996555113333">+996 555 11 33 33</a>
+                  <div class="footer-social__bitrix">
+                    <a href="https://crm.caravan-logistics.com" target="_blank" rel="noopener">
+                      <img src="img/Logos/bitrix24.svg" alt="Bitrix24">
+                    </a>
+                  </div>
+                </div>
              </div>
     </div>
     <hr>
     <p data-i18n="footer.copyright">Copyright ® Kaliev Salavat All rights Reserved</p>
   </footer>
+
+
   <script src="js/main.js"></script>
 </body>
 

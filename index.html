@@ -20,12 +20,33 @@
                 <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
                 <li><a href ="portfolio.html" data-i18n="nav.news">Новости</a></li>
                 <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
-            </ul>
+            
+                    <li class="nav-services nav-services--mobile">
+                        <div class="mobile-menu__divider"></div>
+                        <button class="mobile-menu__accordion" type="button" aria-expanded="true" data-accordion="services">Услуги <span class="mobile-menu__chev">▾</span></button>
+                        <div class="mobile-menu__submenu is-open" data-submenu="services">
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-auto.html">Автоперевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-rail.html">Железнодорожные перевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-multimodal.html">Мультимодальные перевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-broker.html">Таможенный брокер</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-china.html">Китай</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-air.html">Авиаперевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-warehousing.html">Складские услуги</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-insurance.html">Страхование</a>
+                        </div>
+                    </li>
+                </ul>
         </nav>
-        <div class="lang-switcher">
-            <button type="button" class="active" data-lang="ru" data-i18n="lang.ru">RU</button>
-            <button type="button" data-lang="en" data-i18n="lang.en">EN</button>
-            <button type="button" data-lang="zh" data-i18n="lang.zh">中文</button>
+        <div class="lang">
+            <button class="lang__btn" id="langBtn" type="button" aria-expanded="false">
+                <span class="lang__current" id="langCurrent">RU</span>
+                <span class="lang__chev">▾</span>
+            </button>
+            <div class="lang__menu" id="langMenu" role="menu">
+                <button class="lang__item" data-lang="ru" role="menuitem" data-i18n="lang.ru">RU</button>
+                <button class="lang__item" data-lang="en" role="menuitem" data-i18n="lang.en">EN</button>
+                <button class="lang__item" data-lang="zh" role="menuitem" data-i18n="lang.zh">中文</button>
+            </div>
         </div>
     </header>
 
@@ -41,11 +62,11 @@
             </div>
         </div>
     </div>
+
     <div class="container trending">
         <div class="services-header">
             <h3 data-i18n="services.title">Наши услуги</h3>
             <div class="services-actions">
-                <a href="#services" class="see-all" data-i18n="services.more">Все услуги</a>
                 <div class="services-arrows">
                     <button class="services-arrow" type="button" data-direction="prev" aria-label="Прокрутить услуги влево">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -113,7 +134,7 @@
         <p data-i18n="faq.text">Мы подготовили краткие подсказки по стоимости, срокам и документам. Не нашли нужный ответ — оставьте заявку, и логист свяжется с вами в течение нескольких минут.</p>
         <div class="info">
             <div class="block faq-card" style="--popup-accent:#f97316;">
-                <img loading="lazy" src="img/Features/feature1.svg" alt="Иконка стоимости доставки">
+                <img loading="lazy" src="img/Caravan_Brandbook/1.png" alt="Иконка стоимости доставки">
                 <div class="faq-question">
                     <p data-i18n="faq.q1">Сколько стоит доставка фуры по СНГ?</p>
                     <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
@@ -125,7 +146,7 @@
                 </div>
             </div>
             <div class="block faq-card" style="--popup-accent:#facc15;">
-                <img loading="lazy" src="img/Features/feature2.svg" alt="Иконка времени оформления">
+                <img loading="lazy" src="img/Caravan_Brandbook/2.png" alt="Иконка времени оформления">
                 <div class="faq-question">
                     <p data-i18n="faq.q2">Сколько времени занимает оформление вагонов на границе?</p>
                     <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
@@ -137,7 +158,7 @@
                 </div>
             </div>
             <div class="block faq-card" style="--popup-accent:#22d3ee;">
-                <img loading="lazy" src="img/Features/feature3.svg" alt="Иконка списка документов">
+                <img loading="lazy" src="img/Caravan_Brandbook/3.png" alt="Иконка списка документов">
                 <div class="faq-question">
                     <p data-i18n="faq.q3">Какие документы нужны для авиа и мультимодальных перевозок?</p>
                     <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
@@ -149,7 +170,7 @@
                 </div>
             </div>
             <div class="block faq-card" style="--popup-accent:#a855f7;">
-                <img loading="lazy" src="img/Features/feature4.svg" alt="Иконка сборного груза">
+                <img loading="lazy" src="img/Caravan_Brandbook/8.png" alt="Иконка сборного груза">
                 <div class="faq-question">
                     <p data-i18n="faq.q4">Можно ли рассчитать сборный груз из Китая?</p>
                     <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
@@ -161,7 +182,7 @@
                 </div>
             </div>
             <div class="block faq-card" style="--popup-accent:#34d399;">
-                <img loading="lazy" src="img/Features/feature5.svg" alt="Иконка сертификации">
+                <img loading="lazy" src="img/Caravan_Brandbook/10.png" alt="Иконка сертификации">
                 <div class="faq-question">
                     <p data-i18n="faq.q5">Помогаете ли с кодами ТН ВЭД и сертификацией?</p>
                     <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
@@ -173,7 +194,7 @@
                 </div>
             </div>
             <div class="block faq-card" style="--popup-accent:#fb7185;">
-                <img loading="lazy" src="img/Features/feature6.svg" alt="Иконка отслеживания">
+                <img loading="lazy" src="img/Caravan_Brandbook/7.png" alt="Иконка отслеживания">
                 <div class="faq-question">
                     <p data-i18n="faq.q6">Как отследить груз онлайн?</p>
                     <button class="faq-trigger" type="button" aria-label="Показать ответ" aria-expanded="false">
@@ -272,14 +293,43 @@
                 </ul>
              </div>
              <div>
-                <h4 data-i18n="footer.contactsTitle">Наши социальные сети</h4>
-                <p data-i18n="footer.email">info@caravan-logistics.com </p>
-                <p data-i18n="footer.phone">+996 555 11 33 33</p>
+                <div class="footer-social">
+                  <h3 class="footer-social__title">Наши социальные сети</h3>
+                  <div class="footer-social__icons">
+                    <a class="footer-social__icon" href="https://wa.me/996555113333" target="_blank" rel="noopener" aria-label="WhatsApp">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7.2 19.5l.6-3.1a7.1 7.1 0 1 1 3.1 1.6l-3.7 1.5z" />
+                        <path d="M9.5 9.4c.2-.4.3-.4.5-.4h.5c.2 0 .3 0 .4.3l.6 1.5c0 .1.1.3 0 .4l-.2.4c-.1.1-.2.2 0 .4.2.3.6 1 1.4 1.6.8.7 1.5.9 1.8 1 .2.1.3 0 .4-.1l.5-.6c.1-.2.3-.2.5-.1l1.6.7c.2.1.3.2.3.3 0 .2-.1.6-.4.9-.3.3-.7.6-1.2.6-.5 0-1-.1-2-.5-1-.4-1.9-1.1-2.8-2.1-.9-1-1.5-2-1.8-2.8-.3-.8-.3-1.3-.3-1.7 0-.4.1-.8.3-1z" />
+                      </svg>
+                    </a>
+                    <a class="footer-social__icon" href="https://t.me/+996555113333" target="_blank" rel="noopener" aria-label="Telegram">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.6 4.6L3.6 11.4c-.8.3-.8 1.4.1 1.6l4.5 1.4 1.7 5.2c.2.7 1.1.9 1.6.4l2.6-2.4 4.6 3.4c.6.4 1.4.1 1.5-.6l2.6-14.1c.2-.8-.6-1.4-1.3-1.1z" />
+                      </svg>
+                    </a>
+                    <a class="footer-social__icon" href="https://www.instagram.com/caravan_logistics_com?igsh=dWprNTB4MnB4MjVp" target="_blank" rel="noopener" aria-label="Instagram">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="5" y="5" width="14" height="14" rx="4" />
+                        <circle cx="12" cy="12" r="3.5" />
+                        <circle cx="16.5" cy="7.5" r="1" />
+                      </svg>
+                    </a>
+                  </div>
+                  <a class="footer-social__email" href="mailto:info@caravan-logistics.com">info@caravan-logistics.com</a>
+                  <a class="footer-social__phone" href="tel:+996555113333">+996 555 11 33 33</a>
+                  <div class="footer-social__bitrix">
+                    <a href="https://crm.caravan-logistics.com" target="_blank" rel="noopener">
+                      <img src="img/Logos/bitrix24.svg" alt="Bitrix24">
+                    </a>
+                  </div>
+                </div>
              </div>
     </div>
     <hr>
     <p data-i18n="footer.copyright">Copyright ® Kaliev Salavat All rights Reserved</p>
   </footer>
+
+
   <script src="js/main.js"></script>
 </body>
 

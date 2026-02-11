@@ -228,6 +228,12 @@ const translations = {
       'portfolio.heroText':
         'Рассказываем о тарифах, маршрутах и технологиях Caravan Logistics для авто, ЖД и авиа направлений.',
       'portfolio.search': 'Поиск по новостям',
+      'portfolio.filter.all': 'Все',
+      'portfolio.filter.auto': 'Авто',
+      'portfolio.filter.rail': 'ЖД',
+      'portfolio.filter.china': 'Китай',
+      'portfolio.filter.it': 'IT проекты',
+      'portfolio.empty': 'Пока нет публикаций в этом разделе.',
       'portfolio.feature1.badge': 'Caravan Аналитика',
       'portfolio.feature1.time': '2 мин',
       'portfolio.feature1.title': 'Компания Caravan Logistics поздравила партнёров с наступающим Новым годом',
@@ -575,6 +581,12 @@ const translations = {
       'portfolio.heroText':
         'We share tariffs, routes and technology updates from Caravan Logistics for road, rail and air services.',
       'portfolio.search': 'Search news',
+      'portfolio.filter.all': 'All',
+      'portfolio.filter.auto': 'Road',
+      'portfolio.filter.rail': 'Rail',
+      'portfolio.filter.china': 'China',
+      'portfolio.filter.it': 'IT projects',
+      'portfolio.empty': 'No posts in this section yet.',
       'portfolio.feature1.badge': 'Caravan Analytics',
       'portfolio.feature1.time': '2 min',
       'portfolio.feature1.title': 'Caravan Logistics wished partners a Happy New Year',
@@ -905,6 +917,12 @@ const translations = {
       'portfolio.heroTitle': '物流资讯与洞察',
       'portfolio.heroText': '分享 Caravan Logistics 在公路、铁路与航空领域的费率、路线与技术更新。',
       'portfolio.search': '搜索资讯',
+      'portfolio.filter.all': '全部',
+      'portfolio.filter.auto': '公路',
+      'portfolio.filter.rail': '铁路',
+      'portfolio.filter.china': '中国',
+      'portfolio.filter.it': 'IT 项目',
+      'portfolio.empty': '该分类暂无内容。',
       'portfolio.feature1.badge': '分析',
       'portfolio.feature1.time': '2 分钟',
       'portfolio.feature1.title': 'Caravan Logistics 送上新年祝福',
@@ -1035,9 +1053,24 @@ document.addEventListener('DOMContentLoaded', () => {
       header.appendChild(toggle);
     }
 
+    const accordion = nav.querySelector('.mobile-menu__accordion');
+    const submenu = nav.querySelector('.mobile-menu__submenu');
+    if (accordion && submenu) {
+      accordion.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const isOpen = !submenu.classList.contains('is-open');
+        submenu.classList.toggle('is-open', isOpen);
+        accordion.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+
     const closeNav = () => {
       document.body.classList.remove('nav-open');
       toggle?.setAttribute('aria-expanded', 'false');
+      if (accordion && submenu) {
+        submenu.classList.remove('is-open');
+        accordion.setAttribute('aria-expanded', 'false');
+      }
     };
 
     toggle.addEventListener('click', (event) => {
@@ -1113,6 +1146,179 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', updateButtons);
     updateButtons();
+  };
+
+  const initHistorySlider = () => {
+    const section = document.querySelector('.history');
+    if (!section) return;
+    const track = section.querySelector('.history__track');
+    const cards = Array.from(section.querySelectorAll('.history__card'));
+    const dotsContainer = section.querySelector('.history__dots');
+    const prevBtn = section.querySelector('.history__nav--prev');
+    const nextBtn = section.querySelector('.history__nav--next');
+
+    if (!track || !dotsContainer || cards.length === 0) return;
+
+    dotsContainer.innerHTML = '';
+    const dots = cards.map((card, index) => {
+      const year = card.dataset.year || card.querySelector('.history__year')?.textContent?.trim();
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'history__dot';
+      dot.setAttribute('aria-label', year ? `Этап ${year}` : `Этап ${index + 1}`);
+      dot.addEventListener('click', () => {
+        card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+      dotsContainer.appendChild(dot);
+      return dot;
+    });
+
+    const setActive = (index) => {
+      cards.forEach((card, idx) => {
+        card.classList.toggle('is-active', idx === index);
+      });
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('is-active', idx === index);
+      });
+    };
+
+    const getStep = () => {
+      const card = cards[0];
+      if (!card) return track.clientWidth;
+      const styles = window.getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap || styles.gap || '0');
+      return card.getBoundingClientRect().width + gap;
+    };
+
+    const updateNav = () => {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (prevBtn) {
+        prevBtn.disabled = track.scrollLeft <= 1;
+      }
+      if (nextBtn) {
+        nextBtn.disabled = track.scrollLeft >= maxScroll - 1;
+      }
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: getStep(), behavior: 'smooth' });
+      });
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting);
+        if (!visible.length) return;
+        visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        const index = cards.indexOf(visible[0].target);
+        if (index >= 0) setActive(index);
+      },
+      {
+        root: track,
+        threshold: [0.4, 0.6, 0.8]
+      }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    const startDrag = (event) => {
+      if (event.button !== undefined && event.button !== 0) return;
+      isDown = true;
+      track.classList.add('is-dragging');
+      startX = event.pageX;
+      scrollLeft = track.scrollLeft;
+    };
+
+    const stopDrag = () => {
+      if (!isDown) return;
+      isDown = false;
+      track.classList.remove('is-dragging');
+    };
+
+    const moveDrag = (event) => {
+      if (!isDown) return;
+      event.preventDefault();
+      const walk = event.pageX - startX;
+      track.scrollLeft = scrollLeft - walk;
+    };
+
+    track.addEventListener('mousedown', startDrag);
+    track.addEventListener('mousemove', moveDrag);
+    track.addEventListener('mouseleave', stopDrag);
+    window.addEventListener('mouseup', stopDrag);
+
+    track.addEventListener('scroll', () => {
+      window.requestAnimationFrame(updateNav);
+    });
+
+    window.addEventListener('resize', updateNav);
+    setActive(0);
+    updateNav();
+  };
+
+  const initTeamTimeline = () => {
+    const section = document.querySelector('.team');
+    if (!section) return;
+    const items = Array.from(section.querySelectorAll('.team__item'));
+    if (items.length === 0) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      items.forEach((item) => item.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    items.forEach((item) => observer.observe(item));
+  };
+
+  const initTestimonials = () => {
+    const section = document.querySelector('.testimonials');
+    if (!section) return;
+    const cards = Array.from(section.querySelectorAll('.testimonial-card'));
+    if (cards.length === 0) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      cards.forEach((card) => card.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    cards.forEach((card) => observer.observe(card));
   };
 
   const ensureModal = () => {
@@ -1341,6 +1547,44 @@ document.addEventListener('DOMContentLoaded', () => {
     applyHeight();
   };
 
+  const initNewsFilters = () => {
+    if (page !== 'portfolio') return;
+    const filterBar = document.querySelector('.news-filters');
+    if (!filterBar) return;
+    const buttons = Array.from(filterBar.querySelectorAll('.news-filter'));
+    const cards = Array.from(document.querySelectorAll('.news-card'));
+    const emptyState = document.querySelector('.news-empty');
+    if (!buttons.length || !cards.length) return;
+
+    const applyFilter = (filter) => {
+      let visibleCount = 0;
+      buttons.forEach((button) => {
+        button.classList.toggle('is-active', button.dataset.filter === filter);
+      });
+      cards.forEach((card) => {
+        const categories = (card.dataset.category || '').split(/\s+/).filter(Boolean);
+        const isMatch = filter === 'all' || categories.includes(filter);
+        card.classList.toggle('is-hidden', !isMatch);
+        card.setAttribute('aria-hidden', isMatch ? 'false' : 'true');
+        if (isMatch) visibleCount += 1;
+      });
+      if (emptyState) {
+        emptyState.hidden = visibleCount !== 0;
+      }
+    };
+
+    filterBar.addEventListener('click', (event) => {
+      const button = event.target.closest('.news-filter');
+      if (!button) return;
+      event.preventDefault();
+      const filter = button.dataset.filter || 'all';
+      applyFilter(filter);
+    });
+
+    const initial = buttons.find((button) => button.classList.contains('is-active'))?.dataset.filter || 'all';
+    applyFilter(initial);
+  };
+
   const initPartnerPopups = () => {
     const logos = document.querySelectorAll('.partners__logo');
     if (!logos.length) return;
@@ -1417,6 +1661,64 @@ document.addEventListener('DOMContentLoaded', () => {
         closePopup();
       }
     });
+  };
+
+  let updateLanguageMenu = null;
+
+  const initLanguageMenu = () => {
+    const root = document.querySelector('.lang');
+    if (!root) return null;
+    const btn = root.querySelector('#langBtn');
+    const menu = root.querySelector('#langMenu');
+    const current = root.querySelector('#langCurrent');
+    if (!btn || !menu || !current) return null;
+
+    const setCurrentLabel = (lang) => {
+      const label = lang === 'zh' ? '中文' : lang === 'en' ? 'EN' : 'RU';
+      current.textContent = label;
+      menu.querySelectorAll('.lang__item').forEach((item) => {
+        item.classList.toggle('is-active', item.dataset.lang === lang);
+      });
+    };
+
+    const openMenu = () => {
+      menu.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeMenu = () => {
+      menu.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    };
+
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      menu.classList.contains('is-open') ? closeMenu() : openMenu();
+    });
+
+    menu.addEventListener('click', (event) => {
+      const item = event.target.closest('.lang__item');
+      if (!item) return;
+      const lang = item.dataset.lang;
+      if (lang) {
+        applyLanguage(lang);
+      }
+      closeMenu();
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!root.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    });
+
+    return setCurrentLabel;
   };
 
   const initContactWidget = () => {
@@ -1608,21 +1910,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.documentElement.lang = lang === 'zh' ? 'zh' : lang === 'en' ? 'en' : 'ru';
     localStorage.setItem('lang', lang);
-    document.querySelectorAll('.lang-switcher button').forEach((btn) => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
+    if (typeof updateLanguageMenu === 'function') {
+      updateLanguageMenu(lang);
+    }
     highlightServiceNav();
     initBlurNumberHighlights();
   };
-
-  document.body.addEventListener('click', (event) => {
-    const btn = event.target.closest('.lang-switcher button');
-    if (!btn) return;
-    event.preventDefault();
-    if (btn.dataset.lang) {
-      applyLanguage(btn.dataset.lang);
-    }
-  });
 
   window.checkEmail = function checkEmail() {
     const email = document.querySelector('#emailField')?.value || '';
@@ -1638,9 +1931,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqPopups();
   initSnowfall();
   initFeatureThumbHeights();
+  initNewsFilters();
   initPartnerPopups();
+  updateLanguageMenu = initLanguageMenu();
   initContactWidget();
   initMobileNav();
   initServicesSlider();
+  initHistorySlider();
+  initTeamTimeline();
+  initTestimonials();
   applyLanguage(currentLang);
 });
