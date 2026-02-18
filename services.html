@@ -7,7 +7,7 @@
     <title>Caravan Logistics — услуги</title>
     <link rel="stylesheet" href="CSS/main.css">
 </head>
-<body data-page="services">
+<body data-page="services" data-service="auto">
     <div class="wrapper">
         <header class="container">
             <a class="logo" href="index.html">
@@ -53,60 +53,33 @@
         <section class="services-hero">
             <div class="container">
                 <div class="services-hero__text">
-                    <h1 data-i18n="services.heroTitle">Комплексные логистические услуги</h1>
-                    <p data-i18n="services.heroText">Подберём решение под отрасль и маршрут: от наземных перевозок до брокерского сопровождения. Выберите направление и получите подробное описание.</p>
+                    <h1 data-i18n="services.heroTitle">Автоперевозка</h1>
+                    <p data-i18n="services.heroText">Наша компания предоставляет профессиональные услуги автогрузоперевозок как внутри страны, так и для международных поставок. Мы осуществляем надёжную и оперативную доставку грузов из Кыргызстана в Россию, а также импорт товаров из Китая в Кыргызстан с использованием современных грузовых фур, обеспечивая безопасность и своевременность транспортировки.</p>
                     <button class="btn-primary" data-modal="callback" data-i18n="services.heroButton">Связаться со специалистом</button>
                 </div>
-                <img loading="lazy" src="img/Main_images/shui-miles-IWPTBX8ugjs-unsplash.jpg" alt="Контейнерный терминал Caravan Logistics">
             </div>
         </section>
 
-        <section class="services-grid-section">
-            <div class="container">
-                <h2 data-i18n="services.gridTitle">Наши услуги</h2>
-                <p data-i18n="services.gridSubtitle">Выберите направление, чтобы узнать детали и посмотреть примеры проектов.</p>
-                <div class="services-grid">
-                    <a class="service-card" href="service-auto.html">
-                        <img loading="lazy" src="img/Main_images/robson-hatsukami-morgan-NKr0qBAkU4s-unsplash.jpg" alt="Автоперевозки">
-                        <h3 data-i18n="services.cards.auto.title">Автоперевозки</h3>
-                        <p data-i18n="services.cards.auto.text">Магистральные автоколонны по СНГ, мониторинг рейсов и контроль доставки 24/7.</p>
-                    </a>
-                    <a class="service-card" href="service-rail.html">
-                        <img loading="lazy" src="img/Main_images/shui-miles-IWPTBX8ugjs-unsplash.jpg" alt="Железнодорожные перевозки">
-                        <h3 data-i18n="services.cards.rail.title">Железнодорожные перевозки</h3>
-                        <p data-i18n="services.cards.rail.text">Резервируем вагоны, сопровождаем на погранпереходах и оперативно оформляем документы.</p>
-                    </a>
-                    <a class="service-card" href="service-multimodal.html">
-                        <img loading="lazy" src="img/Main_images/shaah-shahidh--subrrYxv8A-unsplash.jpg" alt="Мультимодальные перевозки">
-                        <h3 data-i18n="services.cards.multimodal.title">Мультимодальные перевозки</h3>
-                        <p data-i18n="services.cards.multimodal.text">Комбинируем авто, ЖД, авиа и море для срочных и сложных маршрутов.</p>
-                    </a>
-                    <a class="service-card" href="service-broker.html">
-                        <img loading="lazy" src="img/Main_images/Rectangle 276-5.png" alt="Таможенный брокер">
-                        <h3 data-i18n="services.cards.broker.title">Таможенный брокер</h3>
-                        <p data-i18n="services.cards.broker.text">Готовим декларации, сертификаты и проводим груз через контроль.</p>
-                    </a>
-                    <a class="service-card" href="service-china.html">
-                        <img loading="lazy" src="img/Main_images/h-co-3JFVNo4ukKQ-unsplash.jpg" alt="Китай">
-                        <h3 data-i18n="services.cards.china.title">Китай</h3>
-                        <p data-i18n="services.cards.china.text">Организуем экспорт и импорт из КНР, обеспечиваем консолидацию и страхование.</p>
-                    </a>
-                    <a class="service-card" href="service-air.html">
-                        <img loading="lazy" src="img/Main_images/jake-weirick-mwXtmsTGlzE-unsplash.jpg" alt="Авиаперевозки">
-                        <h3 data-i18n="services.cards.air.title">Авиаперевозки</h3>
-                        <p data-i18n="services.cards.air.text">Чартеры и регулярные рейсы с приоритетной обработкой и отслеживанием.</p>
-                    </a>
-                    <a class="service-card" href="service-warehousing.html">
-                        <img loading="lazy" src="img/Main_images/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg" alt="Складские услуги">
-                        <h3 data-i18n="services.cards.warehousing.title">Складские услуги</h3>
-                        <p data-i18n="services.cards.warehousing.text">Терминальная обработка, кросс-докинг и ответственное хранение.</p>
-                    </a>
-                    <a class="service-card" href="service-insurance.html">
-                        <img loading="lazy" src="img/Main_images/vlad-deep-mCqi3MljC4E-unsplash.jpg" alt="Страхование">
-                        <h3 data-i18n="services.cards.insurance.title">Страхование</h3>
-                        <p data-i18n="services.cards.insurance.text">Защита грузов от рисков на всех этапах маршрута.</p>
-                    </a>
-                </div>
+        <section class="service-detail">
+            <div class="container service-detail__inner">
+                <aside class="service-nav">
+                    <h4 data-i18n="service.sidebarTitle">Наши услуги</h4>
+                    <ul>
+                        <li><a href="service-auto.html" data-service-link="auto" data-i18n="services.cards.auto.title">Автоперевозки</a></li>
+                        <li><a href="service-rail.html" data-service-link="rail" data-i18n="services.cards.rail.title">Железнодорожные перевозки</a></li>
+                        <li><a href="service-multimodal.html" data-service-link="multimodal" data-i18n="services.cards.multimodal.title">Мультимодальные перевозки</a></li>
+                        <li><a href="service-broker.html" data-service-link="broker" data-i18n="services.cards.broker.title">Таможенный брокер</a></li>
+                        <li><a href="service-china.html" data-service-link="china" data-i18n="services.cards.china.title">Китай</a></li>
+                        <li><a href="service-air.html" data-service-link="air" data-i18n="services.cards.air.title">Авиаперевозки</a></li>
+                        <li><a href="service-warehousing.html" data-service-link="warehousing" data-i18n="services.cards.warehousing.title">Складские услуги</a></li>
+                        <li><a href="service-insurance.html" data-service-link="insurance" data-i18n="services.cards.insurance.title">Страхование</a></li>
+                    </ul>
+                </aside>
+                <article class="service-content">
+                    <h2 data-i18n="services.auto.bodyTitle">Что входит в автоперевозки</h2>
+                    <p data-i18n="services.auto.bodyParagraph1">Подбираем тентованные, рефрижераторные и специализированные машины под конкретный груз. Планируем маршруты с учётом сезонов, лимитов по осям и специальных разрешений. Водители проходят инструктаж, а каждое транспортное средство оснащено GPS для круглосуточного мониторинга.</p>
+                    <p data-i18n="services.auto.bodyParagraph2">Берём на себя оформление путевых листов, CMR, TIR, пропусков и страховых полисов. Личный координатор отслеживает прохождение границ и оперативно информирует клиента. Благодаря собственной сети партнёров мы минимизируем простои и доставляем груз в согласованные сроки.</p>
+                </article>
             </div>
         </section>
 

@@ -75,6 +75,10 @@ const translations = {
       'banner.title': 'Проверенная команда',
       'banner.text':
         'Берём на себя таможенное оформление любой сложности, оформляем разрешительные документы и страхуем грузы. Для каждого клиента разрабатываем оптимальный маршрут — от магистральных автоколонн до мультимодальных схем с авиа и морем.',
+      'index.stats.title': 'Caravan Logistics в цифрах',
+      'index.stats.item1': 'Отправок и доставок выполнено по международным маршрутам',
+      'index.stats.item2': 'Поставок сопровождено командой логистов и брокеров',
+      'index.stats.item3': 'Клиентов продолжают работать с Caravan Logistics ежегодно',
       'faq.title': 'Ответы на популярные вопросы',
       'faq.text':
         'Мы подготовили краткие подсказки по стоимости, срокам и документам. Не нашли нужный ответ — оставьте заявку, и логист свяжется с вами в течение нескольких минут.',
@@ -166,10 +170,15 @@ const translations = {
       'partner.kumtor.stats': 'ведём горнопромышленные поставки без простоев.'
     },
     services: {
-      'services.heroTitle': 'Комплексные логистические услуги',
+      'services.heroTitle': 'Автоперевозка',
       'services.heroText':
-        'Подберём решение под отрасль и маршрут: от наземных перевозок до брокерского сопровождения. Выберите направление и получите подробное описание.',
-      'services.heroButton': 'Связаться со специалистом',
+        'Наша компания предоставляет профессиональные услуги автогрузоперевозок как внутри страны, так и для международных поставок. Мы осуществляем надёжную и оперативную доставку грузов из Кыргызстана в Россию, а также импорт товаров из Китая в Кыргызстан с использованием современных грузовых фур, обеспечивая безопасность и своевременность транспортировки.',
+      'services.heroButton': 'Связь со специалистом',
+      'services.auto.bodyTitle': 'Что входит в автоперевозки',
+      'services.auto.bodyParagraph1':
+        'Подбираем тентованные, рефрижераторные и специализированные машины под конкретный груз. Планируем маршруты с учётом сезонов, лимитов по осям и специальных разрешений. Водители проходят инструктаж, а каждое транспортное средство оснащено GPS для круглосуточного мониторинга.',
+      'services.auto.bodyParagraph2':
+        'Берём на себя оформление путевых листов, CMR, TIR, пропусков и страховых полисов. Личный координатор отслеживает прохождение границ и оперативно информирует клиента. Благодаря собственной сети партнёров мы минимизируем простои и доставляем груз в согласованные сроки.',
       'services.gridTitle': 'Наши услуги',
       'services.gridSubtitle': 'Выберите направление, чтобы узнать детали и посмотреть примеры проектов.',
       'services.cards.auto.title': 'Автоперевозки',
@@ -427,6 +436,10 @@ const translations = {
       'banner.title': 'Certified team',
       'banner.text':
         'We handle customs clearance, permits and insurance. Every client gets the optimal route—from long-haul convoys to multimodal schemes with air or sea legs.',
+      'index.stats.title': 'Caravan Logistics by the numbers',
+      'index.stats.item1': 'Shipments and deliveries completed on international routes',
+      'index.stats.item2': 'Supply projects managed by our logistics and brokerage teams',
+      'index.stats.item3': 'Clients continue to work with Caravan Logistics every year',
       'faq.title': 'Popular questions',
       'faq.text':
         'Here are quick tips on pricing, timing and documents. Didn’t find the answer? Leave a request and a logistics expert will call you back within minutes.',
@@ -519,10 +532,15 @@ const translations = {
       'partner.kumtor.stats': 'Supporting mining logistics without downtime.'
     },
     services: {
-      'services.heroTitle': 'Integrated logistics services',
+      'services.heroTitle': 'Road freight',
       'services.heroText':
-        'We tailor transport and brokerage solutions for every route. Pick a focus area to learn the details and review available options.',
+        'We provide professional road freight services for domestic and international routes. The team organizes reliable deliveries from Kyrgyzstan to Russia and imports from China to Kyrgyzstan using modern trucks with strict safety and timing control.',
       'services.heroButton': 'Talk to a specialist',
+      'services.auto.bodyTitle': 'What road freight includes',
+      'services.auto.bodyParagraph1':
+        'We assign tilt, reefer and specialized trucks for each shipment. Routes are planned with seasonal constraints, axle limits and permit requirements in mind. Drivers are briefed before departure and every vehicle is monitored via GPS 24/7.',
+      'services.auto.bodyParagraph2':
+        'We handle waybills, CMR, TIR, transit passes and insurance. A dedicated coordinator tracks border checkpoints and keeps the client informed. Our partner network helps reduce idle time and meet agreed delivery windows.',
       'services.gridTitle': 'Our services',
       'services.gridSubtitle': 'Choose a card to open a dedicated page with a full description.',
       'services.cards.auto.title': 'Road freight',
@@ -779,6 +797,10 @@ const translations = {
       'banner.title': '认证运营团队',
       'banner.text':
         '我们负责各类报关、许可与保险，为每位客户设计最优线路——从干线车队到航空+海运的多式联运方案。',
+      'index.stats.title': 'Caravan Logistics 数据概览',
+      'index.stats.item1': '已完成的国际线路运输与交付任务',
+      'index.stats.item2': '由物流与报关团队全程管理的供应项目',
+      'index.stats.item3': '每年持续与 Caravan Logistics 合作的客户占比',
       'faq.title': '常见问题',
       'faq.text':
         '这里汇总了费用、时效及文件要求。如未找到答案，请提交申请，我们会在几分钟内回电。',
@@ -862,9 +884,12 @@ const translations = {
       'partner.kumtor.stats': '支持矿业供应链，无停滞。'
     },
     services: {
-      'services.heroTitle': '一站式物流解决方案',
-      'services.heroText': '为每条路线匹配运输与报关服务，覆盖公路、铁路、航空、仓储与保险。选择需要的方向即可查看详细介绍。',
+      'services.heroTitle': '公路运输',
+      'services.heroText': '我们提供专业的国内与国际公路运输服务，使用现代化卡车保障从吉尔吉斯斯坦到俄罗斯以及中国到吉尔吉斯斯坦的货运时效与安全。',
       'services.heroButton': '联系专家',
+      'services.auto.bodyTitle': '公路运输内容',
+      'services.auto.bodyParagraph1': '根据货物类型匹配篷车、冷藏车和特种车辆；结合季节、轴载限制和许可要求规划路线；所有车辆配备GPS并全天监控。',
+      'services.auto.bodyParagraph2': '负责办理运单、CMR、TIR、通行许可和保险文件；专属协调员跟进通关节点并实时反馈，依托合作网络减少等待并按时交付。',
       'services.gridTitle': '我们的服务',
       'services.gridSubtitle': '点击卡片了解详情并选择合适的合作方式。',
       'services.cards.auto.title': '公路运输',
@@ -1319,6 +1344,64 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     cards.forEach((card) => observer.observe(card));
+  };
+
+  const initLogisticsCounters = () => {
+    if (document.body.dataset.page !== 'index') return;
+    const section = document.querySelector('.logistics-stats');
+    if (!section) return;
+
+    const counterNodes = Array.from(section.querySelectorAll('[data-counter-target]'));
+    if (!counterNodes.length) return;
+
+    const formatValue = (value) => new Intl.NumberFormat('en-US').format(value);
+    const setValue = (node, value) => {
+      const suffix = node.dataset.counterSuffix || '';
+      node.textContent = `${formatValue(value)}${suffix}`;
+    };
+
+    counterNodes.forEach((node) => setValue(node, 1));
+
+    const targets = counterNodes.map((node) => Number(node.dataset.counterTarget) || 0);
+    const duration = 3000;
+    let started = false;
+
+    const runAnimation = () => {
+      if (started) return;
+      started = true;
+      const startValue = 1;
+      const startTime = performance.now();
+
+      const frame = (now) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        counterNodes.forEach((node, index) => {
+          const target = targets[index];
+          const value = Math.floor(startValue + (target - startValue) * progress);
+          setValue(node, value);
+        });
+        if (progress < 1) {
+          requestAnimationFrame(frame);
+        } else {
+          counterNodes.forEach((node, index) => setValue(node, targets[index]));
+        }
+      };
+
+      requestAnimationFrame(frame);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            runAnimation();
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.35, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    observer.observe(section);
   };
 
   const ensureModal = () => {
@@ -1940,5 +2023,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHistorySlider();
   initTeamTimeline();
   initTestimonials();
+  initLogisticsCounters();
   applyLanguage(currentLang);
 });
