@@ -160,6 +160,8 @@ const translations = {
       'partner.lg.stats': 'перевезли 1,2 млн единиц электроники.',
       'partner.termoplex.since': 'С 2017 года',
       'partner.termoplex.stats': 'организуем 50 температурных маршрутов в год.',
+      'partner.penopleks.since': 'С 2016 года',
+      'partner.penopleks.stats': 'обеспечиваем регулярные поставки теплоизоляционных материалов по СНГ.',
       'partner.fabrika.since': 'С 2018 года',
       'partner.fabrika.stats': 'закрыли 90 проектов девелоперов.',
       'partner.augrand.since': 'С 2013 года',
@@ -522,6 +524,8 @@ const translations = {
       'partner.lg.stats': 'Shipped 1.2M electronics units.',
       'partner.termoplex.since': 'Since 2017',
       'partner.termoplex.stats': '50 temperature-controlled routes yearly.',
+      'partner.penopleks.since': 'Since 2016',
+      'partner.penopleks.stats': 'Regular deliveries of insulation materials across the CIS.',
       'partner.fabrika.since': 'Since 2018',
       'partner.fabrika.stats': 'Completed 90 developer projects.',
       'partner.augrand.since': 'Since 2013',
@@ -874,6 +878,8 @@ const translations = {
       'partner.lg.stats': '运输120万台电子设备。',
       'partner.termoplex.since': '自2017年起合作',
       'partner.termoplex.stats': '每年执行50条控温路线。',
+      'partner.penopleks.since': '自2016年起合作',
+      'partner.penopleks.stats': '持续为独联体市场配送保温隔热材料。',
       'partner.fabrika.since': '自2018年起合作',
       'partner.fabrika.stats': '完成90个地产项目配送。',
       'partner.augrand.since': '自2013年起合作',
@@ -1129,50 +1135,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const initServicesSlider = () => {
-    const slider = document.querySelector('.services-slider');
-    if (!slider) return;
-    const track = slider.querySelector('.games');
-    if (!track) return;
-
-    const container = slider.closest('.trending') || slider.parentElement;
-    const buttons = container?.querySelectorAll('.services-arrow') || [];
-
-    const getStep = () => {
-      const card = track.querySelector('.block');
-      if (!card) return track.clientWidth;
-      const styles = window.getComputedStyle(track);
-      const gap = parseFloat(styles.columnGap || styles.gap || '0');
-      return card.getBoundingClientRect().width + gap;
-    };
-
-    const updateButtons = () => {
-      const maxScroll = track.scrollWidth - track.clientWidth;
-      buttons.forEach((button) => {
-        const direction = button.dataset.direction;
-        if (direction === 'prev') {
-          button.disabled = track.scrollLeft <= 1;
-        } else if (direction === 'next') {
-          button.disabled = track.scrollLeft >= maxScroll - 1;
-        }
-      });
-    };
-
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const direction = button.dataset.direction === 'next' ? 1 : -1;
-        track.scrollBy({ left: direction * getStep(), behavior: 'smooth' });
-      });
-    });
-
-    track.addEventListener('scroll', () => {
-      window.requestAnimationFrame(updateButtons);
-    });
-
-    window.addEventListener('resize', updateButtons);
-    updateButtons();
-  };
-
   const initHistorySlider = () => {
     const section = document.querySelector('.history');
     if (!section) return;
@@ -1354,7 +1316,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const counterNodes = Array.from(section.querySelectorAll('[data-counter-target]'));
     if (!counterNodes.length) return;
 
-    const formatValue = (value) => new Intl.NumberFormat('en-US').format(value);
+    const numberFormatter = new Intl.NumberFormat('en-US');
+    const formatValue = (value) => numberFormatter.format(value);
     const setValue = (node, value) => {
       const suffix = node.dataset.counterSuffix || '';
       node.textContent = `${formatValue(value)}${suffix}`;
@@ -1688,6 +1651,7 @@ document.addEventListener('DOMContentLoaded', () => {
       DHL: 'partner.dhl',
       LG: 'partner.lg',
       Termoplex: 'partner.termoplex',
+      Penoplex: 'partner.penopleks',
       'Фабрика окон': 'partner.fabrika',
       'AU Grand': 'partner.augrand',
       'ANTO.KG': 'partner.anto',
@@ -2019,7 +1983,6 @@ document.addEventListener('DOMContentLoaded', () => {
   updateLanguageMenu = initLanguageMenu();
   initContactWidget();
   initMobileNav();
-  initServicesSlider();
   initHistorySlider();
   initTeamTimeline();
   initTestimonials();
