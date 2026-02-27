@@ -1,0 +1,431 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "news": "新闻",
+    "services": "服务",
+    "contacts": "联系方式"
+  },
+  "lang": {
+    "ru": "RU",
+    "en": "EN",
+    "zh": "中文"
+  },
+  "service": {
+    "sidebarTitle": "服务目录",
+    "heroTitle": "保险服务",
+    "heroText": "在运输各阶段提供货物与责任险。",
+    "bodyTitle": "保险支持",
+    "bodyParagraph1": "根据货物和路线定制保险方案，覆盖基础险、战争险及延误险，并与大型保险公司合作。",
+    "bodyParagraph2": "协助出单和理赔，代表客户与保险公司沟通，确保赔付及时到账。"
+  },
+  "footer": {
+    "description": "我们提供公路、海运与空运等全方位物流服务。凭借先进技术和全球网络，确保您的货物安全准时抵达。",
+    "addressTitle": "公司地址",
+    "addressLine1": "吉尔吉斯斯坦 比什凯克 阿依特马托夫街243号 3层",
+    "addressLine2": "+996 555 11 33 33",
+    "addressLine3": "比什凯克",
+    "addressLine4": "吉尔吉斯斯坦",
+    "contactsTitle": "联系我们",
+    "email": "info@caravan-logistics.com ",
+    "phone": "+996 555 11 33 33",
+    "copyright": "Copyright ® Kaliev Salavat All rights Reserved",
+    "socialTitle": "我们的社交网络"
+  },
+  "partners": {
+    "eyebrow": "合作伙伴",
+    "title": "我们的合作伙伴",
+    "text": "我们与独联体地区的设备制造商、快消品公司及建筑集团合作。"
+  },
+  "modal": {
+    "title": "提交申请",
+    "description": "留下联系方式并简要描述货物——我们将在15分钟内与您联系。",
+    "label": {
+      "name": "姓名",
+      "company": "公司",
+      "phone": "电话",
+      "email": "邮箱",
+      "details": "货物描述"
+    },
+    "placeholder": {
+      "name": "请填写称呼",
+      "company": "公司名称",
+      "phone": "+996 ___ ___ ___",
+      "email": "name@example.com",
+      "details": "路线、货物类型、时效"
+    },
+    "submit": "发送",
+    "hint": "点击按钮即表示同意个人信息处理。",
+    "success": "感谢！我们已收到申请并将尽快回复。",
+    "closeLabel": "关闭窗口"
+  },
+  "email": {
+    "validation": {
+      "missingAt": "邮箱缺少 @",
+      "missingDot": "邮箱缺少 .",
+      "success": "一切正常！"
+    },
+    "title": "免费咨询",
+    "text": "获取适合您货物的运价与路线方案——涵盖公路、铁路及航空。",
+    "subtitle": "联系物流顾问",
+    "description": "留下联系方式，我们将在5分钟内与您取得联系。",
+    "placeholder": "请输入邮箱",
+    "button": "发送"
+  },
+  "contact": {
+    "widget": {
+      "title": "随时联系",
+      "text": "可通过聊天或电话回复您。",
+      "whatsapp": {
+        "label": "WhatsApp",
+        "desc": "发送消息"
+      },
+      "telegram": {
+        "label": "Telegram",
+        "desc": "讨论项目"
+      },
+      "phone": {
+        "label": "+996 555 11 33 33",
+        "desc": "直接拨打"
+      },
+      "toggle": "给我们留言"
+    }
+  },
+  "hero": {
+    "tagline": "Caravan Logistics",
+    "title": "我们是一家物流公司",
+    "line1": "自2008年以来，我们为独联体及全球客户组织公路、铁路和航空运输。",
+    "line2": "每年完成一万多票货物、两千多节铁路车厢的交付。",
+    "line3": "提供一站式路线设计与全程报关服务。",
+    "cta": "获取报价"
+  },
+  "services": {
+    "more": "全部服务",
+    "title": "我们的业务",
+    "item1": "独联体公路运输",
+    "item2": "铁路班列与车厢",
+    "item3": "报关与合规",
+    "item4": "中国及全球项目",
+    "item5": "多式联运",
+    "item6": "航空运输",
+    "item7": "仓储服务",
+    "item8": "货物保险",
+    "heroTitle": "公路运输",
+    "heroText": "我们提供专业的国内与国际公路运输服务，使用现代化卡车保障从吉尔吉斯斯坦到俄罗斯以及中国到吉尔吉斯斯坦的货运时效与安全。",
+    "heroButton": "联系专家",
+    "auto": {
+      "bodyTitle": "公路运输内容",
+      "bodyParagraph1": "根据货物类型匹配篷车、冷藏车和特种车辆；结合季节、轴载限制和许可要求规划路线；所有车辆配备GPS并全天监控。",
+      "bodyParagraph2": "负责办理运单、CMR、TIR、通行许可和保险文件；专属协调员跟进通关节点并实时反馈，依托合作网络减少等待并按时交付。"
+    },
+    "gridTitle": "我们的服务",
+    "gridSubtitle": "点击卡片了解详情并选择合适的合作方式。",
+    "cards": {
+      "auto": {
+        "title": "公路运输",
+        "text": "覆盖独联体的干线车队与24/7监控。"
+      },
+      "rail": {
+        "title": "铁路运输",
+        "text": "预留车皮、协助过境并准备全部单证。"
+      },
+      "multimodal": {
+        "title": "多式联运",
+        "text": "组合公路、铁路、航空与海运，适合复杂项目。"
+      },
+      "broker": {
+        "title": "报关服务",
+        "text": "编制报关单、证书并陪同查验。"
+      },
+      "china": {
+        "title": "中国业务",
+        "text": "负责中国进出口、集货与保险。"
+      },
+      "air": {
+        "title": "航空运输",
+        "text": "包机与定期航班，享受优先装卸。"
+      },
+      "warehousing": {
+        "title": "仓储服务",
+        "text": "仓储作业、分拣与保税仓。"
+      },
+      "insurance": {
+        "title": "保险服务",
+        "text": "为全程运输提供风险保障。"
+      }
+    }
+  },
+  "big-text": "为什么选择 Caravan Logistics？",
+  "banner": {
+    "title": "认证运营团队",
+    "text": "我们负责各类报关、许可与保险，为每位客户设计最优线路——从干线车队到航空+海运的多式联运方案。"
+  },
+  "index": {
+    "stats": {
+      "title": "Caravan Logistics 数据概览",
+      "item1": "已完成的国际线路运输与交付任务",
+      "item2": "由物流与报关团队全程管理的供应项目",
+      "item3": "每年持续与 Caravan Logistics 合作的客户占比"
+    },
+    "upcoming": {
+      "eyebrow": "数字化服务",
+      "title": "即将上线智能工具",
+      "text": "自动化关税计算与HS编码搜索，让您在站内几秒获取答案。",
+      "card1": {
+        "badge": "即将上线",
+        "title": "关税助手计算器",
+        "text": "选择起运国、货物类型和附加服务，系统即时估算关税并给出清单。",
+        "pill1": "货物类型",
+        "pill2": "起运国 → 目的国",
+        "pill3": "保险",
+        "small": "我们正在测试计算公式并加入AI提示。"
+      },
+      "card2": {
+        "badge": "即将上线",
+        "title": "HS编码搜索",
+        "text": "输入产品名称或行业，系统将推荐合适编码、要求及限制。",
+        "pill1": "产品名称",
+        "pill2": "HS编码",
+        "pill3": "所需文件",
+        "small": "我们将提供覆盖一万条目的快速搜索。"
+      }
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "text": "这里汇总了费用、时效及文件要求。如未找到答案，请提交申请，我们会在几分钟内回电。",
+    "q1": "沟通与服务",
+    "q2": "Win - Win",
+    "q3": "专属客户经理",
+    "q4": "质量控制",
+    "q5": "开放的反馈机制",
+    "q6": "经验",
+    "a1": "我们坚持透明沟通：清晰报价、费率依据、市场情况说明以及及时反馈。客户应当清楚货物进展以及每项决策背后的原因。",
+    "a2": "我们不追求短期利益，我们的模式是长期合作伙伴关系。",
+    "a3": "每个项目都会配备专属经理，从报价到卸货全程跟进，协调承运方、把控单证，并确保各阶段沟通透明。每票运输都会根据货物、时效、线路和预算进行个性化测算。",
+    "a4": "公司建立了内部质控体系，包括报价复核、已确认条件执行检查以及异常场景分析。我们会系统复盘问题，避免同类异常重复发生。",
+    "a5": "我们重视并公开处理反馈，对每个异常案例进行详细记录和复盘。通过对沟通记录、执行动作与流程的分析，我们持续优化系统，而不是回避问题。",
+    "a6": "团队在中国、东南亚、中亚、欧亚经济联盟及欧洲方向拥有丰富的国际运输实操经验。凭借这些经验，我们能更好预判风险，考虑中转与清关细节，并处理复杂货物。",
+    "q7": "运输保险",
+    "a7": "我们按合同条款为运输提供保险，降低客户财务风险，并在突发情况下提供额外保障。",
+    "q8": "持续学习与发展",
+    "a8": "团队定期参加网络研讨会和进阶课程，并通过公司内部培训体系持续成长。同时我们与教育机构合作，建设人才储备，吸引未来物流专业人才。"
+  },
+  "projects": {
+    "title": "合作客户",
+    "text": "遍布独联体的设备制造商、快消品牌和IT企业",
+    "more": "成功案例"
+  },
+  "partner": {
+    "kulikov": {
+      "since": "自2016年起合作",
+      "stats": "完成90票高端家具运输。"
+    },
+    "kant": {
+      "since": "自2018年起合作",
+      "stats": "每年承运约1200吨建材。"
+    },
+    "translogistica": {
+      "since": "自2015年起合作",
+      "stats": "执行65条多式联运链路。"
+    },
+    "shoro": {
+      "since": "自2017年起合作",
+      "stats": "为30座城市提供FMCG配送。"
+    },
+    "cocacola": {
+      "since": "自2014年起合作",
+      "stats": "完成150次冷链运输。"
+    },
+    "nestle": {
+      "since": "自2013年起合作",
+      "stats": "整合200+批配料运输。"
+    },
+    "knauf": {
+      "since": "自2016年起合作",
+      "stats": "运输了3,500吨石膏板。"
+    },
+    "shatura": {
+      "since": "自2019年起合作",
+      "stats": "为40家展厅供应家具。"
+    },
+    "worldclass": {
+      "since": "自2020年起合作",
+      "stats": "为15家健身会所提供设备物流。"
+    },
+    "keramin": {
+      "since": "自2012年起合作",
+      "stats": "每年配送1,800托盘瓷砖。"
+    },
+    "borusan": {
+      "since": "自2011年起合作",
+      "stats": "完成75次超大件运输。"
+    },
+    "bellona": {
+      "since": "自2015年起合作",
+      "stats": "完成110票集装箱发运。"
+    },
+    "tesladoor": {
+      "since": "自2019年起合作",
+      "stats": "交付6,000套门类产品。"
+    },
+    "dhl": {
+      "since": "自2010年起合作",
+      "stats": "支持快件的地面运输环节。"
+    },
+    "lg": {
+      "since": "自2014年起合作",
+      "stats": "运输120万台电子设备。"
+    },
+    "termoplex": {
+      "since": "自2017年起合作",
+      "stats": "每年执行50条控温路线。"
+    },
+    "penopleks": {
+      "since": "自2016年起合作",
+      "stats": "持续为独联体市场配送保温隔热材料。"
+    },
+    "fabrika": {
+      "since": "自2018年起合作",
+      "stats": "完成90个地产项目配送。"
+    },
+    "augrand": {
+      "since": "自2013年起合作",
+      "stats": "为8个市场出口家具。"
+    },
+    "anto": {
+      "since": "自2011年起合作",
+      "stats": "交付400批金属结构件。"
+    },
+    "kumtor": {
+      "since": "自2009年起合作",
+      "stats": "支持矿业供应链，无停滞。"
+    }
+  },
+  "about": {
+    "heroTitle": "Caravan Logistics",
+    "heroText": "公司成立于2008年，我们的创始人曾亲自从事运输并担任承运人。我们的目标是打造更快、更高效、更稳定的物流解决方案，在确保可靠交付的同时降低成本，助力您的业务加速发展。",
+    "heroCta": "联系我们",
+    "whyTitle": "合作优势",
+    "card1": {
+      "badge": "公路",
+      "title": "自有车队",
+      "text": "依据项目匹配篷车、冷藏车及特种车辆，24/7监控司机并办理各类许可。"
+    },
+    "card2": {
+      "badge": "铁路",
+      "title": "车皮与平台资源",
+      "text": "预留车皮与平台，办理ETRAN单证，确保通关顺畅无滞留。"
+    },
+    "card3": {
+      "badge": "空运与海运",
+      "title": "多式联运方案",
+      "text": "航空+公路无缝衔接，提供拼箱/拼车服务，并为每一段运输购买保险。"
+    },
+    "valuesTitle": "价值观",
+    "valuesText": "我们以责任、透明和伙伴关系为基础开展工作，做出对客户、公司和市场都可持续的决策。我们的方法强调系统性、专业性以及团队的持续发展。"
+  },
+  "contacts": {
+    "heroTitle": "Caravan Logistics 客服中心",
+    "heroText": "全天候响应公路、铁路与航空运输咨询，覆盖独联体及全球项目。",
+    "formTitle": "给我们留言",
+    "formText": "提交需求，我们将提供报价并解答文件、时效与费用问题。",
+    "labelFirst": "名字",
+    "labelLast": "姓氏",
+    "labelEmail": "邮箱",
+    "labelMessage": "留言",
+    "submit": "提交申请",
+    "visit": {
+      "title": "如何找到我们",
+      "scheduleWeekday": "办公室周一至周五开放，时间为 8:00 至 18:00。",
+      "scheduleWeekend": "休息日：周六、周日。",
+      "addressLabel": "地址",
+      "addressValue": "比什凯克市，钦吉兹·艾特玛托夫街243号，3层",
+      "phoneLabel": "电话",
+      "phoneValue": "+996 555 11 33 33",
+      "callBtn": "拨打电话",
+      "whatsappBtn": "WhatsApp 联系",
+      "instagramBtn": "Instagram",
+      "mapTitle": "Caravan Logistics 办公室",
+      "mapCardTitle": "Caravan Logistics 办公室",
+      "mapCardAddress": "比什凯克市，钦吉兹·艾特玛托夫街243号，3层"
+    },
+    "placeholderFirst": "请输入名字",
+    "placeholderLast": "请输入姓氏",
+    "placeholderEmail": "请输入邮箱",
+    "placeholderMessage": "请简要描述您的需求"
+  },
+  "breadcrumbs": {
+    "home": "首页",
+    "news": "新闻"
+  },
+  "portfolio": {
+    "heroTitle": "物流资讯与洞察",
+    "heroText": "分享 Caravan Logistics 在公路、铁路与航空领域的费率、路线与技术更新。",
+    "search": "搜索资讯",
+    "filter": {
+      "all": "全部",
+      "auto": "公路",
+      "rail": "铁路",
+      "china": "中国",
+      "it": "IT 项目"
+    },
+    "empty": "该分类暂无内容。",
+    "feature1": {
+      "badge": "分析",
+      "time": "2 分钟",
+      "title": "Caravan Logistics 送上新年祝福",
+      "text1": "每年12月我们都会总结成果并准备客户专属礼物。2024年团队制作了带有 Caravan 标识的节日礼盒，送达所有核心办公室。",
+      "text2": "祝福中附上感谢信，并邀请合作伙伴加入私享俱乐部，共同规划新一年的项目。"
+    },
+    "feature2": {
+      "badge": "项目团队",
+      "time": "2 分钟",
+      "title": "Caravan Logistics 向合作伙伴致贺新年",
+      "text1": "团队制作了视频与贺卡，分享2025年的主要成果与祝福，礼盒中还附赠额外服务优惠券。",
+      "text2": "感谢客户的信任，我们将在未来项目中投入更多支持与互动。"
+    },
+    "block1": {
+      "title": "聚焦独联体基础设施",
+      "text": "携手主要货运站和口岸，即使旺季也能预留舱位、避免延误。"
+    },
+    "block2": {
+      "title": "全球线路",
+      "text": "提供来自中国、土耳其、欧洲和美国的集运、报关与保险服务。"
+    },
+    "sidebar1": {
+      "badge": "公路物流",
+      "time": "5 分钟",
+      "text": "更新比什凯克—阿拉木图FMCG班车时刻表。"
+    },
+    "sidebar2": {
+      "badge": "铁路服务",
+      "time": "6 分钟",
+      "text": "上线明斯克—比什凯克重型设备平台车。"
+    },
+    "sidebar3": {
+      "badge": "分析",
+      "time": "4 分钟",
+      "text": "数字化追踪如何减少边境滞留——Caravan 案例。"
+    },
+    "sidebar4": {
+      "badge": "项目",
+      "time": "7 分钟",
+      "text": "为跨境电商打造中国多式联运方案。"
+    },
+    "sidebar5": {
+      "badge": "航空运输",
+      "time": "5 分钟",
+      "text": "组织首架搭载电子元件的包机。"
+    },
+    "subscribeTitle": "订阅最新动态",
+    "subscribeText": "获取 Caravan Logistics 的费率、路线与实用建议。",
+    "subscribePlaceholder": "请输入邮箱",
+    "subscribeButton": "立即订阅",
+    "pageTitle": "发布内容"
+  },
+  "common": {
+    "servicesMenu": "服务 <span class=\"mobile-menu__chev\">▾</span>",
+    "servicesMenuList": "服务列表 <span class=\"mobile-menu__chev\">▾</span>"
+  }
+}

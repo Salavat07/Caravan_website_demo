@@ -382,7 +382,7 @@ header nav ul li a:active,
     position: absolute;
     right: 0;
     top: calc(100% + 10px);
-    min-width: 160px;
+    min-width: 110px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
@@ -405,6 +405,7 @@ header nav ul li a:active,
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     color: var(--color-text);
+    font-weight: 600;
 }
 
 .lang__item:hover,
@@ -1399,7 +1400,9 @@ transition: all 500ms ease;
     left: 50%;
     bottom: -40px;
     transform: translate(-50%, 10px) scale(0.95);
-    width: min(260px, 90vw);
+    width: min(360px, 90vw);
+    max-height: min(320px, 60vh);
+    overflow-y: auto;
     padding: 18px 20px;
     border-radius: 20px;
     border: 2px solid var(--popup-accent, #ff8f3f);
@@ -1429,6 +1432,7 @@ transition: all 500ms ease;
     font-size: 14px;
     line-height: 1.6;
     color: var(--color-muted);
+    overflow-wrap: anywhere;
 }
 
 .faq-popup.is-visible{
@@ -1696,13 +1700,23 @@ transition: all 500ms ease;
 
 .hero-about .info p{
     color: var(--color-muted);
+    line-height: 1.65;
+    margin-bottom: 14px;
 }
 
 
 .hero-about .info h1{
     margin-bottom: 15px;
-    font-size: 36px;
+    font-size: 44px;
     
+}
+
+.hero-about__values-title{
+    margin-top: 8px;
+    margin-bottom: 6px;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text) !important;
 }
 
 .hero-about .info .btn{
@@ -1804,7 +1818,7 @@ margin-top: 20px;
 
 .history__card{
     scroll-snap-align: center;
-    flex: 0 0 520px;
+    flex: 0 0 560px;
     border-radius: 28px;
     background: rgba(255,255,255,0.55);
     border: 1px solid rgba(255,255,255,0.65);
@@ -1813,7 +1827,7 @@ margin-top: 20px;
     padding: 18px;
     display: flex;
     flex-direction: column;
-    min-height: 420px;
+    min-height: 460px;
     transition: transform 320ms ease, box-shadow 320ms ease, opacity 320ms ease;
     opacity: 0.88;
     transform: translateY(8px);
@@ -1833,7 +1847,7 @@ margin-top: 20px;
 
 .history__media{
     position: relative;
-    height: 200px;
+    height: 190px;
     border-radius: 22px;
     overflow: hidden;
 }
@@ -1895,7 +1909,8 @@ margin-top: 20px;
 
 .history__body p{
     color: var(--color-muted);
-    line-height: 1.5;
+    line-height: 1.58;
+    overflow-wrap: anywhere;
 }
 
 .history__nav{
@@ -3582,7 +3597,7 @@ body.modal-open {
     }
 
     .lang__menu{
-        min-width: 150px;
+        min-width: 110px;
     }
 
     .nav-services--mobile{
@@ -4694,5 +4709,182 @@ footer>p{
 
     .testimonials-2gis-inline__btn{
         padding: 7px 12px;
+    }
+}
+
+.cases-pro{
+    padding: 88px 0;
+    background: linear-gradient(180deg, #f5f7fb 0%, #eef3fa 100%);
+}
+
+.cases-pro__head{
+    max-width: 900px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+.cases-pro__title{
+    margin: 0 0 10px;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    color: #0f172a;
+}
+
+.cases-pro__subtitle{
+    margin: 0 auto;
+    max-width: 740px;
+    color: #5b667a;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.cases-pro__tabs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 22px;
+}
+
+.cases-tab{
+    border: 1px solid rgba(15,23,42,0.12);
+    background: rgba(255,255,255,0.75);
+    color: #344054;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 220ms ease;
+    white-space: nowrap;
+}
+
+.cases-tab:hover{
+    border-color: rgba(15,23,42,0.24);
+    background: #fff;
+}
+
+.cases-tab.is-active{
+    color: #fff;
+    background: linear-gradient(135deg, #1f3f86 0%, #0f172a 100%);
+    border-color: transparent;
+    box-shadow: 0 10px 28px rgba(15,23,42,0.28);
+}
+
+.cases-pro__panel{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.case-panel{
+    display: none;
+    background: rgba(255,255,255,0.94);
+    border: 1px solid rgba(15,23,42,0.08);
+    box-shadow: 0 18px 42px rgba(15,23,42,0.1);
+    border-radius: 22px;
+    padding: 32px 34px;
+}
+
+.case-panel.is-active{
+    display: block;
+}
+
+.case-panel__title{
+    margin: 0 0 12px;
+    font-size: clamp(20px, 2.8vw, 28px);
+    line-height: 1.3;
+    color: #0f172a;
+}
+
+.case-panel__route{
+    margin-bottom: 18px;
+}
+
+.case-route-badge{
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(15,23,42,0.06);
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.case-panel__meta{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.case-meta-item{
+    border: 1px solid rgba(15,23,42,0.08);
+    background: rgba(15,23,42,0.03);
+    border-radius: 12px;
+    padding: 11px 13px;
+    color: #253041;
+    font-size: 14px;
+    line-height: 1.5;
+    min-width: 0;
+}
+
+.case-meta-item strong{
+    font-weight: 600;
+}
+
+.case-panel__desc{
+    margin: 0 0 12px;
+    color: #344054;
+    font-size: 15px;
+    line-height: 1.78;
+}
+
+.case-panel__desc:last-child{
+    margin-bottom: 0;
+}
+
+@media (max-width: 992px){
+    .case-panel{
+        padding: 26px 24px;
+    }
+}
+
+@media (max-width: 768px){
+    .cases-pro{
+        padding: 64px 0;
+    }
+
+    .cases-pro__tabs{
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 16px 4px;
+        margin-bottom: 18px;
+        gap: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cases-pro__tabs::-webkit-scrollbar{
+        display: none;
+    }
+
+    .cases-tab{
+        white-space: nowrap;
+        flex: 0 0 auto;
+    }
+
+    .cases-pro__panel{
+        padding: 0 16px;
+    }
+
+    .case-panel{
+        border-radius: 18px;
+        padding: 20px 16px;
+    }
+
+    .case-panel__meta{
+        grid-template-columns: 1fr;
     }
 }

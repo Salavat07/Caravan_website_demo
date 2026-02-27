@@ -1,0 +1,431 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "news": "News",
+    "services": "Services",
+    "contacts": "Contacts"
+  },
+  "lang": {
+    "ru": "RU",
+    "en": "EN",
+    "zh": "中文"
+  },
+  "service": {
+    "sidebarTitle": "Our services",
+    "heroTitle": "Insurance",
+    "heroText": "Cargo and liability insurance for every step of the logistics chain.",
+    "bodyTitle": "Insurance support",
+    "bodyParagraph1": "Insurance programmes are tailored to cargo type and route, from basic cover to war and delay risks with top-tier underwriters.",
+    "bodyParagraph2": "We guide policy issuance and claims, liaise with insurers and make sure compensation arrives without delays."
+  },
+  "footer": {
+    "description": "Discover our full range of road, sea and air freight services. Thanks to advanced technology and a global network we deliver cargo safely and on time.",
+    "addressTitle": "Our address",
+    "addressLine1": "243 Chyngyz Aitmatov St., 3rd floor",
+    "addressLine2": "+996 555 11 33 33",
+    "addressLine3": "Bishkek",
+    "addressLine4": "Kyrgyzstan",
+    "contactsTitle": "Stay in touch",
+    "email": "info@caravan-logistics.com ",
+    "phone": "+996 555 11 33 33",
+    "copyright": "Copyright ® Kaliev Salavat All rights Reserved",
+    "socialTitle": "Our social networks"
+  },
+  "partners": {
+    "eyebrow": "Our partners",
+    "title": "Our partners",
+    "text": "We work with equipment makers, FMCG companies, and construction groups across the CIS."
+  },
+  "modal": {
+    "title": "Leave a request",
+    "description": "Share your contacts and briefly describe the cargo — we will prepare a proposal and call back within 15 minutes.",
+    "label": {
+      "name": "Name",
+      "company": "Company",
+      "phone": "Phone",
+      "email": "Email",
+      "details": "Cargo details"
+    },
+    "placeholder": {
+      "name": "How should we address you?",
+      "company": "Company name",
+      "phone": "+996 ___ ___ ___",
+      "email": "you@example.com",
+      "details": "Route, cargo type, timing"
+    },
+    "submit": "Send",
+    "hint": "By clicking send you agree to personal data processing.",
+    "success": "Thank you! We have received your request and will respond shortly.",
+    "closeLabel": "Close modal"
+  },
+  "email": {
+    "validation": {
+      "missingAt": "Missing @ symbol",
+      "missingDot": "Missing dot",
+      "success": "Looks good!"
+    },
+    "title": "Free consultation",
+    "text": "Get a freight quote and a proposed route for your cargo — by road, rail or air.",
+    "subtitle": "Talk to a specialist",
+    "description": "Leave your contacts and our logistics manager will respond within 5 minutes.",
+    "placeholder": "Enter email",
+    "button": "Send"
+  },
+  "contact": {
+    "widget": {
+      "title": "Always in touch",
+      "text": "We reply in messengers or by phone.",
+      "whatsapp": {
+        "label": "WhatsApp",
+        "desc": "Write in messenger"
+      },
+      "telegram": {
+        "label": "Telegram",
+        "desc": "Discuss the project"
+      },
+      "phone": {
+        "label": "+996 555 11 33 33",
+        "desc": "Call directly"
+      },
+      "toggle": "Message us"
+    }
+  },
+  "hero": {
+    "tagline": "Caravan Logistics",
+    "title": "We are a logistics company",
+    "line1": "Since 2008 we arrange road, rail and air freight across the CIS and worldwide.",
+    "line2": "Over 10,000 shipments delivered and more than 2,000 wagons each year.",
+    "line3": "We build turnkey routes with full customs support.",
+    "cta": "Request a quote"
+  },
+  "services": {
+    "more": "All services",
+    "title": "Our services",
+    "item1": "Road freight across the CIS",
+    "item2": "Rail routes and wagons",
+    "item3": "Customs brokerage",
+    "item4": "China and global projects",
+    "item5": "Multimodal logistics",
+    "item6": "Air freight",
+    "item7": "Warehousing services",
+    "item8": "Cargo insurance",
+    "heroTitle": "Road freight",
+    "heroText": "We provide professional road freight services for domestic and international routes. The team organizes reliable deliveries from Kyrgyzstan to Russia and imports from China to Kyrgyzstan using modern trucks with strict safety and timing control.",
+    "heroButton": "Talk to a specialist",
+    "auto": {
+      "bodyTitle": "What road freight includes",
+      "bodyParagraph1": "We assign tilt, reefer and specialized trucks for each shipment. Routes are planned with seasonal constraints, axle limits and permit requirements in mind. Drivers are briefed before departure and every vehicle is monitored via GPS 24/7.",
+      "bodyParagraph2": "We handle waybills, CMR, TIR, transit passes and insurance. A dedicated coordinator tracks border checkpoints and keeps the client informed. Our partner network helps reduce idle time and meet agreed delivery windows."
+    },
+    "gridTitle": "Our services",
+    "gridSubtitle": "Choose a card to open a dedicated page with a full description.",
+    "cards": {
+      "auto": {
+        "title": "Road freight",
+        "text": "Long-haul convoys across the CIS with 24/7 monitoring."
+      },
+      "rail": {
+        "title": "Rail freight",
+        "text": "We reserve wagons, supervise border crossings and prepare paperwork."
+      },
+      "multimodal": {
+        "title": "Multimodal",
+        "text": "Mix road, rail, air and sea legs for complex projects."
+      },
+      "broker": {
+        "title": "Customs brokerage",
+        "text": "Declarations, certificates and on-site support at customs."
+      },
+      "china": {
+        "title": "China desk",
+        "text": "Import/export flows from China with consolidation and insurance."
+      },
+      "air": {
+        "title": "Air freight",
+        "text": "Charters and scheduled flights with priority handling."
+      },
+      "warehousing": {
+        "title": "Warehousing",
+        "text": "Handling, cross-docking and bonded storage."
+      },
+      "insurance": {
+        "title": "Insurance",
+        "text": "Cargo protection throughout the route."
+      }
+    }
+  },
+  "big-text": "Why companies trust Caravan Logistics?",
+  "banner": {
+    "title": "Certified team",
+    "text": "We handle customs clearance, permits and insurance. Every client gets the optimal route—from long-haul convoys to multimodal schemes with air or sea legs."
+  },
+  "index": {
+    "stats": {
+      "title": "Caravan Logistics by the numbers",
+      "item1": "Shipments and deliveries completed on international routes",
+      "item2": "Supply projects managed by our logistics and brokerage teams",
+      "item3": "Clients continue to work with Caravan Logistics every year"
+    },
+    "upcoming": {
+      "eyebrow": "Digital services",
+      "title": "We are preparing smart tools for launch",
+      "text": "We automate customs calculations and HS code search so you get answers in seconds on the site.",
+      "card1": {
+        "badge": "Coming soon",
+        "title": "Calculator — customs assistant",
+        "text": "Select origin, cargo type and extras — the tool instantly estimates duties and gives you a ready checklist.",
+        "pill1": "Cargo type",
+        "pill2": "Country → country",
+        "pill3": "Insurance",
+        "small": "We are testing formulas and adding AI tips."
+      },
+      "card2": {
+        "badge": "Coming soon",
+        "title": "HS code finder",
+        "text": "Enter a product name or industry — the service suggests valid codes, requirements, and supply restrictions.",
+        "pill1": "Product name",
+        "pill2": "HS codes",
+        "pill3": "Documents",
+        "small": "We will add fast search across a catalog of 10,000 items."
+      }
+    }
+  },
+  "faq": {
+    "title": "Popular questions",
+    "text": "Here are quick tips on pricing, timing and documents. Didn’t find the answer? Leave a request and a logistics expert will call you back within minutes.",
+    "q1": "Communication and service",
+    "q2": "Win - Win",
+    "q3": "Personal manager",
+    "q4": "Quality control",
+    "q5": "Open feedback policy",
+    "q6": "Experience",
+    "a1": "We build cooperation on transparency: clear calculations, rate justification, market context explanation, and timely feedback. The client should understand what is happening with the cargo and why each decision is made.",
+    "a2": "We do not operate on short-term gain. Our model is long-term partnership.",
+    "a3": "Each project is assigned a personal manager who oversees the shipment from quotation to unloading, coordinates carriers, controls documents, and keeps communication transparent at every stage. Every shipment is calculated individually based on cargo, timing, geography, and budget.",
+    "a4": "The company has an internal control system including calculation checks, compliance with agreed terms, and review of non-standard situations. We systematically analyze errors to prevent repeated incidents.",
+    "a5": "We treat feedback openly and record every non-standard case for detailed review. Analysis of correspondence, actions, and processes helps us improve the system instead of ignoring the issue.",
+    "a6": "Our team has practical international transportation experience across China, Southeast Asia, Central Asia, the EAEU, and Europe. This helps us predict risks, account for transit and customs specifics, and handle complex cargo.",
+    "q7": "Shipment insurance",
+    "a7": "We insure shipments in accordance with contract terms. This reduces the client’s financial risks and provides additional protection in non-standard situations.",
+    "q8": "Continuous learning and development",
+    "a8": "Our team regularly attends webinars and advanced training courses, and also develops internally through our in-house learning system. We also cooperate with educational institutions, building a talent pipeline and attracting future logistics specialists."
+  },
+  "projects": {
+    "title": "Clients who trust us",
+    "text": "Equipment makers, FMCG brands and IT companies throughout the CIS",
+    "more": "Cases"
+  },
+  "partner": {
+    "kulikov": {
+      "since": "Since 2016",
+      "stats": "90 premium furniture shipments."
+    },
+    "kant": {
+      "since": "Since 2018",
+      "stats": "1,200 tons of construction materials per year."
+    },
+    "translogistica": {
+      "since": "Since 2015",
+      "stats": "65 multimodal chains delivered."
+    },
+    "shoro": {
+      "since": "Since 2017",
+      "stats": "FMCG deliveries to 30 cities."
+    },
+    "cocacola": {
+      "since": "Since 2014",
+      "stats": "150 refrigerated runs completed."
+    },
+    "nestle": {
+      "since": "Since 2013",
+      "stats": "Consolidated 200+ ingredient batches."
+    },
+    "knauf": {
+      "since": "Since 2016",
+      "stats": "Moved 3,500 tons of drywall."
+    },
+    "shatura": {
+      "since": "Since 2019",
+      "stats": "Supplying 40 furniture showrooms."
+    },
+    "worldclass": {
+      "since": "Since 2020",
+      "stats": "Logistics for 15 fitness clubs."
+    },
+    "keramin": {
+      "since": "Since 2012",
+      "stats": "1,800 pallets of tiles each year."
+    },
+    "borusan": {
+      "since": "Since 2011",
+      "stats": "Handled 75 heavy-haul projects."
+    },
+    "bellona": {
+      "since": "Since 2015",
+      "stats": "110 container shipments completed."
+    },
+    "tesladoor": {
+      "since": "Since 2019",
+      "stats": "Delivered 6,000 door sets."
+    },
+    "dhl": {
+      "since": "Since 2010",
+      "stats": "Ground support for express deliveries."
+    },
+    "lg": {
+      "since": "Since 2014",
+      "stats": "Shipped 1.2M electronics units."
+    },
+    "termoplex": {
+      "since": "Since 2017",
+      "stats": "50 temperature-controlled routes yearly."
+    },
+    "penopleks": {
+      "since": "Since 2016",
+      "stats": "Regular deliveries of insulation materials across the CIS."
+    },
+    "fabrika": {
+      "since": "Since 2018",
+      "stats": "Completed 90 developer projects."
+    },
+    "augrand": {
+      "since": "Since 2013",
+      "stats": "Furniture export to 8 markets."
+    },
+    "anto": {
+      "since": "Since 2011",
+      "stats": "Delivered 400 batches of steel structures."
+    },
+    "kumtor": {
+      "since": "Since 2009",
+      "stats": "Supporting mining logistics without downtime."
+    }
+  },
+  "about": {
+    "heroTitle": "Caravan Logistics",
+    "heroText": "Our company was founded in 2008, and our founder personally worked in transportation as a carrier. Our goal is to create solutions that make logistics faster, more efficient, and more stable while ensuring reliable delivery and minimizing costs. We accelerate your business growth.",
+    "heroCta": "Contact us",
+    "whyTitle": "Why partners work with us",
+    "card1": {
+      "badge": "Road",
+      "title": "Own fleet",
+      "text": "We allocate tilt, reefer or special trucks for each project, supervise drivers 24/7 and arrange permits."
+    },
+    "card2": {
+      "badge": "Rail",
+      "title": "Rolling stock access",
+      "text": "We reserve wagons and platforms, prepare ETRAN documents and guide cargo through border crossings without idle time."
+    },
+    "card3": {
+      "badge": "Air & Sea",
+      "title": "Multimodal solutions",
+      "text": "We combine air deliveries with last-mile trucking, consolidate cargo and insure every leg."
+    },
+    "valuesTitle": "Values",
+    "valuesText": "We work based on responsibility, transparency, and partnership, making decisions that are sustainable for the client, the company, and the market. Our approach is built on system thinking, professionalism, and continuous team development."
+  },
+  "contacts": {
+    "heroTitle": "Caravan Logistics contact center",
+    "heroText": "We respond 24/7 on road, rail and air freight across the CIS and overseas projects.",
+    "formTitle": "Write to us",
+    "formText": "Send a request — we will prepare a quote and answer all questions about documents, timing and tariffs.",
+    "labelFirst": "First name",
+    "labelLast": "Last name",
+    "labelEmail": "Email",
+    "labelMessage": "Message",
+    "submit": "Send request",
+    "visit": {
+      "title": "How to find us",
+      "scheduleWeekday": "The office is open Monday to Friday from 8:00 AM to 6:00 PM.",
+      "scheduleWeekend": "Days off: Saturday and Sunday.",
+      "addressLabel": "Address",
+      "addressValue": "243 Chyngyz Aitmatov St., 3rd floor, Bishkek",
+      "phoneLabel": "Phone",
+      "phoneValue": "+996 555 11 33 33",
+      "callBtn": "Call us",
+      "whatsappBtn": "Message on WhatsApp",
+      "instagramBtn": "Instagram",
+      "mapTitle": "Caravan Logistics office",
+      "mapCardTitle": "Caravan Logistics office",
+      "mapCardAddress": "243 Chyngyz Aitmatov St., 3rd floor, Bishkek"
+    },
+    "placeholderFirst": "Enter first name",
+    "placeholderLast": "Enter last name",
+    "placeholderEmail": "Enter email",
+    "placeholderMessage": "Briefly describe your request"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "news": "News"
+  },
+  "portfolio": {
+    "heroTitle": "Logistics news and insights",
+    "heroText": "We share tariffs, routes and technology updates from Caravan Logistics for road, rail and air services.",
+    "search": "Search news",
+    "filter": {
+      "all": "All",
+      "auto": "Road",
+      "rail": "Rail",
+      "china": "China",
+      "it": "IT projects"
+    },
+    "empty": "No posts in this section yet.",
+    "feature1": {
+      "badge": "Caravan Analytics",
+      "time": "2 min",
+      "title": "Caravan Logistics wished partners a Happy New Year",
+      "text1": "Each December we wrap up results and prepare personal gifts for clients. In 2024 the team created branded holiday boxes and delivered them to every key office.",
+      "text2": "The greetings include thank-you letters and an invitation to a private partners’ club to discuss plans for next year."
+    },
+    "feature2": {
+      "badge": "Project team",
+      "time": "2 min",
+      "title": "Caravan Logistics congratulated partners on the New Year",
+      "text1": "The team prepared videos and postcards highlighting 2025 achievements and wishes. Holiday surprises include coupons for extra services.",
+      "text2": "We thank clients for their trust and promise even greater engagement in joint projects."
+    },
+    "block1": {
+      "title": "Infrastructure focus in the CIS",
+      "text": "We cooperate with major terminals and border transitions, reserve capacity and move cargo without delays even in peak season."
+    },
+    "block2": {
+      "title": "Global routes",
+      "text": "We ship from China, Turkey, Europe and the USA with consolidation, customs brokerage and insurance on every leg."
+    },
+    "sidebar1": {
+      "badge": "Road logistics",
+      "time": "5 min",
+      "text": "Updated Bishkek–Almaty schedules for FMCG cargo."
+    },
+    "sidebar2": {
+      "badge": "Rail service",
+      "time": "6 min",
+      "text": "Launched platforms for heavy equipment on the Minsk–Bishkek route."
+    },
+    "sidebar3": {
+      "badge": "Analytics",
+      "time": "4 min",
+      "text": "How digital tracking reduces border idle time — Caravan case study."
+    },
+    "sidebar4": {
+      "badge": "Projects",
+      "time": "7 min",
+      "text": "Implemented a multimodal scheme for e-commerce deliveries from China."
+    },
+    "sidebar5": {
+      "badge": "Air freight",
+      "time": "5 min",
+      "text": "Launched a charter flight with components for electronics production."
+    },
+    "subscribeTitle": "Stay in the loop",
+    "subscribeText": "Subscribe to Caravan Logistics news: tariffs, routes and practical tips for logistics teams.",
+    "subscribePlaceholder": "Enter email address",
+    "subscribeButton": "Subscribe",
+    "pageTitle": "Publications"
+  },
+  "common": {
+    "servicesMenu": "Services <span class=\"mobile-menu__chev\">▾</span>",
+    "servicesMenuList": "Service list <span class=\"mobile-menu__chev\">▾</span>"
+  }
+}
