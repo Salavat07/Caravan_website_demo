@@ -19,6 +19,292 @@
     "bodyParagraph1": "Insurance programmes are tailored to cargo type and route, from basic cover to war and delay risks with top-tier underwriters.",
     "bodyParagraph2": "We guide policy issuance and claims, liaise with insurers and make sure compensation arrives without delays."
   },
+  "servicePages": {
+    "auto": {
+      "heroTitle": "Road Freight",
+      "heroText": "We organize international road freight with full support at every stage. We handle turnkey projects, from selecting equipment and planning the route to delivery control and unloading. We provide insurance, process coordination, and transparent execution control.",
+      "bodyTitle": "International Road Freight",
+      "bodyParagraph1": "Caravan Logistics organizes international road freight across Central Asia, China, the EAEU, and Europe. We provide end-to-end support for trucking projects, from route planning to unloading control, for both one-off shipments and regular business supply flows. We serve manufacturers, developers, distributors, and trading companies. For each shipment, we select the right equipment based on cargo type, tonnage, volume, and urgency, reducing logistics risks and keeping delivery schedules stable.",
+      "bodyParagraph2": "We cover the full road-freight cycle, from rate calculation and carrier selection to route control, delivery timing, insurance, and customs support. As a logistics operator with a dedicated manager and transparent pricing, we give businesses stable and manageable international logistics.",
+      "cases": {
+        "title": "Road Freight Cases",
+        "subtitle": "Four project examples with route, shipment profile, support scope, and a short solution summary.",
+        "tabs": {
+          "case1": "Development",
+          "case2": "FMCG",
+          "case3": "Oversized",
+          "case4": "Agriculture"
+        },
+        "case1": {
+          "title": "Case 1: Development / Construction",
+          "route": "Saint Petersburg -> Bishkek",
+          "meta": {
+            "vehicle": "<strong>Vehicle type:</strong> curtain-side truck",
+            "tonnage": "<strong>Tonnage:</strong> 20 tons",
+            "cargo": "<strong>Cargo type:</strong> ventilation equipment",
+            "extra": "<strong>Additional services:</strong> insurance, customs clearance"
+          },
+          "desc1": "The client needed timely delivery of ventilation equipment for a residential complex at the interior finishing stage. A delay could have pushed the commissioning timeline.",
+          "desc2": "We assigned a curtain-side truck with side loading, verified the equipment dimensions in advance, and prepared the customs paperwork package. A dedicated manager supervised the border crossing and delivery timing throughout the shipment."
+        },
+        "case2": {
+          "title": "Case 2: Retail / FMCG",
+          "route": "Almaty -> Novosibirsk",
+          "meta": {
+            "vehicle": "<strong>Vehicle type:</strong> curtain-side truck",
+            "tonnage": "<strong>Tonnage:</strong> 18 tons",
+            "cargo": "<strong>Cargo type:</strong> household chemicals and fast-moving consumer goods",
+            "extra": "<strong>Additional services:</strong> insurance, delivery schedule control"
+          },
+          "desc1": "The client, a distributor for a federal retail chain, needed regular stock replenishment before a promotional campaign launch.",
+          "desc2": "Given the tight schedule, we built a fixed shipping plan, aligned loading and unloading slots, and added cargo insurance to reduce risk on the international lane."
+        },
+        "case3": {
+          "title": "Case 3: Oversized / Energy",
+          "route": "Hamburg, Germany -> Bucharest, Romania",
+          "meta": {
+            "vehicle": "<strong>Vehicle type:</strong> low-bed trailer (oversized platform)",
+            "tonnage": "<strong>Tonnage:</strong> 42 tons",
+            "cargo": "<strong>Cargo type:</strong> industrial transformer",
+            "extra": "<strong>Additional services:</strong> oversized permits, escort, insurance, route approvals"
+          },
+          "desc1": "The client was an energy-project contractor upgrading a substation. The transformer had non-standard dimensions and weighed more than 40 tons, requiring a dedicated route and special permits.",
+          "desc2": "We completed a preliminary route survey covering bridge and tunnel constraints, secured oversized permits, arranged escort support, and coordinated with road authorities. The delivery was completed on schedule without equipment damage."
+        },
+        "case4": {
+          "title": "Case 4: Agriculture / Fresh Produce",
+          "route": "Seville, Spain -> Milan, Italy",
+          "meta": {
+            "vehicle": "<strong>Vehicle type:</strong> refrigerated truck (90 m3 road train)",
+            "tonnage": "<strong>Tonnage:</strong> 24 tons",
+            "cargo": "<strong>Cargo type:</strong> fresh citrus fruit",
+            "extra": "<strong>Additional services:</strong> temperature control, insurance, GPS monitoring"
+          },
+          "desc1": "The client, an exporter of fresh agricultural produce, needed strict temperature compliance and precise timing for delivery to a retail distribution center.",
+          "desc2": "We provided a reefer with a +4 C setpoint, configured in-transit temperature monitoring, and maintained GPS route control. The shipment arrived within the agreed unloading window with no temperature deviations and no loss of product quality."
+        }
+      }
+    },
+    "rail": {
+      "heroTitle": "International Rail Freight",
+      "heroText": "We organize rail freight across the CIS, China, and Europe and work with both owned and leased rolling stock.",
+      "bodyTitle": "International Rail Freight",
+      "bodyParagraph1": "Caravan Logistics organizes international rail freight across Central Asia, China, the EAEU, and Europe. We provide full support for rail shipments, from route and rate calculation to station-by-station control and arrival at the destination terminal, handling both spot shipments and regular supply programs. We serve manufacturers, agribusiness, metallurgy, construction companies, and major distributors. Depending on cargo profile, weight, volume, and lead-time requirements, we select the optimal format: boxcars, gondolas, flatcars, or containers.",
+      "bodyParagraph2": "We cover the full rail logistics cycle, from rate calculation and rolling-stock booking to movement control, shipping documents, and unloading coordination. With a dedicated manager and transparent pricing, we provide predictable and cost-efficient rail logistics for business.",
+      "cases": {
+        "title": "Rail Freight Cases",
+        "subtitle": "Four project examples with route, shipment profile, support scope, and a short solution summary.",
+        "descriptionLabel": "Shipment overview",
+        "tabs": {
+          "case1": "Metallurgy",
+          "case2": "Agriculture",
+          "case3": "Industrial",
+          "case4": "Project cargo"
+        },
+        "case1": {
+          "title": "Case 1: Metallurgy / Raw Materials",
+          "route": "Chelyabinsk -> Tashkent",
+          "meta": {
+            "vehicle": "<strong>Rolling stock:</strong> gondola car",
+            "tonnage": "<strong>Tonnage:</strong> 68 tons",
+            "cargo": "<strong>Cargo type:</strong> hot-rolled steel",
+            "extra": "<strong>Additional services:</strong> loading control, document support"
+          },
+          "desc1": "The client, a metallurgical company, was shipping steel products regularly for construction sites. A gondola car was selected based on the cargo weight and profile.",
+          "desc2": "We supervised balanced loading and lashing, checked paperwork at the origin station, and completed the shipment within the supply schedule without idle time at destination."
+        },
+        "case2": {
+          "title": "Case 2: Agriculture / Grain",
+          "route": "Samara -> Baku",
+          "meta": {
+            "vehicle": "<strong>Rolling stock:</strong> covered wagon",
+            "tonnage": "<strong>Tonnage:</strong> 65 tons",
+            "cargo": "<strong>Cargo type:</strong> food-grade wheat",
+            "extra": "<strong>Additional services:</strong> insurance, transit supervision"
+          },
+          "desc1": "The client, an agricultural exporter, was handling seasonal grain shipments. The movement required sanitary compliance and transport-condition control.",
+          "desc2": "We selected covered wagons, aligned the loading schedule, and monitored the transit through several stations. The cargo arrived on time with no loss of volume or quality."
+        },
+        "case3": {
+          "title": "Case 3: Industrial Engineering / Container Shipment",
+          "route": "Warsaw -> Almaty",
+          "meta": {
+            "vehicle": "<strong>Rolling stock:</strong> 40-foot container on rail platform",
+            "tonnage": "<strong>Tonnage:</strong> 22 tons",
+            "cargo": "<strong>Cargo type:</strong> industrial equipment",
+            "extra": "<strong>Additional services:</strong> customs support, insurance, terminal coordination"
+          },
+          "desc1": "The client, a manufacturing company, was delivering equipment for an assembly line. A container format was chosen to protect the cargo and simplify transit handling.",
+          "desc2": "We booked the platform, checked internal packaging and lashing, and provided customs support. The shipment moved without document corrections and without delays at the destination terminal."
+        },
+        "case4": {
+          "title": "Case 4: Construction / Project Cargo",
+          "route": "Bratislava -> Tbilisi",
+          "meta": {
+            "vehicle": "<strong>Rolling stock:</strong> flatcar",
+            "tonnage": "<strong>Tonnage:</strong> 54 tons",
+            "cargo": "<strong>Cargo type:</strong> steel structures for an industrial site",
+            "extra": "<strong>Additional services:</strong> gauge approvals, insurance, lashing control"
+          },
+          "desc1": "The client was implementing an industrial project and needed large steel structures delivered. The shipment required prior approval of loading parameters.",
+          "desc2": "We selected the flatcar, checked lashing schemes, and aligned the route with operational restrictions. Delivery arrived on time and prevented a shift in the installation schedule."
+        }
+      }
+    },
+    "multimodal": {
+      "heroTitle": "Multimodal Freight",
+      "heroText": "We organize international multimodal freight by combining several transport modes within one logistics solution. We deliver turnkey projects, from selecting the optimal transport chain and planning transfer points to controlling every leg and final delivery. We coordinate all participants, provide insurance, and keep timing transparent.",
+      "bodyTitle": "International Multimodal Freight",
+      "bodyParagraph1": "Caravan Logistics organizes international multimodal shipments using road, rail, sea, and air transport. This format is used when a single mode cannot meet the client's timing, geography, budget, or cargo requirements. We build route architectures that balance transit time, cost, and operational reliability while keeping one accountable operator across the chain.",
+      "bodyParagraph2": "We provide end-to-end support, from transport-scheme design and mode selection to transfer control, documentation, and terminal coordination. This gives clients one operating center for the entire route and lowers the risk of disruption between legs.",
+      "cases": {
+        "title": "Multimodal Freight Cases",
+        "subtitle": "Four project examples with route, shipment profile, support scope, and a short solution summary.",
+        "descriptionLabel": "Shipment overview",
+        "tabs": {
+          "case1": "Port logistics",
+          "case2": "FMCG",
+          "case3": "Energy",
+          "case4": "Electronics"
+        },
+        "case1": {
+          "title": "Case 1: Industrial Engineering / Port Logistics",
+          "route": "Genoa, Italy -> Bucharest -> client's final warehouse",
+          "meta": {
+            "vehicle": "<strong>Transport mix:</strong> sea container + rail + road",
+            "tonnage": "<strong>Tonnage:</strong> 26 tons",
+            "cargo": "<strong>Cargo type:</strong> production line",
+            "extra": "<strong>Additional services:</strong> customs clearance, insurance, terminal coordination"
+          },
+          "desc1": "The client purchased a production line in Europe for delivery to a plant in Eastern Europe. The optimal solution combined sea delivery to port, a rail leg to the inland terminal, and road drayage to the warehouse.",
+          "desc2": "We coordinated three transport modes, controlled transfer windows, and handled transit documents. The shipment moved without terminal idle time and stayed aligned with the production start schedule."
+        },
+        "case2": {
+          "title": "Case 2: FMCG / Port-Based Import",
+          "route": "Barcelona -> Port of Rotterdam -> distributor warehouse",
+          "meta": {
+            "vehicle": "<strong>Transport mix:</strong> sea container + road",
+            "tonnage": "<strong>Tonnage:</strong> 22 tons",
+            "cargo": "<strong>Cargo type:</strong> household chemicals",
+            "extra": "<strong>Additional services:</strong> insurance, temperature control on the road leg"
+          },
+          "desc1": "The client, a distributor for a major retail chain, needed delivery within a precise unloading slot. The sea leg optimized cost, while the road leg ensured schedule accuracy.",
+          "desc2": "We coordinated container arrival at the port, aligned truck dispatch, and controlled the delivery schedule. The cargo reached the distribution center without timing deviations."
+        },
+        "case3": {
+          "title": "Case 3: Energy / Project Cargo",
+          "route": "Gdansk -> Kyiv -> industrial site",
+          "meta": {
+            "vehicle": "<strong>Transport mix:</strong> rail + low-bed trailer",
+            "tonnage": "<strong>Tonnage:</strong> 48 tons",
+            "cargo": "<strong>Cargo type:</strong> turbine equipment",
+            "extra": "<strong>Additional services:</strong> oversized permits, escort, insurance"
+          },
+          "desc1": "For this heavy shipment, rail was chosen as the main transport leg, while the final mile was executed by low-bed trailer.",
+          "desc2": "We completed route engineering, aligned unloading parameters, and organized escort support. The transport was completed within the project schedule and without equipment damage."
+        },
+        "case4": {
+          "title": "Case 4: Electronics / Urgent Supply",
+          "route": "Milan -> Frankfurt -> client warehouse",
+          "meta": {
+            "vehicle": "<strong>Transport mix:</strong> air + road",
+            "tonnage": "<strong>Tonnage:</strong> 8 tons",
+            "cargo": "<strong>Cargo type:</strong> electronic components",
+            "extra": "<strong>Additional services:</strong> insurance, expedited customs clearance"
+          },
+          "desc1": "The client needed urgent components for a production line. The air leg reduced transit time, while the road leg enabled immediate delivery to the warehouse.",
+          "desc2": "We arranged accelerated document handling and coordinated every leg of the chain. The cargo arrived within the required deadline, preventing a production stoppage."
+        }
+      }
+    },
+    "china": {
+      "heroTitle": "Freight from China and East Asia",
+      "heroText": "We organize international deliveries from China and East Asia to the CIS and EAEU. We manage turnkey projects, from supplier coordination and cargo consolidation to final delivery control. We coordinate all parties in the chain, provide insurance, and keep deadlines transparent.",
+      "bodyTitle": "International Logistics from China",
+      "bodyParagraph1": "Caravan Logistics has built a dedicated desk focused on shipments from China by road, rail, and multimodal transport. This direction requires continuous market monitoring, a strong understanding of import-export regulation, and resilient transit planning. We design tailored delivery schemes based on cargo profile, supplier specifics, production readiness, and destination-country requirements, supporting both standard shipments and cargo that requires elevated document control.",
+      "bodyParagraph2": "We manage the full delivery cycle, from supplier negotiations and pick-up across different regions of China to consolidation, export documents, and transit control through multiple jurisdictions. Acting as a single logistics operator, we reduce the risk of delays and operational downtime across the chain.",
+      "cases": {
+        "title": "China Lane Cases",
+        "subtitle": "Two project examples with route, shipment profile, support scope, and a short solution summary.",
+        "descriptionLabel": "Shipment overview",
+        "tabs": {
+          "case1": "Light industry",
+          "case2": "Electronics"
+        },
+        "case1": {
+          "title": "Case: Light Industry / Production Launch",
+          "route": "multiple regions of China -> client's final warehouse",
+          "meta": {
+            "vehicle": "<strong>Transport mix:</strong> road + rail (multimodal)",
+            "tonnage": "<strong>Tonnage:</strong> 38 tons (consolidated shipment)",
+            "cargo": "<strong>Cargo type:</strong> equipment for a garment factory",
+            "extra": "<strong>Additional services:</strong> consolidation, completeness check, customs clearance, insurance"
+          },
+          "desc1": "The project involved more than ten suppliers across different regions of China, each with its own production timeline, packaging requirements, and shipping conditions. That required precise synchronization.",
+          "desc2": "We organized staged pick-up from different addresses, checked completeness and labeling, arranged temporary storage, and consolidated everything into one shipment. With the factory launch depending on the deadline, the equipment arrived in full and without disruption, allowing production to start without downtime."
+        },
+        "case2": {
+          "title": "Case: Electronics / Regulated Cargo",
+          "route": "Shenzhen -> transit via the EAEU -> client warehouse",
+          "meta": {
+            "vehicle": "<strong>Transport mix:</strong> rail + road",
+            "tonnage": "<strong>Tonnage:</strong> 19 tons",
+            "cargo": "<strong>Cargo type:</strong> electronic components",
+            "extra": "<strong>Additional services:</strong> HS code verification, admissibility consulting, customs support, insurance"
+          },
+          "desc1": "The client purchased a batch of electronic components requiring correct classification and validation for movement through transit countries. A documentation error could have delayed the cargo at the border.",
+          "desc2": "Our East Asia desk reviewed the documents in advance, aligned the route with current regulatory requirements, and supervised transit control. The cargo was delivered on time without document corrections or additional cost."
+        }
+      }
+    },
+    "air": {
+      "heroTitle": "Air Freight",
+      "heroText": "We ship urgent cargo on charter and scheduled flights with 24/7 support.",
+      "bodyTitle": "International Air Freight",
+      "bodyParagraph1": "Caravan Logistics arranges international air freight for urgent, high-value, and high-tech shipments. We manage the full cycle, from airfreight pricing and flight booking to departure control, arrival coordination, and last-mile delivery. Air freight is the right fit for strict deadlines, production launches, urgent contracts, and high-value cargo. We also account for airline rules, packaging standards, weight and dimension limits, insurance, and customs formalities.",
+      "bodyParagraph2": "As a logistics operator, we coordinate carriers, agents, and terminals while keeping deadlines transparent and each stage under control.",
+      "cases": {
+        "title": "Air Freight Cases",
+        "subtitle": "One project example with route, shipment profile, support scope, and a short solution summary.",
+        "tabs": {
+          "case1": "Electronics"
+        },
+        "case1": {
+          "title": "Case: Electronics / Urgent Production Supply",
+          "route": "Frankfurt -> Dubai -> client warehouse",
+          "meta": {
+            "vehicle": "<strong>Transport mode:</strong> air freight + road delivery",
+            "tonnage": "<strong>Tonnage:</strong> 6 tons",
+            "cargo": "<strong>Cargo type:</strong> electronic modules for a production line",
+            "extra": "<strong>Additional services:</strong> insurance, expedited customs clearance, terminal coordination"
+          },
+          "desc1": "The client, a manufacturing company, faced the risk of a production-line shutdown because of a component delay. Sea or rail delivery could not meet the required timeline.",
+          "desc2": "We calculated the airfreight rate, booked the flight quickly, and prepared the cargo in line with air-carriage requirements. After arrival, we arranged expedited terminal handling and coordinated road delivery to the warehouse. The shipment prevented production downtime and financial losses."
+        }
+      }
+    },
+    "broker": {
+      "heroTitle": "Customs Brokerage",
+      "heroText": "Our in-house broker team clears cargo of any complexity and supports inspections.",
+      "bodyTitle": "Customs Service",
+      "bodyParagraph1": "We classify goods, select HS codes, and calculate duties. We prepare the full document package, including invoices, packing lists, certificates of origin, and compliance certificates.",
+      "bodyParagraph2": "We work closely with customs posts to speed up release. We help clients build the right supply model, reduce risk, and avoid unnecessary extra cost."
+    },
+    "warehousing": {
+      "heroTitle": "Warehousing Services",
+      "heroText": "Owned and partner warehouses help us consolidate, label, and prepare cargo for onward shipment.",
+      "bodyTitle": "Warehouse Solutions",
+      "bodyParagraph1": "We organize bonded storage, customs warehouses, and cross-docking. We label, build kits, and provide photo reports for every operation.",
+      "bodyParagraph2": "We integrate the client's WMS or provide our own reporting system. We prepare cargo for international transport through palletizing, sealing, and document processing."
+    },
+    "insurance": {
+      "heroTitle": "Cargo Insurance",
+      "heroText": "We insure cargo and liability at every stage of the logistics chain.",
+      "bodyTitle": "Insurance Support",
+      "bodyParagraph1": "We tailor insurance programs to cargo type and route, from standard coverage to expanded war-risk and delay protection with leading insurers.",
+      "bodyParagraph2": "We support policy issuance and claims settlement, help prepare documents, manage communication with the insurer, and work toward fast compensation."
+    }
+  },
   "footer": {
     "description": "Discover our full range of road, sea and air freight services. Thanks to advanced technology and a global network we deliver cargo safely and on time.",
     "addressTitle": "Our address",
@@ -35,7 +321,98 @@
   "partners": {
     "eyebrow": "Our partners",
     "title": "Our partners",
-    "text": "We work with equipment makers, FMCG companies, and construction groups across the CIS."
+    "text": "We work with manufacturers, distributors, FMCG brands, and industrial companies across the CIS."
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "The people behind Caravan Logistics who deliver results every day.",
+    "members": {
+      "ceo": {
+        "name": "Syrgak Orozaliev",
+        "role": "CEO • Experience: 20 years",
+        "text": "Defines the company’s development strategy, key growth priorities, and partner relationships."
+      },
+      "auto": {
+        "name": "Meerim Usubalieva",
+        "role": "Head of Road Freight • Experience: 12 years",
+        "text": "Coordinates key business units and is responsible for a stable operating model and service quality."
+      },
+      "finance": {
+        "name": "Indira Turdalieva",
+        "role": "Chief Accountant • Experience: 30 years",
+        "text": "Ensures the legality of all company financial operations and takes personal responsibility for accurate tax calculations and regulatory reporting."
+      },
+      "china": {
+        "name": "Rustam Kadyrkulov",
+        "role": "Head of China Desk • Experience: 10 years",
+        "text": "Coordinates the full supply chain from Chinese suppliers to Kyrgyzstan and other CIS countries, including negotiations, loading control, route planning, and customs issue resolution."
+      },
+      "customs": {
+        "name": "Bermet Sultanova",
+        "role": "Head of Customs Department • Experience: 12 years",
+        "text": "Prepares the legal and financial documentation required for lawful cross-border cargo movement while minimizing costs and delay risks."
+      }
+    }
+  },
+  "history": {
+    "title": "History and Growth",
+    "subtitle": "From a small team to a trusted logistics partner.",
+    "sliderLabel": "Company history",
+    "prev": "Previous",
+    "next": "Next",
+    "dots": "Milestone navigation",
+    "items": {
+      "founded": {
+        "title": "Foundation and the First Step",
+        "text": "Caravan Logistics began in 2008 with a simple idea: to build dependable logistics without empty promises or hidden risks. A few owned trucks, a small office, and the first clients became the foundation of a company focused on results and responsibility."
+      },
+      "system": {
+        "title": "Building the System",
+        "text": "The move to a new office in the city center was more than expansion. It marked the beginning of a structured business model. We started building processes so the company would run as a system, not around individual people, but through a stable management model."
+      },
+      "team": {
+        "title": "Team Formation",
+        "text": "The core team took shape: the first generation of logistics specialists who handled larger projects and more complex routes. Business processes became established and started working as a unified mechanism that supported company growth."
+      },
+      "expertise": {
+        "title": "Expanding Expertise",
+        "text": "Caravan Logistics joined the Chamber of Commerce and Industry of the Kyrgyz Republic and also became a member of the American Chamber of Commerce in Kyrgyzstan, AmCham. This strengthened our position in the international business community and expanded opportunities for partnership, development, and participation in key economic initiatives."
+      },
+      "infrastructure": {
+        "title": "Partner Infrastructure and Technology Shift",
+        "text": "We launched partner warehouses, expanding both geography and delivery speed. The rail freight department was opened as a new line of business that strengthened our multimodal strategy. From a small team and the first clients, we moved toward a fully diversified logistics model."
+      },
+      "digital": {
+        "title": "Technology Development",
+        "text": "The company moved to digital tools and started cooperating with educational institutions, building a talent pipeline and investing in the future of the industry."
+      },
+      "newDirections": {
+        "title": "New Directions",
+        "text": "A separate East Asia lane was launched, including shipments from China to the CIS, which strengthened our position in international logistics. We also built a full air-freight department as an independent business line within Caravan Logistics. We are developing air logistics systematically and moving to a new level: now we operate confidently in the sky as well."
+      },
+      "fullCycle": {
+        "title": "Full Support Cycle",
+        "text": "The launch of the customs-clearance direction allows us to provide businesses with a full-cycle logistics support model."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "role": "Caravan Logistics client",
+    "stars": "Rated 5 out of 5",
+    "moreLabel": "More reviews on 2GIS",
+    "moreButton": "Open",
+    "items": {
+      "item1": "A conscientious company that truly knows its work.",
+      "item2": "Delivered in the shortest possible time. Real professionals. I will continue working with them.",
+      "item3": "Excellent cargo service. They deliver quickly and keep the goods safe and intact.",
+      "item4": "Excellent and reliable cargo service. Polite and responsible people.",
+      "item5": "The best and most reliable company in Kyrgyzstan. A team of professionals.",
+      "item6": "Excellent team, true masters of their craft.",
+      "item7": "A very good company, especially the staff, who are real professionals.",
+      "item8": "An excellent logistics company.",
+      "item9": "A reliable company with fast deliveries. I recommend it as one of the best in Kyrgyzstan."
+    }
   },
   "modal": {
     "title": "Leave a request",
@@ -58,6 +435,11 @@
     "hint": "By clicking send you agree to personal data processing.",
     "success": "Thank you! We have received your request and will respond shortly.",
     "closeLabel": "Close modal"
+  },
+  "forms": {
+    "sending": "Sending...",
+    "success": "Thank you! Your request has been sent. We will contact you shortly.",
+    "error": "We could not send your request. Please try again later."
   },
   "email": {
     "validation": {
@@ -114,9 +496,9 @@
     "heroText": "We provide professional road freight services for domestic and international routes. The team organizes reliable deliveries from Kyrgyzstan to Russia and imports from China to Kyrgyzstan using modern trucks with strict safety and timing control.",
     "heroButton": "Talk to a specialist",
     "auto": {
-      "bodyTitle": "What road freight includes",
-      "bodyParagraph1": "We assign tilt, reefer and specialized trucks for each shipment. Routes are planned with seasonal constraints, axle limits and permit requirements in mind. Drivers are briefed before departure and every vehicle is monitored via GPS 24/7.",
-      "bodyParagraph2": "We handle waybills, CMR, TIR, transit passes and insurance. A dedicated coordinator tracks border checkpoints and keeps the client informed. Our partner network helps reduce idle time and meet agreed delivery windows."
+      "bodyTitle": "International Road Freight",
+      "bodyParagraph1": "Caravan Logistics organizes international road freight across Central Asia, China, the EAEU, and Europe. We provide end-to-end support for trucking projects, from route planning to unloading control, for both one-off shipments and regular business supply flows. We serve manufacturers, developers, distributors, and trading companies. For each shipment, we select the right equipment based on cargo type, tonnage, volume, and urgency, reducing logistics risks and keeping delivery schedules stable.",
+      "bodyParagraph2": "We cover the full road-freight cycle, from rate calculation and carrier selection to route control, delivery timing, insurance, and customs support. As a logistics operator with a dedicated manager and transparent pricing, we give businesses stable and manageable international logistics."
     },
     "gridTitle": "Our services",
     "gridSubtitle": "Choose a card to open a dedicated page with a full description.",
@@ -218,88 +600,88 @@
   },
   "partner": {
     "kulikov": {
-      "since": "Since 2016",
-      "stats": "90 premium furniture shipments."
+      "since": "Partnering since 2022",
+      "stats": "We organize food deliveries with strict temperature control."
     },
     "kant": {
-      "since": "Since 2018",
-      "stats": "1,200 tons of construction materials per year."
+      "since": "Partnering since 2021",
+      "stats": "We ensure regular deliveries of construction materials to project sites."
     },
     "translogistica": {
-      "since": "Since 2015",
-      "stats": "65 multimodal chains delivered."
+      "since": "Partnering since 2019",
+      "stats": "We support multimodal shipments and route coordination."
     },
     "shoro": {
-      "since": "Since 2017",
-      "stats": "FMCG deliveries to 30 cities."
+      "since": "Partnering since 2021",
+      "stats": "We support beverage distribution across the regions of Kyrgyzstan."
     },
     "cocacola": {
-      "since": "Since 2014",
-      "stats": "150 refrigerated runs completed."
+      "since": "Partnering since 2016",
+      "stats": "We transport products in line with FMCG logistics standards."
     },
     "nestle": {
-      "since": "Since 2013",
-      "stats": "Consolidated 200+ ingredient batches."
+      "since": "Partnering since 2020",
+      "stats": "We organize deliveries of raw materials and finished products across the region."
     },
     "knauf": {
-      "since": "Since 2016",
-      "stats": "Moved 3,500 tons of drywall."
+      "since": "Partnering since 2015",
+      "stats": "We supply construction materials to warehouses and project sites."
     },
     "shatura": {
-      "since": "Since 2019",
-      "stats": "Supplying 40 furniture showrooms."
+      "since": "Partnering since 2014",
+      "stats": "We deliver furniture to retail locations and warehouses."
     },
     "worldclass": {
-      "since": "Since 2020",
-      "stats": "Logistics for 15 fitness clubs."
+      "since": "Partnering since 2022",
+      "stats": "We organize sports equipment logistics for fitness clubs."
     },
     "keramin": {
-      "since": "Since 2012",
-      "stats": "1,800 pallets of tiles each year."
+      "since": "Partnering since 2015",
+      "stats": "We transport ceramic tiles and related materials."
     },
     "borusan": {
-      "since": "Since 2011",
-      "stats": "Handled 75 heavy-haul projects."
+      "since": "Partnering since 2017",
+      "stats": "We handle oversized and industrial equipment transportation."
     },
     "bellona": {
-      "since": "Since 2015",
-      "stats": "110 container shipments completed."
+      "since": "Partnering since 2022",
+      "stats": "We organize containerized deliveries of furniture and components."
     },
     "tesladoor": {
-      "since": "Since 2019",
-      "stats": "Delivered 6,000 door sets."
+      "since": "Partnering since 2014",
+      "stats": "We deliver door systems to sites and warehouses."
     },
     "dhl": {
-      "since": "Since 2010",
-      "stats": "Ground support for express deliveries."
+      "since": "Partnering since 2021",
+      "stats": "We take part in organizing ground logistics for international shipments."
     },
     "lg": {
-      "since": "Since 2014",
-      "stats": "Shipped 1.2M electronics units."
+      "since": "Partnering since 2018",
+      "stats": "We transport household appliances in line with storage and delivery requirements."
     },
     "termoplex": {
-      "since": "Since 2017",
-      "stats": "50 temperature-controlled routes yearly."
+      "since": "Partnering since 2017",
+      "stats": "We organize regional transportation of thermal insulation materials."
     },
     "penopleks": {
-      "since": "Since 2016",
-      "stats": "Regular deliveries of insulation materials across the CIS."
+      "since": "Partnering since 2017",
+      "stats": "We ensure regular deliveries of building insulation materials."
     },
     "fabrika": {
-      "since": "Since 2018",
-      "stats": "Completed 90 developer projects."
+      "since": "Partnering since 2015",
+      "stats": "We support deliveries of materials for construction projects."
     },
     "augrand": {
-      "since": "Since 2013",
-      "stats": "Furniture export to 8 markets."
+      "since": "Partnering since 2014",
+      "stats": "We support the export and delivery of furniture products."
     },
     "anto": {
-      "since": "Since 2011",
-      "stats": "Delivered 400 batches of steel structures."
+      "since": "Partnering since 2024",
+      "stats": "We organize shipments of steel structures and components."
     },
     "kumtor": {
-      "since": "Since 2009",
-      "stats": "Supporting mining logistics without downtime."
+      "since": "Partnering since 2017",
+      "stats": "We provide logistics support for mining-related supplies."
     }
   },
   "about": {
@@ -332,6 +714,7 @@
     "formText": "Send a request — we will prepare a quote and answer all questions about documents, timing and tariffs.",
     "labelFirst": "First name",
     "labelLast": "Last name",
+    "labelPhone": "Phone",
     "labelEmail": "Email",
     "labelMessage": "Message",
     "submit": "Send request",
@@ -352,6 +735,7 @@
     },
     "placeholderFirst": "Enter first name",
     "placeholderLast": "Enter last name",
+    "placeholderPhone": "Enter phone number",
     "placeholderEmail": "Enter email",
     "placeholderMessage": "Briefly describe your request"
   },

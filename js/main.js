@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
           >&times;</button>
           <h3 id="callbackModalTitle" data-i18n="modal.title">Оставьте заявку</h3>
           <p data-i18n="modal.description">Укажите контакты и кратко опишите груз — мы подготовим предложение и свяжемся в течение 15 минут.</p>
-          <form class="modal-form">
+          <form class="modal-form" data-request-form>
             <label>
               <span data-i18n="modal.label.name">Имя</span>
               <input
@@ -365,15 +365,16 @@ document.addEventListener('DOMContentLoaded', () => {
             <label>
               <span data-i18n="modal.label.details">Описание груза</span>
               <textarea
-                name="details"
+                name="message"
                 rows="3"
                 placeholder="Маршрут, тип груза, сроки"
                 data-i18n-placeholder="modal.placeholder.details"
               ></textarea>
             </label>
+            <input type="text" name="company" class="form-honeypot" tabindex="-1" autocomplete="off">
             <button type="submit" data-i18n="modal.submit">Отправить</button>
             <p class="modal-hint" data-i18n="modal.hint">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
-            <p class="modal-success" aria-live="polite"></p>
+            <p class="modal-success form-status" aria-live="polite"></p>
           </form>
         </div>
       </div>`;
@@ -400,6 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const htmlNodes = [];
   const placeholderNodes = [];
   const titleNodes = [];
+  const ariaLabelNodes = [];
 
   const collectRuNodes = () => {
     document.querySelectorAll('[data-i18n]').forEach((node) => {
@@ -413,6 +415,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.querySelectorAll('[data-i18n-title]').forEach((node) => {
       titleNodes.push({ node, value: node.title });
+    });
+    document.querySelectorAll('[data-i18n-aria-label]').forEach((node) => {
+      ariaLabelNodes.push({ node, value: node.getAttribute('aria-label') || '' });
     });
   };
 
@@ -428,6 +433,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     titleNodes.forEach(({ node, value }) => {
       node.title = value;
+    });
+    ariaLabelNodes.forEach(({ node, value }) => {
+      node.setAttribute('aria-label', value);
     });
   };
 
@@ -452,34 +460,51 @@ document.addEventListener('DOMContentLoaded', () => {
     modal: {
       success: 'Спасибо! Мы получили заявку и уже работаем над ответом.'
     },
+    forms: {
+      sending: 'Отправка...',
+      success: 'Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.',
+      error: 'Не удалось отправить заявку. Попробуйте еще раз позже.'
+    },
     partner: {
-      kulikov: { since: 'С 2016 года', stats: 'оформили 90 рейсов с премиальной мебелью.' },
-      kant: { since: 'С 2018 года', stats: 'перевозим по 1200 тонн стройматериалов ежегодно.' },
-      translogistica: { since: 'С 2015 года', stats: 'организовали 65 мультимодальных цепочек.' },
-      shoro: { since: 'С 2017 года', stats: 'поддерживаем FMCG-доставки в 30 городов.' },
-      cocacola: { since: 'С 2014 года', stats: 'выполнили 150 рефрижераторных рейсов.' },
-      nestle: { since: 'С 2013 года', stats: 'консолидировали 200+ партий ингредиентов.' },
-      knauf: { since: 'С 2016 года', stats: 'доставили 3 500 тонн гипсокартона.' },
-      shatura: { since: 'С 2019 года', stats: 'обеспечиваем 40 шоурумов мебелью.' },
-      worldclass: { since: 'С 2020 года', stats: 'логистика спортивного оборудования для 15 клубов.' },
-      keramin: { since: 'С 2012 года', stats: 'ежегодно перевозим 1 800 паллет плитки.' },
-      borusan: { since: 'С 2011 года', stats: 'организовали 75 тяжеловесных перевозок.' },
-      bellona: { since: 'С 2015 года', stats: 'выполнили 110 контейнерных отправок.' },
-      tesladoor: { since: 'С 2019 года', stats: 'доставили 6 000 дверных комплектов.' },
-      dhl: { since: 'С 2010 года', stats: 'помогаем с наземной частью экспресс-доставок.' },
-      lg: { since: 'С 2014 года', stats: 'перевезли 1,2 млн единиц электроники.' },
-      termoplex: { since: 'С 2017 года', stats: 'организуем 50 температурных маршрутов в год.' },
-      penopleks: { since: 'С 2016 года', stats: 'обеспечиваем регулярные поставки теплоизоляционных материалов по СНГ.' },
-      fabrika: { since: 'С 2018 года', stats: 'закрыли 90 проектов девелоперов.' },
-      augrand: { since: 'С 2013 года', stats: 'сопровождаем экспорт мебели на 8 рынков.' },
-      anto: { since: 'С 2011 года', stats: 'доставили 400 партий металлоконструкций.' },
-      kumtor: { since: 'С 2009 года', stats: 'ведем горнопромышленные поставки без простоев.' }
-    }
+  kulikov: { since: 'Сотрудничаем с 2022 года', stats: 'Организуем поставки продуктов питания с соблюдением температурного режима.' },
+  kant: { since: 'Сотрудничаем с 2021 года', stats: 'Обеспечиваем регулярные поставки строительных материалов на объекты.' },
+  translogistica: { since: 'Сотрудничаем с 2019 года', stats: 'Участвуем в мультимодальных перевозках и координации маршрутов.' },
+  shoro: { since: 'Сотрудничаем с 2021 года', stats: 'Поддерживаем дистрибуцию напитков по регионам Кыргызстана.' },
+  cocacola: { since: 'Сотрудничаем с 2016 года', stats: 'Выполняем перевозки продукции с соблюдением стандартов FMCG-логистики.' },
+  nestle: { since: 'Сотрудничаем с 2020 года', stats: 'Организуем доставку сырья и готовой продукции по региону.' },
+  knauf: { since: 'Сотрудничаем с 2015 года', stats: 'Обеспечиваем поставки строительных материалов на склады и объекты.' },
+  shatura: { since: 'Сотрудничаем с 2014 года', stats: 'Осуществляем доставку мебели в розничные точки и склады.' },
+  worldclass: { since: 'Сотрудничаем с 2022 года', stats: 'Организуем логистику спортивного оборудования для фитнес-клубов.' },
+  keramin: { since: 'Сотрудничаем с 2015 года', stats: 'Обеспечиваем перевозку керамической плитки и сопутствующих материалов.' },
+  borusan: { since: 'Сотрудничаем с 2017 года', stats: 'Выполняем перевозки негабаритной и промышленной техники.' },
+  bellona: { since: 'Сотрудничаем с 2022 года', stats: 'Организуем контейнерные поставки мебели и комплектующих.' },
+  tesladoor: { since: 'Сотрудничаем с 2014 года', stats: 'Обеспечиваем доставку дверных конструкций на объекты и склады.' },
+  dhl: { since: 'Сотрудничаем с 2021 года', stats: 'Участвуем в организации наземной логистики для международных отправлений.' },
+  lg: { since: 'Сотрудничаем с 2018 года', stats: 'Перевозим бытовую технику с соблюдением требований к хранению и доставке.' },
+  termoplex: { since: 'Сотрудничаем с 2017 года', stats: 'Организуем перевозки теплоизоляционных материалов по региону.' },
+  penopleks: { since: 'Сотрудничаем с 2017 года', stats: 'Обеспечиваем регулярные поставки строительной изоляции.' },
+  fabrika: { since: 'Сотрудничаем с 2015 года', stats: 'Работаем с поставками материалов для строительных проектов.' },
+  augrand: { since: 'Сотрудничаем с 2014 года', stats: 'Сопровождаем экспорт и доставку мебельной продукции.' },
+  anto: { since: 'Сотрудничаем с 2024 года', stats: 'Организуем перевозки металлоконструкций и комплектующих.' },
+  kumtor: { since: 'Сотрудничаем с 2017 года', stats: 'Обеспечиваем логистику для горнодобывающих поставок.' }
+}
   };
 
   const getNested = (obj, path) => {
     if (!obj || !path) return undefined;
     return path.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), obj);
+  };
+
+  const resolveTranslation = (dict, key) => {
+    const serviceKey = document.body.dataset.service;
+    if (serviceKey && key.startsWith('service.')) {
+      const serviceValue = getNested(dict, `servicePages.${serviceKey}.${key.slice('service.'.length)}`);
+      if (serviceValue !== undefined) {
+        return serviceValue;
+      }
+    }
+
+    return getNested(dict, key);
   };
 
   const loadDict = async (lang) => {
@@ -498,9 +523,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const translate = (key) => {
     if (currentLang === DEFAULT_LANG) {
-      return getNested(ruMessages, key) ?? key;
+      return resolveTranslation(ruMessages, key) ?? key;
     }
-    return getNested(currentDict, key) ?? getNested(ruMessages, key) ?? key;
+    return resolveTranslation(currentDict, key) ?? resolveTranslation(ruMessages, key) ?? key;
   };
 
   const applyTranslations = async (lang) => {
@@ -514,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-i18n]').forEach((node) => {
       const key = node.getAttribute('data-i18n');
-      const value = getNested(currentDict, key);
+      const value = resolveTranslation(currentDict, key);
       if (typeof value === 'string') {
         node.textContent = value;
       }
@@ -522,7 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-i18n-html]').forEach((node) => {
       const key = node.getAttribute('data-i18n-html');
-      const value = getNested(currentDict, key);
+      const value = resolveTranslation(currentDict, key);
       if (typeof value === 'string') {
         node.innerHTML = value;
       }
@@ -530,7 +555,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-i18n-placeholder]').forEach((node) => {
       const key = node.getAttribute('data-i18n-placeholder');
-      const value = getNested(currentDict, key);
+      const value = resolveTranslation(currentDict, key);
       if (typeof value === 'string') {
         node.placeholder = value;
       }
@@ -538,9 +563,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-i18n-title]').forEach((node) => {
       const key = node.getAttribute('data-i18n-title');
-      const value = getNested(currentDict, key);
+      const value = resolveTranslation(currentDict, key);
       if (typeof value === 'string') {
         node.title = value;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria-label]').forEach((node) => {
+      const key = node.getAttribute('data-i18n-aria-label');
+      const value = resolveTranslation(currentDict, key);
+      if (typeof value === 'string') {
+        node.setAttribute('aria-label', value);
       }
     });
   };
@@ -732,6 +765,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const initPartnerPopups = () => {
     const logos = document.querySelectorAll('.partners__logo');
     if (!logos.length) return;
+    const mobilePopupQuery = window.matchMedia('(max-width: 768px)');
     const partnerKeys = {
       Kulikov: 'partner.kulikov',
       'Kant TSP': 'partner.kant',
@@ -757,10 +791,48 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     let activePopup = null;
 
+    const resetPopupPosition = (popup) => {
+      popup.style.removeProperty('--partner-popup-shift-x');
+      popup.style.removeProperty('--partner-popup-arrow-left');
+      popup.dataset.placement = 'above';
+    };
+
+    const positionPopup = (logo, popup) => {
+      resetPopupPosition(popup);
+      const popupRect = popup.getBoundingClientRect();
+      const logoRect = logo.getBoundingClientRect();
+      if (!popupRect.width || !logoRect.width) return;
+
+      const viewportPadding = mobilePopupQuery.matches ? 16 : 24;
+      const preferredLeft = logoRect.left + (logoRect.width / 2) - (popupRect.width / 2);
+      const maxLeft = Math.max(viewportPadding, window.innerWidth - viewportPadding - popupRect.width);
+      const clampedLeft = Math.min(Math.max(preferredLeft, viewportPadding), maxLeft);
+      const shiftX = clampedLeft - preferredLeft;
+      const anchorCenter = logoRect.left + (logoRect.width / 2);
+      const arrowLeft = Math.min(
+        popupRect.width - 28,
+        Math.max(28, anchorCenter - clampedLeft)
+      );
+      const spaceAbove = logoRect.top - viewportPadding;
+      const spaceBelow = window.innerHeight - logoRect.bottom - viewportPadding;
+
+      popup.style.setProperty('--partner-popup-shift-x', `${shiftX}px`);
+      popup.style.setProperty('--partner-popup-arrow-left', `${arrowLeft}px`);
+      popup.dataset.placement = spaceAbove >= popupRect.height + 12 || spaceAbove >= spaceBelow ? 'above' : 'below';
+    };
+
+    const syncActivePopupPosition = () => {
+      if (!activePopup) return;
+      const logo = activePopup.closest('.partners__logo');
+      if (!logo) return;
+      positionPopup(logo, activePopup);
+    };
+
     const closePopup = () => {
       if (!activePopup) return;
       activePopup.closest('.partners__logo')?.classList.remove('is-active');
       activePopup.setAttribute('aria-hidden', 'true');
+      resetPopupPosition(activePopup);
       activePopup = null;
     };
 
@@ -790,6 +862,7 @@ document.addEventListener('DOMContentLoaded', () => {
           logo.classList.add('is-active');
           popup.setAttribute('aria-hidden', 'false');
           activePopup = popup;
+          requestAnimationFrame(() => positionPopup(logo, popup));
         } else {
           closePopup();
         }
@@ -808,6 +881,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    window.addEventListener('resize', syncActivePopupPosition);
+    window.addEventListener('scroll', syncActivePopupPosition, { passive: true });
+
     refreshPartnerPopups = () => {
       document.querySelectorAll('.partner-popup').forEach((popup) => {
         const storyKey = popup.dataset.storyKey;
@@ -817,6 +893,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const stats = translate(`${storyKey}.stats`);
         popup.innerHTML = `<strong>${title}</strong><p>${since}. ${stats}</p>`;
       });
+      requestAnimationFrame(syncActivePopupPosition);
     };
   };
 
@@ -946,6 +1023,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.add('is-open');
     document.body.classList.add('modal-open');
     successNode.textContent = '';
+    successNode.classList.remove('is-success', 'is-error');
   };
 
   const closeModal = () => {
@@ -972,23 +1050,97 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  form?.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const formData = new FormData(form);
-    const name = formData.get('name') || 'Без имени';
-    const phone = formData.get('phone') || 'Не указан';
-    const details = formData.get('details') || 'Нет описания';
+  const getFormStatusNode = (targetForm) => targetForm.querySelector('.form-status');
 
-    const subject = encodeURIComponent('Заявка с сайта Caravan Logistics');
-    const body = encodeURIComponent(
-      `Имя: ${name}\nТелефон: ${phone}\nОписание: ${details}`
-    );
+  const setFormStatus = (targetForm, type, message) => {
+    const statusNode = getFormStatusNode(targetForm);
+    if (!statusNode) return;
+    statusNode.textContent = message || '';
+    statusNode.classList.remove('is-success', 'is-error');
+    if (type) {
+      statusNode.classList.add(type === 'success' ? 'is-success' : 'is-error');
+    }
+  };
 
-    window.location.href = `mailto:info@caravan-logistics.com?subject=${subject}&body=${body}`;
-    successNode.textContent = translate('modal.success');
-    form.reset();
-    setTimeout(closeModal, 2500);
-  });
+  const buildSourceValue = () => {
+    const sourceUrl = window.location.href;
+    const pageName = document.body.dataset.page;
+    return pageName ? `${pageName} | ${sourceUrl}` : sourceUrl;
+  };
+
+  const normalizeFormData = (targetForm) => {
+    const rawData = new FormData(targetForm);
+    const normalizedData = new FormData();
+    const name = (rawData.get('name') || rawData.get('full_name') || rawData.get('first_name') || '').toString().trim();
+    const phone = (rawData.get('phone') || rawData.get('tel') || rawData.get('mobile') || '').toString().trim();
+    const email = (rawData.get('email') || '').toString().trim();
+    const message = (rawData.get('message') || rawData.get('details') || rawData.get('comment') || '').toString().trim();
+    const company = (rawData.get('company') || '').toString().trim();
+
+    normalizedData.append('name', name);
+    normalizedData.append('phone', phone);
+    normalizedData.append('email', email);
+    normalizedData.append('message', message);
+    normalizedData.append('source', buildSourceValue());
+    normalizedData.append('company', company);
+
+    return normalizedData;
+  };
+
+  const setSubmitState = (targetForm, isSubmitting) => {
+    const submitButton = targetForm.querySelector('[type="submit"]');
+    if (!submitButton) return;
+    if (!submitButton.dataset.defaultText) {
+      submitButton.dataset.defaultText = submitButton.textContent.trim();
+    }
+    submitButton.disabled = isSubmitting;
+    submitButton.textContent = isSubmitting
+      ? translate('forms.sending')
+      : submitButton.dataset.defaultText;
+  };
+
+  const submitRequestForm = async (targetForm) => {
+    setFormStatus(targetForm, null, '');
+    setSubmitState(targetForm, true);
+
+    try {
+      const response = await fetch('send.php', {
+        method: 'POST',
+        body: normalizeFormData(targetForm)
+      });
+
+      let payload = null;
+      try {
+        payload = await response.json();
+      } catch (error) {
+        payload = null;
+      }
+
+      if (!response.ok || !payload?.success) {
+        throw new Error(payload?.message || 'Request failed');
+      }
+
+      setFormStatus(targetForm, 'success', translate('forms.success'));
+      targetForm.reset();
+
+      if (targetForm === form) {
+        setTimeout(closeModal, 1800);
+      }
+    } catch (error) {
+      setFormStatus(targetForm, 'error', translate('forms.error'));
+    } finally {
+      setSubmitState(targetForm, false);
+    }
+  };
+
+  const initRequestForms = () => {
+    document.querySelectorAll('[data-request-form]').forEach((targetForm) => {
+      targetForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        submitRequestForm(targetForm);
+      });
+    });
+  };
 
   const initBlurNumberHighlights = () => {
     if (document.body.dataset.page !== 'index') return;
@@ -1067,6 +1219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     refreshPartnerPopups();
     highlightServiceNav();
     initBlurNumberHighlights();
+    window.dispatchEvent(new CustomEvent('caravan:languagechange', { detail: { lang: targetLang } }));
   };
 
   window.checkEmail = function checkEmail() {
@@ -1093,6 +1246,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonials();
   initCasesProTabs();
   initLogisticsCounters();
+  initRequestForms();
   collectRuNodes();
   const savedLang = localStorage.getItem('lang') || DEFAULT_LANG;
   setLang(savedLang);

@@ -92,24 +92,27 @@
       <h2 data-i18n="contacts.formTitle">Напишите нам</h2>
       <p data-i18n="contacts.formText">Оставьте запрос — подготовим расчёт и ответим на вопросы о документах, сроках и тарифах.</p>
 
-      <form>
+      <form data-request-form>
         <div class="inline">
           <div>
             <label data-i18n="contacts.labelFirst">Имя</label>
-            <input type="text" data-i18n-placeholder="contacts.placeholderFirst" placeholder="Введите имя">
+            <input type="text" name="name" required data-i18n-placeholder="contacts.placeholderFirst" placeholder="Введите имя">
           </div>
           <div>
-            <label data-i18n="contacts.labelLast">Фамилия</label>
-            <input type="text" data-i18n-placeholder="contacts.placeholderLast" placeholder="Введите фамилию">
+            <label data-i18n="contacts.labelPhone">Телефон</label>
+            <input type="tel" name="phone" required data-form-field="phone" data-i18n-placeholder="contacts.placeholderPhone" placeholder="+996 ___ ___ ___">
           </div>
           </div>
             <label data-i18n="contacts.labelEmail">Email</label>
-            <input type="email" class = "one-line" data-i18n-placeholder="contacts.placeholderEmail" placeholder="Введите email"> 
+            <input type="email" name="email" class = "one-line" data-i18n-placeholder="contacts.placeholderEmail" placeholder="Введите email"> 
 
             <label data-i18n="contacts.labelMessage">Сообщение</label>
-            <textarea class = "one-line" data-i18n-placeholder="contacts.placeholderMessage" placeholder="Кратко опишите ваш запрос"></textarea>
+            <textarea name="message" class = "one-line" data-i18n-placeholder="contacts.placeholderMessage" placeholder="Кратко опишите ваш запрос"></textarea>
+
+            <input type="text" name="company" class="form-honeypot" tabindex="-1" autocomplete="off">
 
             <button type="submit" data-i18n="contacts.submit">Отправить заявку</button>
+            <p class="form-status" aria-live="polite"></p>
         
       </form>
     </div>

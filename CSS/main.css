@@ -1627,11 +1627,14 @@ transition: all 500ms ease;
 }
 
 .partner-popup{
+    --partner-popup-shift-x: 0px;
+    --partner-popup-arrow-left: 50%;
     position: absolute;
     bottom: calc(100% + 12px);
     left: 50%;
-    transform: translate(-50%, 10px) scale(0.95);
+    transform: translate(calc(-50% + var(--partner-popup-shift-x)), 10px) scale(0.95);
     width: 230px;
+    max-width: min(280px, calc(100vw - 32px));
     padding: 14px 16px;
     border-radius: 18px;
     border: 2px solid rgba(111,157,20,0.4);
@@ -1647,13 +1650,27 @@ transition: all 500ms ease;
     content:'';
     position:absolute;
     top:100%;
-    left:50%;
+    left: var(--partner-popup-arrow-left);
     transform: translateX(-50%) rotate(45deg);
     width: 16px;
     height: 16px;
     background: rgba(255,255,255,0.96);
     border-right: 2px solid rgba(111,157,20,0.4);
     border-bottom: 2px solid rgba(111,157,20,0.4);
+}
+
+.partner-popup[data-placement="below"]{
+    top: calc(100% + 12px);
+    bottom: auto;
+}
+
+.partner-popup[data-placement="below"]::before{
+    top: auto;
+    bottom: 100%;
+    border-right: none;
+    border-bottom: none;
+    border-left: 2px solid rgba(111,157,20,0.4);
+    border-top: 2px solid rgba(111,157,20,0.4);
 }
 
 .partner-popup strong{
@@ -1672,7 +1689,7 @@ transition: all 500ms ease;
 .partners__logo.is-active .partner-popup{
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-50%, 0) scale(1);
+    transform: translate(calc(-50% + var(--partner-popup-shift-x)), 0) scale(1);
 }
 
 
@@ -2404,6 +2421,37 @@ flex: 1 1 220px;
 
 .feedback form button:hover{
     filter: brightness(1.05);
+}
+
+.feedback form button[disabled],
+.modal-form button[disabled]{
+    cursor: wait;
+    opacity: 0.75;
+    filter: none;
+}
+
+.form-honeypot{
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-status{
+    min-height: 22px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.form-status.is-success{
+    color: var(--color-lime);
+}
+
+.form-status.is-error{
+    color: #c0392b;
 }
 
 /* Contacts page visit section */
@@ -3279,9 +3327,7 @@ body.modal-open {
 }
 
 .modal-success{
-    min-height: 18px;
     margin-top: 10px;
-    color: var(--color-lime);
 }
 
 @keyframes modal-slide{
@@ -3543,6 +3589,10 @@ body.modal-open {
     :root{
         --mobile-safe: 20px;
         --header-height: 64px;
+    }
+
+    body{
+        padding-top: calc(var(--header-height) + 20px);
     }
 
     .container{
@@ -4239,7 +4289,8 @@ body.modal-open {
     }
 
     .partner-popup{
-        display: none;
+        width: min(280px, calc(100vw - 32px));
+        padding: 14px;
     }
 }
 
@@ -4247,6 +4298,7 @@ body.modal-open {
     body{
         font-size: 14px;
         line-height: 1.45;
+        padding-top: calc(var(--header-height) + 28px);
     }
 
     :root{
