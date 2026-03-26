@@ -29,25 +29,65 @@
   };
 
   const renderCards = (items) => {
-    grid.innerHTML = items.map((item) => {
+    const fragment = document.createDocumentFragment();
+
+    items.forEach((item) => {
       const title = getLocalizedField(item, 'title');
       const excerpt = getLocalizedField(item, 'excerpt');
-      const tag = item.tag ? `<span class=\"news-card__tag\">${item.tag}</span>` : '';
-      const date = item.date ? `<time class=\"news-card__date\" datetime=\"${item.date}\">${formatDate(item.date)}</time>` : '';
-      const meta = tag || date ? `<div class=\"news-card__meta\">${tag}${date}</div>` : '';
-      return `
-        <article class="news-card" data-id="${item.id || ''}">
-          <div class="news-card__media">
-            <img src="${item.image}" alt="${title}">
-          </div>
-          <div class="news-card__body">
-            ${meta}
-            <h3 class="news-card__title">${title}</h3>
-            <p class="news-card__excerpt">${excerpt}</p>
-          </div>
-        </article>
-      `;
-    }).join('');
+
+      const article = document.createElement('article');
+      article.className = 'news-card';
+      article.dataset.id = item.id || '';
+
+      const media = document.createElement('div');
+      media.className = 'news-card__media';
+
+      const image = document.createElement('img');
+      image.src = item.image || '';
+      image.alt = title;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      media.appendChild(image);
+
+      const body = document.createElement('div');
+      body.className = 'news-card__body';
+
+      if (item.tag || item.date) {
+        const meta = document.createElement('div');
+        meta.className = 'news-card__meta';
+
+        if (item.tag) {
+          const tag = document.createElement('span');
+          tag.className = 'news-card__tag';
+          tag.textContent = item.tag;
+          meta.appendChild(tag);
+        }
+
+        if (item.date) {
+          const date = document.createElement('time');
+          date.className = 'news-card__date';
+          date.dateTime = item.date;
+          date.textContent = formatDate(item.date);
+          meta.appendChild(date);
+        }
+
+        body.appendChild(meta);
+      }
+
+      const heading = document.createElement('h3');
+      heading.className = 'news-card__title';
+      heading.textContent = title;
+
+      const text = document.createElement('p');
+      text.className = 'news-card__excerpt';
+      text.textContent = excerpt;
+
+      body.append(heading, text);
+      article.append(media, body);
+      fragment.appendChild(article);
+    });
+
+    grid.replaceChildren(fragment);
   };
 
   fetch('data/news.json')
