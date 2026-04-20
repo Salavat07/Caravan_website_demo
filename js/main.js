@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!track || !dotsContainer || cards.length === 0) return;
 
     dotsContainer.innerHTML = '';
+    let activeIndex = 0;
+    let scrollRaf = 0;
     const dots = cards.map((card, index) => {
       const year = card.dataset.year || card.querySelector('.history__year')?.textContent?.trim();
       const dot = document.createElement('button');
@@ -92,12 +94,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const setActive = (index) => {
+      if (index === activeIndex) return;
+      activeIndex = index;
       cards.forEach((card, idx) => {
         card.classList.toggle('is-active', idx === index);
       });
       dots.forEach((dot, idx) => {
         dot.classList.toggle('is-active', idx === index);
       });
+    };
+
+    const getClosestCardIndex = () => {
+      const trackCenter = track.scrollLeft + (track.clientWidth / 2);
+      let closestIndex = 0;
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      cards.forEach((card, index) => {
+        const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
+        const distance = Math.abs(cardCenter - trackCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      return closestIndex;
+    };
+
+    const syncActiveToScroll = () => {
+      scrollRaf = 0;
+      setActive(getClosestCardIndex());
+      updateNav();
     };
 
     const getStep = () => {
@@ -130,22 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((entry) => entry.isIntersecting);
-        if (!visible.length) return;
-        visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        const index = cards.indexOf(visible[0].target);
-        if (index >= 0) setActive(index);
-      },
-      {
-        root: track,
-        threshold: [0.4, 0.6, 0.8]
-      }
-    );
-
-    cards.forEach((card) => observer.observe(card));
-
     let isDown = false;
     let startX = 0;
     let scrollLeft = 0;
@@ -162,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isDown) return;
       isDown = false;
       track.classList.remove('is-dragging');
+      window.requestAnimationFrame(syncActiveToScroll);
     };
 
     const moveDrag = (event) => {
@@ -177,11 +189,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('mouseup', stopDrag);
 
     track.addEventListener('scroll', () => {
-      window.requestAnimationFrame(updateNav);
+      if (scrollRaf) return;
+      scrollRaf = window.requestAnimationFrame(syncActiveToScroll);
     });
 
     window.addEventListener('resize', updateNav);
-    setActive(0);
+    activeIndex = -1;
+    setActive(getClosestCardIndex());
     updateNav();
   };
 
@@ -340,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data-i18n-title="modal.closeLabel"
           >&times;</button>
           <h3 id="callbackModalTitle" data-i18n="modal.title">Оставьте заявку</h3>
-          <p data-i18n="modal.description">Укажите контакты и кратко опишите груз — мы подготовим предложение и свяжемся в течение 15 минут.</p>
+          <p data-i18n="modal.description">Укажите контакты и кратко опишите груз — мы подготовим предложение и свяжемся с вами в ближайшее время.</p>
           <form class="modal-form" data-request-form>
             <label>
               <span data-i18n="modal.label.name">Имя</span>
@@ -465,6 +479,9 @@ document.addEventListener('DOMContentLoaded', () => {
       success: 'Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.',
       error: 'Не удалось отправить заявку. Попробуйте еще раз позже.'
     },
+    partners: {
+      title: 'Наши партнеры'
+    },
     partner: {
   kulikov: { since: 'Сотрудничаем с 2022 года', stats: 'Организуем поставки продуктов питания с соблюдением температурного режима.' },
   kant: { since: 'Сотрудничаем с 2021 года', stats: 'Обеспечиваем регулярные поставки строительных материалов на объекты.' },
@@ -486,7 +503,17 @@ document.addEventListener('DOMContentLoaded', () => {
   fabrika: { since: 'Сотрудничаем с 2015 года', stats: 'Работаем с поставками материалов для строительных проектов.' },
   augrand: { since: 'Сотрудничаем с 2014 года', stats: 'Сопровождаем экспорт и доставку мебельной продукции.' },
   anto: { since: 'Сотрудничаем с 2024 года', stats: 'Организуем перевозки металлоконструкций и комплектующих.' },
-  kumtor: { since: 'Сотрудничаем с 2017 года', stats: 'Обеспечиваем логистику для горнодобывающих поставок.' }
+  kumtor: { since: 'Сотрудничаем с 2017 года', stats: 'Обеспечиваем логистику для горнодобывающих поставок.' },
+  sberbank: { since: 'Сотрудничаем с 2021 года', stats: 'Поддерживаем поставки оборудования, материалов и сопутствующих грузов для офисной и инфраструктурной деятельности.' },
+  alinex: { since: 'Сотрудничаем с 2022 года', stats: 'Сопровождаем поставки пищевой продукции и обеспечиваем стабильную логистику по согласованным маршрутам.' },
+  rakhat: { since: 'Сотрудничаем с 2021 года', stats: 'Организуем перевозки кондитерской продукции и поддерживаем своевременную доставку в рамках торговых поставок.' },
+  schuco: { since: 'Сотрудничаем с 2015 года', stats: 'Обеспечиваем логистику профильных систем и комплектующих для строительных и фасадных проектов.' },
+  modernglass: { since: 'Сотрудничаем с 2015 года', stats: 'Сопровождаем перевозки стекольной продукции и материалов для производственных и строительных задач.' },
+  grohe: { since: 'Сотрудничаем с 2015 года', stats: 'Организуем поставки сантехнической продукции и поддерживаем стабильную логистику для проектных и торговых направлений.' },
+  rzd: { since: 'Совместные проекты в железнодорожной логистике', stats: 'Участвуем в поставках, связанных с железнодорожной инфраструктурой и координацией перевозок по ж/д направлениям.' },
+  evergreen: { since: 'Сотрудничаем с 2022 года', stats: 'Поддерживаем поставки строительных и промышленных материалов, обеспечивая понятную и устойчивую логистику.' },
+  ariston: { since: 'Сотрудничаем с 2015 года', stats: 'Организуем перевозки бытового и инженерного оборудования для проектных и дистрибуционных поставок.' },
+  porcelanosa: { since: 'Сотрудничаем с 2022 года', stats: 'Сопровождаем поставки отделочных материалов и интерьерной продукции для торговых и проектных задач.' }
 }
   };
 
@@ -531,15 +558,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const applyTranslations = async (lang) => {
     if (lang === DEFAULT_LANG) {
       currentDict = {};
-      return;
+    } else {
+      const dict = await loadDict(lang);
+      currentDict = dict || {};
     }
-
-    const dict = await loadDict(lang);
-    currentDict = dict || {};
 
     document.querySelectorAll('[data-i18n]').forEach((node) => {
       const key = node.getAttribute('data-i18n');
-      const value = resolveTranslation(currentDict, key);
+      const value = translate(key);
       if (typeof value === 'string') {
         node.textContent = value;
       }
@@ -547,7 +573,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-i18n-html]').forEach((node) => {
       const key = node.getAttribute('data-i18n-html');
-      const value = resolveTranslation(currentDict, key);
+      const value = translate(key);
       if (typeof value === 'string') {
         node.innerHTML = value;
       }
@@ -555,7 +581,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-i18n-placeholder]').forEach((node) => {
       const key = node.getAttribute('data-i18n-placeholder');
-      const value = resolveTranslation(currentDict, key);
+      const value = translate(key);
       if (typeof value === 'string') {
         node.placeholder = value;
       }
@@ -563,7 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-i18n-title]').forEach((node) => {
       const key = node.getAttribute('data-i18n-title');
-      const value = resolveTranslation(currentDict, key);
+      const value = translate(key);
       if (typeof value === 'string') {
         node.title = value;
       }
@@ -571,7 +597,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-i18n-aria-label]').forEach((node) => {
       const key = node.getAttribute('data-i18n-aria-label');
-      const value = resolveTranslation(currentDict, key);
+      const value = translate(key);
       if (typeof value === 'string') {
         node.setAttribute('aria-label', value);
       }
@@ -591,14 +617,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!cards.length) return;
     let activePopup = null;
 
-    const closePopup = (popup) => {
-      popup.classList.remove('is-visible');
-      popup.setAttribute('aria-hidden', 'true');
-      const trigger = popup.closest('.faq-card')?.querySelector('.faq-trigger');
-      trigger?.setAttribute('aria-expanded', 'false');
-      if (activePopup === popup) {
-        activePopup = null;
-      }
+	    const closePopup = (popup) => {
+	      popup.classList.remove('is-visible');
+	      popup.setAttribute('aria-hidden', 'true');
+	      popup.style.maxHeight = '0px';
+	      const trigger = popup.closest('.faq-card')?.querySelector('.faq-trigger');
+	      trigger?.setAttribute('aria-expanded', 'false');
+	      if (activePopup === popup) {
+	        activePopup = null;
+	      }
     };
 
     cards.forEach((card) => {
@@ -612,16 +639,17 @@ document.addEventListener('DOMContentLoaded', () => {
           closePopup(activePopup);
         }
         const isOpen = popup.classList.contains('is-visible');
-        if (isOpen) {
-          closePopup(popup);
-        } else {
-          popup.classList.add('is-visible');
-          popup.setAttribute('aria-hidden', 'false');
-          trigger.setAttribute('aria-expanded', 'true');
-          activePopup = popup;
-        }
-      });
-    });
+	        if (isOpen) {
+	          closePopup(popup);
+	        } else {
+	          popup.classList.add('is-visible');
+	          popup.setAttribute('aria-hidden', 'false');
+	          trigger.setAttribute('aria-expanded', 'true');
+	          popup.style.maxHeight = `${popup.scrollHeight}px`;
+	          activePopup = popup;
+	        }
+	      });
+	    });
 
     document.addEventListener('click', (event) => {
       if (!activePopup) return;
@@ -630,12 +658,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && activePopup) {
-        closePopup(activePopup);
-      }
-    });
-  };
+	    document.addEventListener('keydown', (event) => {
+	      if (event.key === 'Escape' && activePopup) {
+	        closePopup(activePopup);
+	      }
+	    });
+
+	    window.addEventListener('resize', () => {
+	      if (activePopup) {
+	        activePopup.style.maxHeight = `${activePopup.scrollHeight}px`;
+	      }
+	    });
+	  };
 
   const initSnowfall = () => {
     if (page !== 'portfolio') return;
@@ -787,7 +821,18 @@ document.addEventListener('DOMContentLoaded', () => {
       'Фабрика окон': 'partner.fabrika',
       'AU Grand': 'partner.augrand',
       'ANTO.KG': 'partner.anto',
-      'Кумтор': 'partner.kumtor'
+      'Кумтор': 'partner.kumtor',
+      Kumtor: 'partner.kumtor',
+      Sberbank: 'partner.sberbank',
+      AlinEX: 'partner.alinex',
+      Rakhat: 'partner.rakhat',
+      Schuco: 'partner.schuco',
+      'Modern Glass': 'partner.modernglass',
+      Grohe: 'partner.grohe',
+      РЖД: 'partner.rzd',
+      Evergreen: 'partner.evergreen',
+      Ariston: 'partner.ariston',
+      PORCELANOSA: 'partner.porcelanosa'
     };
     let activePopup = null;
 
@@ -960,63 +1005,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const widget = document.createElement('div');
     widget.className = 'contact-widget';
     widget.innerHTML = `
-      <div class="contact-widget__panel" aria-hidden="true">
-        <h4 data-i18n="contact.widget.title">Всегда на связи</h4>
-        <p data-i18n="contact.widget.text">Ответим в мессенджерах или по телефону.</p>
-        <div class="contact-widget__links">
-          <a class="contact-widget__link whatsapp" href="https://wa.me/996555113333" target="_blank" rel="noopener">
-            <span class="contact-widget__icon">WA</span>
-            <div>
-              <span data-i18n="contact.widget.whatsapp.label">WhatsApp</span>
-              <small data-i18n="contact.widget.whatsapp.desc">Написать в мессенджер</small>
-            </div>
-          </a>
-          <a class="contact-widget__link telegram" href="https://t.me/+996555113333" target="_blank" rel="noopener">
-            <span class="contact-widget__icon">TG</span>
-            <div>
-              <span data-i18n="contact.widget.telegram.label">Telegram</span>
-              <small data-i18n="contact.widget.telegram.desc">Обсудить проект</small>
-            </div>
-          </a>
-          <a class="contact-widget__link phone" href="tel:+996555113333">
-            <span class="contact-widget__icon">TEL</span>
-            <div>
-              <span data-i18n="contact.widget.phone.label">+996 555 11 33 33</span>
-              <small data-i18n="contact.widget.phone.desc">Позвонить напрямую</small>
-            </div>
-          </a>
-        </div>
-      </div>
-      <button class="contact-widget__toggle" type="button" data-i18n-title="contact.widget.toggle" title="Написать нам">
-        <span class="contact-widget__toggle-icon">☎</span>
-      </button>`;
+      <a class="contact-widget__action contact-widget__action--whatsapp"
+         href="https://wa.me/996555113333"
+         target="_blank"
+         rel="noopener"
+         aria-label="Написать в WhatsApp">
+        <img class="contact-widget__img" src="img/Icons/whats_logo.png" alt="WhatsApp" aria-hidden="true">
+      </a>
+      <a class="contact-widget__action contact-widget__action--phone"
+         href="tel:+996555113333"
+         aria-label="Позвонить по номеру +996 555 11 33 33">
+        <img class="contact-widget__img" src="img/Icons/green_phone.jpg" alt="Телефон" aria-hidden="true">
+      </a>`;
     document.body.appendChild(widget);
     contactWidget = widget;
-    const toggle = widget.querySelector('.contact-widget__toggle');
-    const panel = widget.querySelector('.contact-widget__panel');
-
-    const setState = (isOpen) => {
-      widget.classList.toggle('is-open', isOpen);
-      panel?.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-      toggle?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    };
-
-    toggle?.addEventListener('click', (event) => {
-      event.stopPropagation();
-      setState(!widget.classList.contains('is-open'));
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!widget.contains(event.target)) {
-        setState(false);
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        setState(false);
-      }
-    });
   };
 
   const openModal = () => {
@@ -1210,11 +1212,6 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('lang', targetLang);
     if (typeof updateLanguageMenu === 'function') {
       updateLanguageMenu(targetLang);
-    }
-    if (contactWidget) {
-      const toggle = contactWidget.querySelector('.contact-widget__toggle');
-      const toggleLabel = targetLang === DEFAULT_LANG ? null : getNested(currentDict, 'contact.widget.toggle');
-      toggle?.setAttribute('aria-label', toggleLabel || getNested(ruMessages, 'contact.widget.toggle'));
     }
     refreshPartnerPopups();
     highlightServiceNav();

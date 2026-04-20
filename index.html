@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Caravan Logistics — автомобильные, железнодорожные и авиа перевозки по СНГ и миру с полным сопровождением.">
-    <title>Caravan Logistics — международные перевозки</title>
+    <meta name="description" content="Караван логистикс — автомобильные, железнодорожные и мультимодальные перевозки по СНГ и миру с полным сопровождением.">
+    <title>Караван логистикс — международные перевозки</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -14,16 +14,16 @@
     <div class="wrapper">
     <header class = "container">
        <a class = "logo" href="index.html">
-        <img src="img/Caravan/caravan_logo.png" alt="Caravan Logistics логотип" width="371" height="261" decoding="async">
+        <img src="img/Caravan/caravan_logo.png" alt="Караван логистикс логотип" width="371" height="261" decoding="async">
        </a> 
         <nav>
             <ul>
                 <li class = "active"><a href="index.html" data-i18n="nav.home">Главная</a></li>
                 <li><a href ="about.html" data-i18n="nav.about">О нас</a></li>
                 <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
-                <li><a href ="portfolio.html" data-i18n="nav.news">Новости</a></li>
+                <li><a href ="gallery.html" data-i18n="nav.news">Галерея</a></li>
                 <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
-            
+
                     <li class="nav-services nav-services--mobile">
                         <div class="mobile-menu__divider"></div>
                         <button class="mobile-menu__accordion" type="button" aria-expanded="true" data-accordion="services" data-i18n-html="common.servicesMenu">Услуги <span class="mobile-menu__chev">▾</span></button>
@@ -33,7 +33,6 @@
                             <a class="mobile-menu__item mobile-menu__item--sub" href="service-multimodal.html" data-i18n="services.cards.multimodal.title">Мультимодальные перевозки</a>
                             <a class="mobile-menu__item mobile-menu__item--sub" href="service-broker.html" data-i18n="services.cards.broker.title">Таможенный брокер</a>
                             <a class="mobile-menu__item mobile-menu__item--sub" href="service-china.html" data-i18n="services.cards.china.title">Китай</a>
-                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-air.html" data-i18n="services.cards.air.title">Авиаперевозки</a>
                             <a class="mobile-menu__item mobile-menu__item--sub" href="service-warehousing.html" data-i18n="services.cards.warehousing.title">Складские услуги</a>
                             <a class="mobile-menu__item mobile-menu__item--sub" href="service-insurance.html" data-i18n="services.cards.insurance.title">Страхование</a>
                         </div>
@@ -56,11 +55,11 @@
     <div class="hero hero--full">
         <div class="hero__content container">
             <div class="hero--info">
-                <p class="hero__tag">ТРАНСПОРТНО-ЭКСПЕДИТОРСКАЯ КОМПАНИЯ</p>
-                <h1 data-i18n="hero.title">Caravan Logistics</h1>
-                <p data-i18n="hero.line1">Международная логистика в 192 страны мира.</p>
-                <p data-i18n="hero.line2">10 000 перевоезок в год.</p> 
-                <p data-i18n="hero.line3">2000 вагонов перевезенно за год. 17 лет на рынке</p>
+                <p class="hero__tag">Логистическая компания</p>
+                <h1 data-i18n="hero.title">Караван логистикс</h1>
+                <p data-i18n="hero.line1">Международная логистика в 105 странах мира.</p>
+                <p data-i18n="hero.line2">В среднем по 10 000 перевозок в год.</p> 
+                <p data-i18n="hero.line3">С 2008 года на рынке</p>
                 <button class="btn" data-modal="callback" data-i18n="hero.cta">Получить консультацию</button>
             </div>
         </div>
@@ -68,7 +67,7 @@
 
     <section class="logistics-stats">
         <div class="container logistics-stats__inner">
-            <h2 data-i18n="index.stats.title">Caravan Logistics в цифрах</h2>
+            <h2 data-i18n="index.stats.title">Караван логистикс в цифрах</h2>
             <div class="logistics-stats__grid">
                 <article class="logistics-stat-card">
                     <div class="logistics-stat-card__value">
@@ -89,7 +88,7 @@
                         <span data-counter-target="97" data-counter-suffix="%">97%</span>
                     </div>
                     <div class="logistics-stat-card__line" aria-hidden="true"></div>
-                    <p data-i18n="index.stats.item3">Клиентов продолжают работать с Caravan Logistics ежегодно</p>
+                    <p data-i18n="index.stats.item3">Партнеров продолжают работать с Караван логистикс ежегодно</p>
                 </article>
             </div>
         </div>
@@ -101,40 +100,34 @@
         </div>
 
         <div class="services-showcase">
-            <a class="service-entry" href="service-auto.html">
-                <img loading="lazy" src="img/Main_images/kazem-hussein-Kq1ERpkH0eQ-unsplash.jpg" alt="Автоперевозки по СНГ">
+            <a class="service-entry service-entry--auto" href="service-auto.html">
+                <img loading="lazy" src="img/Main_images/bc50333585657f9bd6426e766d14c973.jpg" alt="Автоперевозки по СНГ">
                 <div class="service-entry__meta">
                     <span class="service-entry__title" data-i18n="services.item1">Автоперевозки</span>
                 </div>
             </a>
             <a class="service-entry" href="service-rail.html">
-                <img loading="lazy" src="img/Main_images/shui-miles-IWPTBX8ugjs-unsplash.jpg" alt="ЖД маршруты и вагоны">
+                <img loading="lazy" src="img/Main_images/ЖД.jpeg" alt="ЖД маршруты и вагоны">
                 <div class="service-entry__meta">
                     <span class="service-entry__title" data-i18n="services.item2">Железнодорожные перевозки</span>
                 </div>
             </a>
             <a class="service-entry" href="service-broker.html">
-                <img loading="lazy" src="img/Main_images/vlad-deep-mCqi3MljC4E-unsplash.jpg" alt="Таможенный брокер">
+                <img loading="lazy" src="img/Main_images/EAEU.jpg" alt="Таможенный брокер">
                 <div class="service-entry__meta">
                     <span class="service-entry__title" data-i18n="services.item3">Таможенный брокер</span>
                 </div>
             </a>
             <a class="service-entry" href="service-china.html">
-                <img loading="lazy" src="img/Main_images/h-co-3JFVNo4ukKQ-unsplash.jpg" alt="Китай и международные проекты">
+                <img loading="lazy" src="img/Main_images/china_2.jpg" alt="Китай и международные проекты">
                 <div class="service-entry__meta">
                     <span class="service-entry__title" data-i18n="services.item4">Юго-Восточная Азия (Китай)</span>
                 </div>
             </a>
             <a class="service-entry" href="service-multimodal.html">
-                <img loading="lazy" src="img/Main_images/shaah-shahidh--subrrYxv8A-unsplash.jpg" alt="Мультимодальные перевозки">
+                <img loading="lazy" src="img/Main_images/ChatGPT Image 20 апр. 2026 г., 10_28_58.png" alt="Мультимодальные перевозки">
                 <div class="service-entry__meta">
                     <span class="service-entry__title" data-i18n="services.item5">Мультимодальные перевозки</span>
-                </div>
-            </a>
-            <a class="service-entry" href="service-air.html">
-                <img loading="lazy" src="img/Main_images/jake-weirick-mwXtmsTGlzE-unsplash.jpg" alt="Авиаперевозки">
-                <div class="service-entry__meta">
-                    <span class="service-entry__title" data-i18n="services.item6">Авиаперевозки</span>
                 </div>
             </a>
             <a class="service-entry" href="service-warehousing.html">
@@ -144,7 +137,7 @@
                 </div>
             </a>
             <a class="service-entry" href="service-insurance.html">
-                <img loading="lazy" src="img/Main_images/vlad-deep-mCqi3MljC4E-unsplash.jpg" alt="Страхование грузов">
+                <img loading="lazy" src="img/Main_images/insurance.jpg" alt="Страхование грузов">
                 <div class="service-entry__meta">
                     <span class="service-entry__title" data-i18n="services.item8">Страхование грузов</span>
                 </div>
@@ -153,11 +146,9 @@
     </div>
     <section class="trust">
         <div class="trust__content container">
-            <p class="trust__eyebrow" data-i18n="big-text">Почему Caravan Logistics?</p>
-            <h3 data-i18n="banner.title">Принципы работы</h3>
-            <p data-i18n="banner.text">Мы рассматриваем перевозку не как разовую услугу, а как часть цепочки поставок — от производителя до конечного потребителя, от которой зависят товары в магазинах, сроки строительства и выполнение обязательств перед людьми.
-Каждая поставка влияет не только на бизнес-показатели, но и на реальные жизненные процессы — сдачу объектов, запуск оборудования, переезд семей.
-Мы несём ответственность за ваш груз, сроки, документы и за репутацию вашего бизнеса перед вашими клиентами.</p>
+            <p class="trust__eyebrow" data-i18n="big-text">Почему Караван логистикс?</p>
+            <h3 data-i18n="banner.title">Подход к работе</h3>
+            <p data-i18n="banner.text">Для нас логистика — это точная организация маршрута, сроков и документов. Мы согласовываем условия поставки, подбираем подходящую схему перевозки и сопровождаем груз на ключевых этапах. Такой подход помогает клиенту понимать статус поставки, планировать дальнейшие действия и принимать решения на основе реальной информации.</p>
         </div>
     </section>
 
@@ -165,7 +156,7 @@
       <div class="container">
         <div class="team__head">
           <h2 data-i18n="team.title">Наша команда</h2>
-          <p data-i18n="team.subtitle">Люди, которые стоят за развитием Caravan Logistics и ежедневно отвечают за результат.</p>
+          <p data-i18n="team.subtitle">Люди, которые стоят за развитием Караван логистикс и ежедневно отвечают за результат.</p>
         </div>
 
         <div class="team__timeline">
@@ -177,7 +168,7 @@
             </div>
             <div class="team__content">
               <h3 data-i18n="team.members.ceo.name">Сыргак Орозалиев</h3>
-              <span class="team__role" data-i18n="team.members.ceo.role">CEO • Стаж: 20 лет</span>
+              <span class="team__role" data-i18n="team.members.ceo.role">CEO • Опыт работы: 20 лет</span>
               <p data-i18n="team.members.ceo.text">Определяет стратегию развития компании, ключевые направления роста и партнёрские отношения.</p>
             </div>
           </article>
@@ -188,7 +179,7 @@
             </div>
             <div class="team__content">
               <h3 data-i18n="team.members.auto.name">Мээрим Усубалиева</h3>
-              <span class="team__role" data-i18n="team.members.auto.role"> Руководитель Авто отдела • Стаж: 12 лет</span>
+              <span class="team__role" data-i18n="team.members.auto.role"> Руководитель отдела Автомобильных перевозок • Опыт работы: 12 лет</span>
               <p data-i18n="team.members.auto.text">Координирует ключевые подразделения, отвечает за стабильность операционной модели и качество сервиса.</p>
             </div>
           </article>
@@ -200,7 +191,7 @@
             </div>
             <div class="team__content">
               <h3 data-i18n="team.members.finance.name">Индира Турдалиева</h3>
-              <span class="team__role" data-i18n="team.members.finance.role">Главный бухгалтер • Стаж: 30 лет</span>
+              <span class="team__role" data-i18n="team.members.finance.role">Главный бухгалтер • Опыт работы: 30 лет</span>
               <p data-i18n="team.members.finance.text">Обеспечивает законность всех финансовых операций компании и несет персональную ответственность за правильность расчета налогов и сдачу отчетности перед государством.</p>
             </div>
 
@@ -211,8 +202,8 @@
             </div>
             <div class="team__content">
               <h3 data-i18n="team.members.china.name">Рустам Кадыркулов</h3>
-              <span class="team__role" data-i18n="team.members.china.role">Руководитель Китай Отдела • Стаж: 10 лет</span>
-              <p data-i18n="team.members.china.text"> Координирует всю цепочку поставок от китайских поставщиков до Кыргызстана и других стран СНГ, включая переговоры, контроль погрузки, расчет логистических маршрутов и решение вопросов на таможне..</p>
+              <span class="team__role" data-i18n="team.members.china.role">Руководитель направления Китай и Восточная Азия • Опыт работы: 10 лет</span>
+              <p data-i18n="team.members.china.text">Обеспечивает полный цикл логистики по Восточной Азии: от работы с клиентом до контроля доставки и развития эффективных решений.</p>
             </div>
           </article>
 
@@ -224,8 +215,8 @@
             </div>
             <div class="team__content">
               <h3 data-i18n="team.members.customs.name">Бермет Султанова</h3>
-              <span class="team__role" data-i18n="team.members.customs.role">Руководитель Таможенного отдела • Стаж: 12 лет</span>
-              <p data-i18n="team.members.customs.text"> Готовит юридическую и финансовую документацию для легального перемещения груза через границу, минимизируя расходы и риски задержек..</p>
+              <span class="team__role" data-i18n="team.members.customs.role">Руководитель Таможенного отдела • Опыт работы: 12 лет</span>
+              <p data-i18n="team.members.customs.text"> Готовит юридическую и финансовую документацию для легального перемещения груза через границу, минимизируя расходы и риски задержек.</p>
             </div>
           </article>
         </div>
@@ -236,7 +227,7 @@
   <div class="features">
     <div class="container">
         <h3 data-i18n="faq.title">Ответы на популярные вопросы</h3>
-        <p data-i18n="faq.text">Мы подготовили краткие подсказки по стоимости, срокам и документам. Не нашли нужный ответ — оставьте заявку, и логист свяжется с вами в течение нескольких минут.</p>
+        <p data-i18n="faq.text">В этом разделе собраны ответы на вопросы о формате работы, сопровождении перевозок, коммуникации и контроле процессов. Если вам нужна консультация по вашей задаче, оставьте заявку, и логист свяжется с вами в ближайшее время.</p>
         <div class="info">
             <div class="block faq-card" style="--popup-accent:#f97316;">
                 <img loading="lazy" src="img/Caravan_Brandbook/1.png" alt="Иконка стоимости доставки">
@@ -247,7 +238,7 @@
                     </button>
                 </div>
                 <div class="faq-popup" role="dialog" aria-hidden="true">
-                    <p data-i18n="faq.a1">Мы строим взаимодействие на прозрачности: понятные расчеты, обоснование ставок, объяснение рыночной ситуации и своевременная обратная связь. Клиент должен понимать, что происходит с его грузом и почему принимаются те или иные решения.</p>
+                    <p data-i18n="faq.a1">Для нас важны понятная коммуникация, актуальная информация по грузу и своевременная обратная связь. Клиент в любой момент должен понимать статус перевозки и ключевые решения по поставке.</p>
                 </div>
             </div>
             <div class="block faq-card" style="--popup-accent:#facc15;">
@@ -375,31 +366,31 @@
         <div class="container">
             <div class="partners__intro">
                 <p class="partners__eyebrow" data-i18n="partners.eyebrow">Нам доверяют</p>
-                <h3 data-i18n="partners.title">Бренды и корпорации</h3>
+                <h3 data-i18n="partners.title">Наши партнеры</h3>
                 <p data-i18n="partners.text">Работаем с производителями техники, FMCG и строительными холдингами по всему СНГ.</p>
             </div>
             <div class="partners__grid">
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/Kulikov.png" alt="Kulikov"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/KantTSP.png" alt="Kant TSP"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/TransLogista.png" alt="TransLogistica Kazakhstan"></div>
+                <div class="partners__logo"><img class="partners__logo-img--parcelanosa" loading="lazy" src="img/Logos/parcelanosa.png" alt="PORCELANOSA"></div>
+                <div class="partners__logo"><img loading="lazy" src="img/Logos/РЖД.png" alt="РЖД"></div>
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/Shoro.png" alt="Шоро"></div>
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/cola.png" alt="Coca-Cola"></div>
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/nestle.png" alt="Nestle"></div>
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/Knauf.png" alt="Knauf"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/Shatura.png" alt="Шатура"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/wold_class.png" alt="World Class"></div>
+                <div class="partners__logo"><img loading="lazy" src="img/Logos/Grohe.png" alt="Grohe"></div>
+                <div class="partners__logo"><img loading="lazy" src="img/Logos/Sberbank_Logo_2020.svg.png" alt="Sberbank"></div>
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/Keramin.png" alt="Керамин"></div>
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/borusan.png" alt="Borusan"></div>
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/bellona.png" alt="Bellona"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/tesladoor.png" alt="Tesladoor"></div>
+                <div class="partners__logo"><img class="partners__logo-img--schuco" loading="lazy" src="img/Logos/schuco.webp" alt="Schuco"></div>
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/DHL.png" alt="DHL"></div>
                 <div class="partners__logo"><img loading="lazy" src="img/Logos/LG.png" alt="LG"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/termoplex.png" alt="Termoplex"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/fabrika_okon.png" alt="Фабрика окон"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/AUgrand.png" alt="AU Grand"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/anto.png" alt="ANTO.KG"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/penopleks.png" alt="Penoplex"></div>
-                <div class="partners__logo"><img loading="lazy" src="img/Logos/kumtor.png" alt="Кумтор"></div>
+                <div class="partners__logo"><img loading="lazy" src="img/Logos/Ariston-Logo.png" alt="Ariston"></div>
+                <div class="partners__logo"><img class="partners__logo-img--modern-glass" loading="lazy" src="img/Logos/modern_glass.png" alt="Modern Glass"></div>
+                <div class="partners__logo"><img loading="lazy" src="img/Logos/Rakhat.png" alt="Rakhat"></div>
+                <div class="partners__logo"><img loading="lazy" src="img/Logos/alinex.jpg" alt="AlinEX"></div>
+                <div class="partners__logo"><img class="partners__logo-img--evergreen" loading="lazy" src="img/Logos/evergreen_logo..png.gif" alt="Evergreen"></div>
+                <div class="partners__logo"><img loading="lazy" src="img/Logos/kumtor.png" alt="Kumtor"></div>
             </div>
         </div>
     </section>
@@ -411,15 +402,20 @@
           <a class="logo footer-logo" href="index.html">
             <img loading="lazy" src="img/Caravan/caravan logo.png" alt="Caravan Logistics" width="371" height="260" decoding="async">
           </a>
-          <p data-i18n="footer.description">Откройте для себя наш широкий спектр услуг по доставке грузов, включая наземные, морские и воздушные перевозки. Благодаря передовым технологиям и глобальной сети мы обеспечиваем вам товар прибывает в целости и сохранности и вовремя. </p>
+          <p data-i18n="footer.description">Мы организуем автомобильные, железнодорожные, морские и мультимодальные перевозки, подбирая логистическое решение под задачу клиента. Работаем через проверенную партнёрскую сеть, чтобы груз прибывал в согласованные сроки и в надлежащем состоянии.</p>
         </div>
              <div>
                 <h4 data-i18n="footer.addressTitle">Наш адрес</h4>
                 <ul>
-                    <li data-i18n="footer.addressLine1">г. Бишкек, ул. Чынгыза Айтматова 243, 3 этаж</li>
-                    <li data-i18n="footer.addressLine2">+996 555 11 33 33</li>
-                    <li data-i18n="footer.addressLine3">Бишкек</li>
-                    <li data-i18n="footer.addressLine4">Кыргызстан</li>
+                    <li data-i18n="footer.addressLine1">Бишкек, Кыргызстан</li>
+                    <li data-i18n="footer.addressLine2">ул. Чынгыза Айтматова 243, 3 этаж</li>
+                    <li data-i18n="footer.addressLine3">+996 555 11 33 33</li>
+                    <li class="footer-address-separator" data-i18n="footer.addressLine4">Алматы, Казахстан</li>
+                    <li data-i18n="footer.addressLine5">Сейфуллина 563а, 5 этаж</li>
+                    <li data-i18n="footer.addressLine6">+7 777 078 08 36</li>
+                    <li class="footer-address-separator" data-i18n="footer.addressLine7">Гуанчжоу, Китай</li>
+                    <li data-i18n="footer.addressLine8">Fortune Mansion B2, 7 этаж, офис 711</li>
+                    <li data-i18n="footer.addressLine9">+86 18676883097</li>
                 </ul>
              </div>
              <div>
@@ -428,25 +424,21 @@
                   <div class="footer-social__icons">
                     <a class="footer-social__icon" href="https://wa.me/996555113333" target="_blank" rel="noopener" aria-label="WhatsApp">
                       <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7.2 19.5l.6-3.1a7.1 7.1 0 1 1 3.1 1.6l-3.7 1.5z" />
-                        <path d="M9.5 9.4c.2-.4.3-.4.5-.4h.5c.2 0 .3 0 .4.3l.6 1.5c0 .1.1.3 0 .4l-.2.4c-.1.1-.2.2 0 .4.2.3.6 1 1.4 1.6.8.7 1.5.9 1.8 1 .2.1.3 0 .4-.1l.5-.6c.1-.2.3-.2.5-.1l1.6.7c.2.1.3.2.3.3 0 .2-.1.6-.4.9-.3.3-.7.6-1.2.6-.5 0-1-.1-2-.5-1-.4-1.9-1.1-2.8-2.1-.9-1-1.5-2-1.8-2.8-.3-.8-.3-1.3-.3-1.7 0-.4.1-.8.3-1z" />
+                        <path d="M12 2a10 10 0 0 0-8.78 14.79L2 22l5.36-1.18A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.07-1.11l-.29-.17-3.18.7.68-3.1-.19-.31A8 8 0 1 1 12 20Zm4.29-5.6c-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06a6.56 6.56 0 0 1-1.93-1.19 7.24 7.24 0 0 1-1.34-1.67c-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.79-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.1.15 1.51.09.46-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28Z" />
                       </svg>
                     </a>
                     <a class="footer-social__icon" href="https://t.me/+996555113333" target="_blank" rel="noopener" aria-label="Telegram">
                       <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M20.6 4.6L3.6 11.4c-.8.3-.8 1.4.1 1.6l4.5 1.4 1.7 5.2c.2.7 1.1.9 1.6.4l2.6-2.4 4.6 3.4c.6.4 1.4.1 1.5-.6l2.6-14.1c.2-.8-.6-1.4-1.3-1.1z" />
+                        <path d="M21.5 4.84a1.5 1.5 0 0 0-1.57-.2L3.1 11.52a1.5 1.5 0 0 0 .1 2.82l4.34 1.45 1.5 4.82a1.5 1.5 0 0 0 2.52.65l2.42-2.34 3.94 2.9a1.5 1.5 0 0 0 2.36-.9l2.18-14.5a1.5 1.5 0 0 0-.47-1.48ZM9.02 15.12l8.68-5.32-6.93 6.68-.27 2.44-1.48-3.8Zm2.95 3.01.18-1.64 6.8-6.56-5.88 7.01-1.1 1.19Z" />
                       </svg>
                     </a>
                     <a class="footer-social__icon" href="https://www.instagram.com/caravan_logistics_com?igsh=dWprNTB4MnB4MjVp" target="_blank" rel="noopener" aria-label="Instagram">
                       <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <rect x="5" y="5" width="14" height="14" rx="4" />
-                        <circle cx="12" cy="12" r="3.5" />
-                        <circle cx="16.5" cy="7.5" r="1" />
+                        <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" />
                       </svg>
                     </a>
                   </div>
                   <a class="footer-social__email" href="mailto:info@caravan-logistics.com">info@caravan-logistics.com</a>
-                  <a class="footer-social__phone" href="tel:+996555113333">+996 555 11 33 33</a>
                   <div class="footer-social__bitrix">
                     <a href="https://crm.caravan-logistics.com" target="_blank" rel="noopener">
                       <img src="img/Logos/bitrix24.svg" alt="Bitrix24">

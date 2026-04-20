@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About us",
-    "news": "News",
+    "news": "Gallery",
     "services": "Services",
     "contacts": "Contacts"
   },
@@ -28,60 +28,54 @@
       "bodyParagraph2": "We cover the full road-freight cycle, from rate calculation and carrier selection to route control, delivery timing, insurance, and customs support. As a logistics operator with a dedicated manager and transparent pricing, we give businesses stable and manageable international logistics.",
       "cases": {
         "title": "Road Freight Cases",
-        "subtitle": "Four project examples with route, shipment profile, support scope, and a short solution summary.",
+        "subtitle": "Four projects covering synchronized international supply, high-value cargo security, winter chemical logistics, and regular reefer deliveries.",
+        "taskLabel": "Task",
+        "challengesLabel": "Challenges",
+        "solutionLabel": "Solution",
+        "resultLabel": "Result",
         "tabs": {
-          "case1": "Development",
-          "case2": "FMCG",
-          "case3": "Oversized",
-          "case4": "Agriculture"
+          "case1": "Premium project",
+          "case2": "High-value cargo",
+          "case3": "Chemical cargo",
+          "case4": "Metal products"
         },
         "case1": {
-          "title": "Case 1: Development / Construction",
-          "route": "Saint Petersburg -> Bishkek",
-          "meta": {
-            "vehicle": "<strong>Vehicle type:</strong> curtain-side truck",
-            "tonnage": "<strong>Tonnage:</strong> 20 tons",
-            "cargo": "<strong>Cargo type:</strong> ventilation equipment",
-            "extra": "<strong>Additional services:</strong> insurance, customs clearance"
-          },
-          "desc1": "The client needed timely delivery of ventilation equipment for a residential complex at the interior finishing stage. A delay could have pushed the commissioning timeline.",
-          "desc2": "We assigned a curtain-side truck with side loading, verified the equipment dimensions in advance, and prepared the customs paperwork package. A dedicated manager supervised the border crossing and delivery timing throughout the shipment."
+          "kicker": "Complex international project",
+          "title": "Case 1. Restaurant equipment supply from Europe and China to Russia",
+          "route": "4 trucks from Europe, 3 trucks from China, total weight above 100 tons",
+          "task": "Organize an international supply of restaurant equipment for a premium facility, consolidating cargo from Europe and China with onward delivery to Russia.",
+          "challenges": "<ul><li>The project required around two months of preparation and synchronization between two international origins.</li><li>The shipment included a large number of product positions and originally fell under more than 100 HS codes.</li><li>Two oversized units weighed about 30 tons each.</li><li>Separate low-bed trailers and crane unloading were required for the oversized cargo.</li></ul>",
+          "solution": "<ul><li>Built the logistics scheme and synchronized simultaneous dispatch of 4 trucks from Europe and 3 trucks from China.</li><li>Optimized cargo classification and reduced the complexity of HS-code handling.</li><li>Added 2 Russian low-bed trailers for oversized units and arranged loading and crane unloading.</li><li>We organized customs clearance in Bishkek, coordinated all related documentation processes, and ensured the onward shipment of the cargo to Russia..</li></ul>",
+          "result": "A complex international supply of equipment was completed with synchronized flows, oversized-cargo handling, and onward delivery to the final destination within the agreed schedule."
         },
         "case2": {
-          "title": "Case 2: Retail / FMCG",
-          "route": "Almaty -> Novosibirsk",
-          "meta": {
-            "vehicle": "<strong>Vehicle type:</strong> curtain-side truck",
-            "tonnage": "<strong>Tonnage:</strong> 18 tons",
-            "cargo": "<strong>Cargo type:</strong> household chemicals and fast-moving consumer goods",
-            "extra": "<strong>Additional services:</strong> insurance, delivery schedule control"
-          },
-          "desc1": "The client, a distributor for a federal retail chain, needed regular stock replenishment before a promotional campaign launch.",
-          "desc2": "Given the tight schedule, we built a fixed shipping plan, aligned loading and unloading slots, and added cargo insurance to reduce risk on the international lane."
+          "kicker": "Enhanced security",
+          "title": "Case 2. High-value cargo delivery from China to Moscow",
+          "route": "China -> Moscow, 3-truck batches, total cargo value above USD 15 million",
+          "task": "Organize transportation of high-value IT cargo with lithium batteries from China to Moscow with elevated requirements for security, insurance, and control.",
+          "challenges": "<ul><li>Each loaded truck carried cargo worth approximately USD 500,000 to 800,000.</li><li>Total cargo value exceeded USD 15 million.</li><li>The project required lengthy preparation of contractual, insurance, and customs arrangements.</li><li>Security requirements were elevated throughout the route.</li></ul>",
+          "solution": "<ul><li>Negotiation and approval with the client took around three months.</li><li>The transportation was organized in stages: supplies were consolidated into around 10 lots of 3-4 trucks each, within a project totaling about 30 trucks.</li><li>Armed escort was arranged on every stage across Kazakhstan.</li><li>We completed full cargo insurance, customs clearance, and route-wide control.</li></ul>",
+          "result": "The high-value shipment was delivered in stages, on schedule, and in compliance with security, insurance, and customs requirements."
         },
         "case3": {
-          "title": "Case 3: Oversized / Energy",
-          "route": "Hamburg, Germany -> Bucharest, Romania",
-          "meta": {
-            "vehicle": "<strong>Vehicle type:</strong> low-bed trailer (oversized platform)",
-            "tonnage": "<strong>Tonnage:</strong> 42 tons",
-            "cargo": "<strong>Cargo type:</strong> industrial transformer",
-            "extra": "<strong>Additional services:</strong> oversized permits, escort, insurance, route approvals"
-          },
-          "desc1": "The client was an energy-project contractor upgrading a substation. The transformer had non-standard dimensions and weighed more than 40 tons, requiring a dedicated route and special permits.",
-          "desc2": "We completed a preliminary route survey covering bridge and tunnel constraints, secured oversized permits, arranged escort support, and coordinated with road authorities. The delivery was completed on schedule without equipment damage."
+          "kicker": "Winter transport",
+          "title": "Case 3. Chemical cargo in a tank container from Germany to Bishkek",
+          "route": "Germany -> Almaty -> Bishkek, 26 tons, winter season",
+          "task": "Organize international delivery of chemical cargo in a tank container during winter at a temperature of -10 degrees and resolve technical and customs issues along the route.",
+          "challenges": "<ul><li>The cargo froze in transit and had to be restored before unloading.</li><li>The required trailer for handling the tank container was unavailable at destination.</li><li>A rare trailer had to be found urgently and the cargo had to be reheated.</li><li>At the Almaty-Bishkek border, customs declaration documents from Kazakhstan were additionally requested and document-related issues arose.</li></ul>",
+          "solution": "<ul><li>Arranged the international movement of the chemical cargo and issued insurance coverage.</li><li>Quickly sourced the required trailer for further handling of the container.</li><li>Organized two days of cargo heating up to approximately 25 C.</li><li>Engaged customs specialists and resolved additional document requirements at the border.</li></ul>",
+          "result": "Despite winter conditions, technical complications, and additional document requirements, the shipment was supported through all critical operational and customs issues without losing control of the project."
         },
         "case4": {
-          "title": "Case 4: Agriculture / Fresh Produce",
-          "route": "Seville, Spain -> Milan, Italy",
-          "meta": {
-            "vehicle": "<strong>Vehicle type:</strong> refrigerated truck (90 m3 road train)",
-            "tonnage": "<strong>Tonnage:</strong> 24 tons",
-            "cargo": "<strong>Cargo type:</strong> fresh citrus fruit",
-            "extra": "<strong>Additional services:</strong> temperature control, insurance, GPS monitoring"
-          },
-          "desc1": "The client, an exporter of fresh agricultural produce, needed strict temperature compliance and precise timing for delivery to a retail distribution center.",
-          "desc2": "We provided a reefer with a +4 C setpoint, configured in-transit temperature monitoring, and maintained GPS route control. The shipment arrived within the agreed unloading window with no temperature deviations and no loss of product quality."
+          "kicker": "Regular supply program",
+          "title": "Case 4. Regular deliveries of metal products from Yekaterinburg and Saratov to Bishkek",
+          "route": "Yekaterinburg / Saratov -> Bishkek, around 100 trucks per month over 5 years",
+          "task": "Ensure stable regular delivery of metal products from Yekaterinburg and Saratov to Bishkek with control over timing, documents, and security across the entire route.",
+          "metricsLabel": "Project parameters",
+          "doneLabel": "What we handled",
+          "metrics": "<span>Rebar and metal products</span><span>Standard euro trucks</span><span>90-105 m3</span><span>Up to 22 tons per truck</span><span>Around 100 trucks per month</span><span>5 years of regular operation</span>",
+          "solution": "<ul><li>Built a stable scheme of regular deliveries and document checks before dispatch.</li><li>Verified compliance of the cargo with accompanying documents and arranged liability insurance.</li><li>Received daily updates on truck locations to control safety and delivery timing.</li><li>When fraudsters attempted to reroute the trucks, we promptly checked the number, restored contact with the drivers, and prevented deviation from the agreed route.</li></ul>",
+          "result": "For several years, we have been ensuring stable deliveries of metal products from Russia to Bishkek with a transit time of 4-5 days and regular control of route, documents, and security at every stage."
         }
       }
     },
@@ -93,61 +87,46 @@
       "bodyParagraph2": "We cover the full rail logistics cycle, from rate calculation and rolling-stock booking to movement control, shipping documents, and unloading coordination. With a dedicated manager and transparent pricing, we provide predictable and cost-efficient rail logistics for business.",
       "cases": {
         "title": "Rail Freight Cases",
-        "subtitle": "Four project examples with route, shipment profile, support scope, and a short solution summary.",
-        "descriptionLabel": "Shipment overview",
+        "subtitle": "Three projects where coordination, control, and operational discipline were critical to the result.",
+        "taskLabel": "Task",
+        "challengesLabel": "Challenges",
+        "solutionLabel": "Solution",
+        "resultLabel": "Result",
         "tabs": {
-          "case1": "Metallurgy",
-          "case2": "Agriculture",
-          "case3": "Industrial",
-          "case4": "Project cargo"
+          "case1": "Oversized cargo",
+          "case2": "Building materials",
+          "case3": "Turnkey supply"
         },
         "case1": {
-          "title": "Case 1: Metallurgy / Raw Materials",
-          "route": "Chelyabinsk -> Tashkent",
-          "meta": {
-            "vehicle": "<strong>Rolling stock:</strong> gondola car",
-            "tonnage": "<strong>Tonnage:</strong> 68 tons",
-            "cargo": "<strong>Cargo type:</strong> hot-rolled steel",
-            "extra": "<strong>Additional services:</strong> loading control, document support"
-          },
-          "desc1": "The client, a metallurgical company, was shipping steel products regularly for construction sites. A gondola car was selected based on the cargo weight and profile.",
-          "desc2": "We supervised balanced loading and lashing, checked paperwork at the origin station, and completed the shipment within the supply schedule without idle time at destination."
+          "kicker": "Complex project",
+          "title": "Case 1. Rail transport of oversized special equipment",
+          "route": "Rail shipment of oversized cargo",
+          "task": "Arrange rail transport for oversized special equipment in full compliance with applicable requirements.",
+          "challenges": "<ul><li>The first step was to determine the degree of oversize.</li><li>Obtaining the loading scheme took significant time.</li><li>Railway services were not aligned and requirements changed between stages.</li><li>The route and movement conditions required separate approval.</li></ul>",
+          "solution": "<ul><li>We organized the collection and approval of the loading scheme.</li><li>We supervised loading and securing in line with rail standards.</li><li>We coordinated stations and the relevant railway services.</li><li>We provided full support throughout every stage of the movement.</li></ul>",
+          "result": "The cargo was delivered successfully without violations or delays."
         },
         "case2": {
-          "title": "Case 2: Agriculture / Grain",
-          "route": "Samara -> Baku",
-          "meta": {
-            "vehicle": "<strong>Rolling stock:</strong> covered wagon",
-            "tonnage": "<strong>Tonnage:</strong> 65 tons",
-            "cargo": "<strong>Cargo type:</strong> food-grade wheat",
-            "extra": "<strong>Additional services:</strong> insurance, transit supervision"
-          },
-          "desc1": "The client, an agricultural exporter, was handling seasonal grain shipments. The movement required sanitary compliance and transport-condition control.",
-          "desc2": "We selected covered wagons, aligned the loading schedule, and monitored the transit through several stations. The cargo arrived on time with no loss of volume or quality."
+          "kicker": "Border-risk shipment",
+          "title": "Case 2. Rail transport of commercial cargo with border risk",
+          "route": "Rail movement of ceramic tile through border stations",
+          "task": "Move the cargo by rail through border stations without a return or stoppage risk.",
+          "challenges": "<ul><li>The station recorded an overload at the border.</li><li>There was a discrepancy between weighing results.</li><li>The cargo faced a real risk of delay and return.</li></ul>",
+          "solution": "<ul><li>We organized a repeat cargo inspection.</li><li>We negotiated directly with station representatives.</li><li>We supported on-site resolution of the issue.</li><li>We ensured correct paperwork and a repeat control procedure.</li></ul>",
+          "result": "The cargo cleared the border successfully and was delivered to the consignee."
         },
         "case3": {
-          "title": "Case 3: Industrial Engineering / Container Shipment",
-          "route": "Warsaw -> Almaty",
-          "meta": {
-            "vehicle": "<strong>Rolling stock:</strong> 40-foot container on rail platform",
-            "tonnage": "<strong>Tonnage:</strong> 22 tons",
-            "cargo": "<strong>Cargo type:</strong> industrial equipment",
-            "extra": "<strong>Additional services:</strong> customs support, insurance, terminal coordination"
-          },
-          "desc1": "The client, a manufacturing company, was delivering equipment for an assembly line. A container format was chosen to protect the cargo and simplify transit handling.",
-          "desc2": "We booked the platform, checked internal packaging and lashing, and provided customs support. The shipment moved without document corrections and without delays at the destination terminal."
-        },
-        "case4": {
-          "title": "Case 4: Construction / Project Cargo",
-          "route": "Bratislava -> Tbilisi",
-          "meta": {
-            "vehicle": "<strong>Rolling stock:</strong> flatcar",
-            "tonnage": "<strong>Tonnage:</strong> 54 tons",
-            "cargo": "<strong>Cargo type:</strong> steel structures for an industrial site",
-            "extra": "<strong>Additional services:</strong> gauge approvals, insurance, lashing control"
-          },
-          "desc1": "The client was implementing an industrial project and needed large steel structures delivered. The shipment required prior approval of loading parameters.",
-          "desc2": "We selected the flatcar, checked lashing schemes, and aligned the route with operational restrictions. Delivery arrived on time and prevented a shift in the installation schedule."
+          "kicker": "Regular supply flow",
+          "title": "Case 3. Turnkey rail freight for regular supply programs",
+          "route": "Stable rail deliveries across an international route network",
+          "task": "Build stable rail shipments for different cargo types without involving the client in operational work.",
+          "cargoLabel": "Cargo types",
+          "geoLabel": "Geography",
+          "doneLabel": "What we handled",
+          "cargo": "<span>Rebar</span><span>Flour</span><span>Coal</span><span>Seeds</span><span>Rolled metal</span><span>Home appliances</span><span>Food products</span>",
+          "geo": "<span>Russia</span><span>Kazakhstan</span><span>Uzbekistan</span><span>Belarus</span><span>Estonia</span><span>Turkmenistan</span>",
+          "solution": "<ul><li>Provided and allocated wagons.</li><li>Organized wagon placement on the siding track.</li><li>Handled wagon inspection and acceptance.</li><li>Managed loading and securing.</li><li>Agreed the shipment plan.</li><li>Prepared all documentation.</li><li>Controlled movement to destination station.</li><li>Organized unloading and wagon return.</li></ul>",
+          "result": "The client receives a turnkey rail shipment without being drawn into complex operations or direct interaction with railway structures."
         }
       }
     },
@@ -155,65 +134,48 @@
       "heroTitle": "Multimodal Freight",
       "heroText": "We organize international multimodal freight by combining several transport modes within one logistics solution. We deliver turnkey projects, from selecting the optimal transport chain and planning transfer points to controlling every leg and final delivery. We coordinate all participants, provide insurance, and keep timing transparent.",
       "bodyTitle": "International Multimodal Freight",
-      "bodyParagraph1": "Caravan Logistics organizes international multimodal shipments using road, rail, sea, and air transport. This format is used when a single mode cannot meet the client's timing, geography, budget, or cargo requirements. We build route architectures that balance transit time, cost, and operational reliability while keeping one accountable operator across the chain.",
+      "bodyParagraph1": "Caravan Logistics organizes international multimodal shipments using road, rail, and sea transport. This format is used when a single mode cannot meet the client's timing, geography, budget, or cargo requirements. We build route architectures that balance transit time, cost, and operational reliability while keeping one accountable operator across the chain.",
       "bodyParagraph2": "We provide end-to-end support, from transport-scheme design and mode selection to transfer control, documentation, and terminal coordination. This gives clients one operating center for the entire route and lowers the risk of disruption between legs.",
       "cases": {
         "title": "Multimodal Freight Cases",
-        "subtitle": "Four project examples with route, shipment profile, support scope, and a short solution summary.",
-        "descriptionLabel": "Shipment overview",
+        "subtitle": "Three multimodal projects: steel supply for construction, delivery from Europe via Turkey, and cargo delivery from China to Bishkek under one control chain.",
+        "taskLabel": "Task",
+        "challengesLabel": "Challenges",
+        "solutionLabel": "Solution",
+        "resultLabel": "Result",
         "tabs": {
-          "case1": "Port logistics",
-          "case2": "FMCG",
-          "case3": "Energy",
-          "case4": "Electronics"
+          "case1": "Steel products",
+          "case2": "Europe -> Turkey",
+          "case3": "China -> Bishkek"
         },
         "case1": {
-          "title": "Case 1: Industrial Engineering / Port Logistics",
-          "route": "Genoa, Italy -> Bucharest -> client's final warehouse",
-          "meta": {
-            "vehicle": "<strong>Transport mix:</strong> sea container + rail + road",
-            "tonnage": "<strong>Tonnage:</strong> 26 tons",
-            "cargo": "<strong>Cargo type:</strong> production line",
-            "extra": "<strong>Additional services:</strong> customs clearance, insurance, terminal coordination"
-          },
-          "desc1": "The client purchased a production line in Europe for delivery to a plant in Eastern Europe. The optimal solution combined sea delivery to port, a rail leg to the inland terminal, and road drayage to the warehouse.",
-          "desc2": "We coordinated three transport modes, controlled transfer windows, and handled transit documents. The shipment moved without terminal idle time and stayed aligned with the production start schedule."
+          "kicker": "Single logistics chain",
+          "title": "Case 1. Steel products delivery from Atyrau to Bishkek",
+          "route": "Atyrau -> Lugovaya railway station -> transfer -> road delivery to Bishkek",
+          "task": "Organize delivery of steel products and steel items from Atyrau to Bishkek using a multimodal scheme with timing control across the full route.",
+          "cargoLabel": "Cargo",
+          "cargo": "Steel products and steel items for a construction project in Bishkek.",
+          "doneLabel": "What we handled",
+          "solution": "<ul><li>Aligned cargo readiness dates and the dispatch schedule.</li><li>Checked documents before the shipment started.</li><li>Organized rail dispatch from Atyrau to Lugovaya railway station.</li><li>After arrival at the station, arranged transfer to road transport.</li><li>Maintained control of the cargo on every leg and coordinated final delivery to Bishkek.</li></ul>",
+          "result": "The cargo was delivered to Bishkek under the agreed multimodal scheme, and the client received one managed logistics chain instead of coordinating rail and road stages separately."
         },
         "case2": {
-          "title": "Case 2: FMCG / Port-Based Import",
-          "route": "Barcelona -> Port of Rotterdam -> distributor warehouse",
-          "meta": {
-            "vehicle": "<strong>Transport mix:</strong> sea container + road",
-            "tonnage": "<strong>Tonnage:</strong> 22 tons",
-            "cargo": "<strong>Cargo type:</strong> household chemicals",
-            "extra": "<strong>Additional services:</strong> insurance, temperature control on the road leg"
-          },
-          "desc1": "The client, a distributor for a major retail chain, needed delivery within a precise unloading slot. The sea leg optimized cost, while the road leg ensured schedule accuracy.",
-          "desc2": "We coordinated container arrival at the port, aligned truck dispatch, and controlled the delivery schedule. The cargo reached the distribution center without timing deviations."
+          "kicker": "Sea and road chain",
+          "title": "Case 2. Cargo delivery from Europe to Bishkek via Turkey",
+          "route": "Europe -> port of loading -> sea to Turkey -> transfer -> Bishkek",
+          "task": "Organize cargo delivery from Europe to Bishkek using a multimodal chain with sea transport and onward delivery to Kyrgyzstan.",
+          "challenges": "<ul><li>Several transport stages had to be linked into one chain.</li><li>Precise coordination in port and during onward movement from Turkey was critical.</li><li>The client needed one point of control for the full shipment to Bishkek.</li></ul>",
+          "solution": "<ul><li>Accepted the cargo at the port of loading in Europe.</li><li>Organized the sea shipment to Turkey.</li><li>Aligned transfer operations and onward movement of the cargo.</li><li>Prepared documents for the next leg.</li><li>Arranged road delivery from Turkey to Bishkek and controlled the route until handover to the consignee.</li></ul>",
+          "result": "The cargo was delivered to Bishkek under the agreed multimodal scheme with coordination of every stage from the port of loading to the final destination."
         },
         "case3": {
-          "title": "Case 3: Energy / Project Cargo",
-          "route": "Gdansk -> Kyiv -> industrial site",
-          "meta": {
-            "vehicle": "<strong>Transport mix:</strong> rail + low-bed trailer",
-            "tonnage": "<strong>Tonnage:</strong> 48 tons",
-            "cargo": "<strong>Cargo type:</strong> turbine equipment",
-            "extra": "<strong>Additional services:</strong> oversized permits, escort, insurance"
-          },
-          "desc1": "For this heavy shipment, rail was chosen as the main transport leg, while the final mile was executed by low-bed trailer.",
-          "desc2": "We completed route engineering, aligned unloading parameters, and organized escort support. The transport was completed within the project schedule and without equipment damage."
-        },
-        "case4": {
-          "title": "Case 4: Electronics / Urgent Supply",
-          "route": "Milan -> Frankfurt -> client warehouse",
-          "meta": {
-            "vehicle": "<strong>Transport mix:</strong> air + road",
-            "tonnage": "<strong>Tonnage:</strong> 8 tons",
-            "cargo": "<strong>Cargo type:</strong> electronic components",
-            "extra": "<strong>Additional services:</strong> insurance, expedited customs clearance"
-          },
-          "desc1": "The client needed urgent components for a production line. The air leg reduced transit time, while the road leg enabled immediate delivery to the warehouse.",
-          "desc2": "We arranged accelerated document handling and coordinated every leg of the chain. The cargo arrived within the required deadline, preventing a production stoppage."
+          "kicker": "Control from shipper to destination",
+          "title": "Case 3. Cargo delivery from China to Bishkek",
+          "route": "China -> consolidation warehouse -> rail leg -> border crossing -> Bishkek",
+          "task": "Organize cargo delivery from China to Bishkek with control of every stage, from pick-up at shippers to arrival in Kyrgyzstan.",
+          "challenges": "<ul><li>The cargo was collected from several shippers.</li><li>Packaging and readiness had to be checked before dispatch.</li><li>Stable timing and correct documents were critical for the client.</li></ul>",
+          "solution": "<ul><li>Organized cargo pick-up from shippers in China.</li><li>Completed consolidation at the warehouse.</li><li>Checked packaging and marking.</li><li>Prepared shipping documents.</li><li>Organized the rail shipment to the border crossing, then arranged delivery to Kyrgyzstan and controlled cargo movement up to arrival in Bishkek.</li></ul>",
+          "result": "The cargo was delivered to Bishkek under the agreed scheme with timing and document control at every stage of transportation."
         }
       }
     },
@@ -221,48 +183,67 @@
       "heroTitle": "Freight from China and East Asia",
       "heroText": "We organize international deliveries from China and East Asia to the CIS and EAEU. We manage turnkey projects, from supplier coordination and cargo consolidation to final delivery control. We coordinate all parties in the chain, provide insurance, and keep deadlines transparent.",
       "bodyTitle": "International Logistics from China",
-      "bodyParagraph1": "Caravan Logistics has built a dedicated desk focused on shipments from China by road, rail, and multimodal transport. This direction requires continuous market monitoring, a strong understanding of import-export regulation, and resilient transit planning. We design tailored delivery schemes based on cargo profile, supplier specifics, production readiness, and destination-country requirements, supporting both standard shipments and cargo that requires elevated document control.",
-      "bodyParagraph2": "We manage the full delivery cycle, from supplier negotiations and pick-up across different regions of China to consolidation, export documents, and transit control through multiple jurisdictions. Acting as a single logistics operator, we reduce the risk of delays and operational downtime across the chain.",
+      "bodyParagraph1": "Caravan Logistics has built a dedicated lane for shipments from China and East Asia, covering road, rail, and multimodal solutions. We do not just arrange delivery, we manage the entire supply chain, taking into account cargo specifics, supplier requirements, production timelines, and the realities of transit routing.",
+      "bodyParagraph2": "Our team handles the full cycle, from supplier negotiations and cargo pick-up across China to consolidation, export documentation, and movement control through several countries. We develop tailored logistics solutions and keep supply flows stable while reducing the risk of delays, downtime, and extra costs.",
       "cases": {
         "title": "China Lane Cases",
-        "subtitle": "Two project examples with route, shipment profile, support scope, and a short solution summary.",
-        "descriptionLabel": "Shipment overview",
+        "subtitle": "Four projects covering equipment consolidation, merchant export, urgent rerouting, and turnkey project logistics.",
+        "taskLabel": "Task",
+        "challengesLabel": "Challenges",
+        "solutionLabel": "Solution",
+        "resultLabel": "Result",
         "tabs": {
-          "case1": "Light industry",
-          "case2": "Electronics"
+          "case1": "Garment factory",
+          "case2": "Buyout and supply",
+          "case3": "Urgent route",
+          "case4": "Project logistics"
         },
         "case1": {
-          "title": "Case: Light Industry / Production Launch",
-          "route": "multiple regions of China -> client's final warehouse",
-          "meta": {
-            "vehicle": "<strong>Transport mix:</strong> road + rail (multimodal)",
-            "tonnage": "<strong>Tonnage:</strong> 38 tons (consolidated shipment)",
-            "cargo": "<strong>Cargo type:</strong> equipment for a garment factory",
-            "extra": "<strong>Additional services:</strong> consolidation, completeness check, customs clearance, insurance"
-          },
-          "desc1": "The project involved more than ten suppliers across different regions of China, each with its own production timeline, packaging requirements, and shipping conditions. That required precise synchronization.",
-          "desc2": "We organized staged pick-up from different addresses, checked completeness and labeling, arranged temporary storage, and consolidated everything into one shipment. With the factory launch depending on the deadline, the equipment arrived in full and without disruption, allowing production to start without downtime."
+          "kicker": "Integrated supply",
+          "title": "Case 1. Equipment delivery for launching a garment factory",
+          "route": "More than 15 suppliers across different regions of China",
+          "task": "Organize the delivery of equipment from China for the launch of a garment factory within a tight deadline and without losses in completeness.",
+          "challenges": "<ul><li>The project involved more than 15 suppliers across different regions of China.</li><li>Cargo pick-up had to be completed from more than 15 separate addresses.</li><li>Each supplier had different readiness dates, packaging requirements, and shipment terms.</li><li>All equipment had to be consolidated into one coordinated shipment.</li></ul>",
+          "solution": "<ul><li>Organized staged cargo pick-up from all suppliers.</li><li>Checked completeness, packaging, and marking of the equipment.</li><li>Arranged temporary storage and consolidation.</li><li>Prepared the document package and monitored the cargo across every leg.</li></ul>",
+          "result": "The equipment was delivered in full and on schedule, which allowed the client to launch production on time. After the first project, similar shipments for this customer continued on a regular basis."
         },
         "case2": {
-          "title": "Case: Electronics / Regulated Cargo",
-          "route": "Shenzhen -> transit via the EAEU -> client warehouse",
-          "meta": {
-            "vehicle": "<strong>Transport mix:</strong> rail + road",
-            "tonnage": "<strong>Tonnage:</strong> 19 tons",
-            "cargo": "<strong>Cargo type:</strong> electronic components",
-            "extra": "<strong>Additional services:</strong> HS code verification, admissibility consulting, customs support, insurance"
-          },
-          "desc1": "The client purchased a batch of electronic components requiring correct classification and validation for movement through transit countries. A documentation error could have delayed the cargo at the border.",
-          "desc2": "Our East Asia desk reviewed the documents in advance, aligned the route with current regulatory requirements, and supervised transit control. The cargo was delivered on time without document corrections or additional cost."
+          "kicker": "Turnkey supply",
+          "title": "Case 2. Supply from China to Russia under payment restrictions",
+          "route": "China -> Russia with buyout through an export company",
+          "task": "Secure delivery from China to Russia when the client could not pay Chinese suppliers directly.",
+          "challenges": "<ul><li>Direct payments to suppliers were constrained.</li><li>There was a real risk of procurement and shipment failure.</li><li>The client needed a legal and workable structure for purchase, export, and delivery.</li></ul>",
+          "solution": "<ul><li>Found manufacturers in China and agreed supply terms.</li><li>Checked the goods and organized buyout through an export company.</li><li>Prepared the document package, export formalities, and international delivery.</li><li>Handled customs clearance and the subsequent transfer of goods to the Russian client.</li></ul>",
+          "result": "The client received the goods on a turnkey basis with delivery to a warehouse in Russia. Payment, documentation, and compliance risks were removed, and the scheme is now used for regular supplies."
+        },
+        "case3": {
+          "kicker": "Project in progress",
+          "title": "Case 3. Urgent delivery from India to Kyrgyzstan via an alternative route",
+          "route": "India -> Mumbai -> Singapore -> Nansha -> Kyrgyzstan",
+          "task": "Organize urgent delivery of industrial products from India to Kyrgyzstan under time pressure and with the standard route unavailable.",
+          "challenges": "<ul><li>The supplier had a limited export-license validity period.</li><li>The standard route via Iran became unavailable because of external restrictions.</li><li>An alternative logistics chain had to be built quickly.</li></ul>",
+          "solution": "<ul><li>Organized cargo pick-up from the shipper and container provision.</li><li>Handled export formalities in India.</li><li>Developed an alternative route via Mumbai, Singapore, and the port of Nansha.</li><li>Coordinated onward trucking into Kyrgyzstan.</li></ul>",
+          "result": "The project is in execution. The expected outcome is delivery through the alternative route within the agreed timeline while preserving the client's export window and supply continuity."
+        },
+        "case4": {
+          "kicker": "Turnkey project",
+          "title": "Case 4. Delivery of a production line from China to Kyrgyzstan",
+          "route": "44 trucks, 39 oversized moves, units up to 38 meters long",
+          "task": "Organize turnkey delivery of a full equipment package for a fired-brick plant directly to the construction site.",
+          "scaleLabel": "Project scale",
+          "doneLabel": "What we handled",
+          "scale": "<span>44 trucks</span><span>39 oversized moves</span><span>Length up to 38 m</span><span>Dimensions above 6 m</span>",
+          "solution": "<ul><li>Assessed logistics and customs risks and selected the correct supply model for Kyrgyzstan.</li><li>Built direct and transit routes via Kazakhstan.</li><li>Completed partial dismantling of the equipment and route engineering, including temporary infrastructure removal.</li><li>Supported customs procedures and organized a temporary customs control zone at the plant site.</li><li>Delivered the full production line as one project and additionally supported fixed-asset registration and VAT exemption matters.</li></ul>",
+          "result": "The project was completed on time. The equipment was delivered directly to the site, the client accepted the production line, and confirmed continued cooperation."
         }
       }
     },
     "air": {
       "heroTitle": "Air Freight",
       "heroText": "We ship urgent cargo on charter and scheduled flights with 24/7 support.",
-      "bodyTitle": "International Air Freight",
-      "bodyParagraph1": "Caravan Logistics arranges international air freight for urgent, high-value, and high-tech shipments. We manage the full cycle, from airfreight pricing and flight booking to departure control, arrival coordination, and last-mile delivery. Air freight is the right fit for strict deadlines, production launches, urgent contracts, and high-value cargo. We also account for airline rules, packaging standards, weight and dimension limits, insurance, and customs formalities.",
-      "bodyParagraph2": "As a logistics operator, we coordinate carriers, agents, and terminals while keeping deadlines transparent and each stage under control.",
+      "bodyTitle": "Air Freight",
+      "bodyParagraph1": "The company has experience in organizing international air shipments within selected logistics projects. Air delivery was used in cases where timing was the key factor and cargo needed accelerated transportation.",
+      "bodyParagraph2": "Within previously completed projects, we worked with international carriers including DHL and Turkish Airlines. The format and terms of air freight are defined individually depending on project requirements and cargo characteristics.",
       "cases": {
         "title": "Air Freight Cases",
         "subtitle": "One project example with route, shipment profile, support scope, and a short solution summary.",
@@ -286,32 +267,38 @@
     "broker": {
       "heroTitle": "Customs Brokerage",
       "heroText": "Our in-house broker team clears cargo of any complexity and supports inspections.",
-      "bodyTitle": "Customs Service",
-      "bodyParagraph1": "We classify goods, select HS codes, and calculate duties. We prepare the full document package, including invoices, packing lists, certificates of origin, and compliance certificates.",
-      "bodyParagraph2": "We work closely with customs posts to speed up release. We help clients build the right supply model, reduce risk, and avoid unnecessary extra cost."
+      "bodyTitle": "Customs Clearance and Foreign Trade Support",
+      "bodyParagraph1": "We provide end-to-end customs clearance and foreign trade support for businesses, taking over every stage from preliminary calculation to cargo release. We work worldwide with a focus on the EAEU and the wider Eurasian region, ensuring speed, transparency, and full compliance with legal requirements.",
+      "bodyParagraph2": "<ul><li><strong>Import and export customs declarations.</strong> Preparation and filing of customs declarations with support through final release.</li><li><strong>HS code classification.</strong> Code determination in line with EAEU requirements while reducing the risk of customs value corrections.</li><li><strong>Advance calculation of customs charges.</strong> Duties, VAT, and fees calculated before cargo arrival.</li><li><strong>Full shipping-document package.</strong> Invoice, packing list, contract, specifications, and transport documents.</li><li><strong>Permit and compliance documentation.</strong> We prepare the full set of supporting documents.<ul><li>Declarations of conformity</li><li>Certificates of conformity</li><li>State registration certificates</li><li>Import and export licenses</li><li>Product notifications</li><li>Exemption letters</li></ul></li><li><strong>Customs procedures management.</strong> We select the correct regime for each shipment.<ul><li>Import for domestic consumption (IM40)</li><li>Customs warehouse (IM70)</li><li>Transit</li><li>Re-export</li></ul></li><li><strong>Clearance at all customs posts in Kyrgyzstan.</strong> Bishkek, Osh, Naryn, and border crossing points.</li><li><strong>Coordination with bonded warehouses and terminals.</strong> Placement, storage, inspection, and cargo release.</li><li><strong>Financial cost consolidation.</strong> One electronic invoice covering all services and payments.</li><li><strong>China procurement support.</strong> Supplier communication, document control, and delivery terms supervision.</li><li><strong>Export VAT refund support in China and the Kyrgyz Republic.</strong> VAT refund procedures to reduce procurement costs.</li><li><strong>Support for investment and project cargo.</strong> Equipment imports, production lines, and work under preferential regimes.</li><li><strong>Automated code and charge selection.</strong> IT tools that reduce errors and speed up clearance.</li><li><strong>Dedicated foreign trade manager.</strong> Control of timing, documents, and every supply-chain stage.</li></ul>"
     },
     "warehousing": {
       "heroTitle": "Warehousing Services",
       "heroText": "Owned and partner warehouses help us consolidate, label, and prepare cargo for onward shipment.",
-      "bodyTitle": "Warehouse Solutions",
-      "bodyParagraph1": "We organize bonded storage, customs warehouses, and cross-docking. We label, build kits, and provide photo reports for every operation.",
-      "bodyParagraph2": "We integrate the client's WMS or provide our own reporting system. We prepare cargo for international transport through palletizing, sealing, and document processing."
+      "bodyTitle": "Warehousing Services",
+      "bodyParagraph1": "We build warehouse infrastructure around the client's task through a proven network of partner warehouses in China, Russia, Kyrgyzstan, and the CIS. Depending on project requirements, we select the right warehousing setup by location, storage period, and cargo-handling conditions.",
+      "bodyParagraph2": "<ul><li><strong>Partner warehouse geography.</strong><ul><li>European Union</li><li>CIS countries</li><li>China: Guangzhou, Yiwu, Urumqi</li><li>Turkey</li><li>Kazakhstan</li><li>Russia</li><li>Kyrgyzstan</li><li>Uzbekistan</li><li>Afghanistan</li><li>Iran</li><li>UAE</li></ul></li><li><strong>What we provide.</strong><ul><li>Selection of the right warehouse site for the task</li><li>Organization of temporary cargo storage</li><li>Consolidation and distribution of shipment batches</li><li>Coordination of loading and unloading operations</li><li>Control of cargo movement through the warehouse</li><li>Coordination with warehouse operators</li></ul></li><li><strong>Flexible capacity access.</strong> When needed, we quickly connect suitable warehouse capacity through our partner network, providing flexibility and speed in solving logistics tasks.</li></ul>"
     },
     "insurance": {
       "heroTitle": "Cargo Insurance",
       "heroText": "We insure cargo and liability at every stage of the logistics chain.",
-      "bodyTitle": "Insurance Support",
-      "bodyParagraph1": "We tailor insurance programs to cargo type and route, from standard coverage to expanded war-risk and delay protection with leading insurers.",
-      "bodyParagraph2": "We support policy issuance and claims settlement, help prepare documents, manage communication with the insurer, and work toward fast compensation."
+      "bodyTitle": "Insurance Solutions",
+      "bodyParagraph1": "As part of logistics support, Caravan Logistics offers insurance protection based on the transport format, cargo type, and delivery terms.",
+      "bodyParagraph2": "<section class=\"insurance-card\"><span class=\"insurance-card__badge\">Format 1</span><h3>Carrier Liability Insurance</h3><p class=\"insurance-card__subtitle\">Motor carrier liability coverage</p><p>This format covers liability arising during transportation. Depending on the policy terms, the coverage limit may reach the equivalent of up to USD 100,000.</p></section><section class=\"insurance-card\"><span class=\"insurance-card__badge\">Format 2</span><h3>Cargo Insurance</h3><p class=\"insurance-card__subtitle\">Additional protection tailored to a specific shipment</p><p>Cargo insurance can be issued under different tariffs depending on cargo characteristics, route, declared value, and carriage terms. It covers the key risks related to damage, loss, and other unforeseen events in transit.</p></section>",
+      "bodyParagraph3": "<p class=\"insurance-support__label\">Insurance Support</p><p>We support the client on insurance issues throughout the shipment lifecycle, from selecting the right coverage format to preparing the necessary documents within the agreed workflow.</p>"
     }
   },
   "footer": {
-    "description": "Discover our full range of road, sea and air freight services. Thanks to advanced technology and a global network we deliver cargo safely and on time.",
+    "description": "We organize road, rail, sea, and multimodal freight, selecting the right logistics solution for each task. We work through a proven partner network so cargo arrives on the agreed schedule and in proper condition.",
     "addressTitle": "Our address",
-    "addressLine1": "243 Chyngyz Aitmatov St., 3rd floor",
-    "addressLine2": "+996 555 11 33 33",
-    "addressLine3": "Bishkek",
-    "addressLine4": "Kyrgyzstan",
+    "addressLine1": "Bishkek, Kyrgyzstan",
+    "addressLine2": "243 Chyngyz Aitmatov St., 3rd floor",
+    "addressLine3": "+996 555 11 33 33",
+    "addressLine4": "Almaty, Kazakhstan",
+    "addressLine5": "563a Seifullina, 5th floor",
+    "addressLine6": "+7 777 078 08 36",
+    "addressLine7": "Guangzhou, China",
+    "addressLine8": "Fortune Mansion B2, 7th floor, office 711",
+    "addressLine9": "+86 18676883097",
     "contactsTitle": "Stay in touch",
     "email": "info@caravan-logistics.com ",
     "phone": "+996 555 11 33 33",
@@ -344,8 +331,8 @@
       },
       "china": {
         "name": "Rustam Kadyrkulov",
-        "role": "Head of China Desk • Experience: 10 years",
-        "text": "Coordinates the full supply chain from Chinese suppliers to Kyrgyzstan and other CIS countries, including negotiations, loading control, route planning, and customs issue resolution."
+        "role": "Head of China and East Asia Direction • Experience: 10 years",
+        "text": "Provides the full logistics cycle across East Asia, from client work to delivery control and the development of efficient solutions."
       },
       "customs": {
         "name": "Bermet Sultanova",
@@ -363,36 +350,48 @@
     "dots": "Milestone navigation",
     "items": {
       "founded": {
-        "title": "Foundation and the First Step",
-        "text": "Caravan Logistics began in 2008 with a simple idea: to build dependable logistics without empty promises or hidden risks. A few owned trucks, a small office, and the first clients became the foundation of a company focused on results and responsibility."
+        "title": "Launch of the logistics business",
+        "text": "From 2008 to 2013, the company started operations in Bishkek as a logistics provider focused on international freight and cargo delivery across Kyrgyzstan and Central Asia. The core focus was transportation with its own fleet and forwarding services. During this stage, practical experience in international logistics was formed, partner warehouses were built, and a clear understanding of cargo-delivery processes was developed."
       },
       "system": {
-        "title": "Building the System",
-        "text": "The move to a new office in the city center was more than expansion. It marked the beginning of a structured business model. We started building processes so the company would run as a system, not around individual people, but through a stable management model."
+        "title": "Creation of Gruzovik",
+        "text": "From 2013 to 2017, Gruzovik was established as a company focused on road freight transportation. This direction became a key element in the development of transport logistics and formed the operational foundation of the group. Today, Gruzovik remains the largest division by headcount and shipment volume, ensuring stable road-logistics operations."
       },
       "team": {
-        "title": "Team Formation",
-        "text": "The core team took shape: the first generation of logistics specialists who handled larger projects and more complex routes. Business processes became established and started working as a unified mechanism that supported company growth."
+        "title": "Formation of the logistics team 1.0",
+        "text": "In 2017, the core team of logistics specialists was formed. Transportation lanes expanded to include rail logistics. The company joined AmCham and signed a contract with Kumtor Gold Company, strengthening its position as an international transport operator and logistics partner for large businesses."
       },
       "expertise": {
-        "title": "Expanding Expertise",
-        "text": "Caravan Logistics joined the Chamber of Commerce and Industry of the Kyrgyz Republic and also became a member of the American Chamber of Commerce in Kyrgyzstan, AmCham. This strengthened our position in the international business community and expanded opportunities for partnership, development, and participation in key economic initiatives."
+        "title": "Strengthening the organizational structure",
+        "text": "In 2018, a separate management function for the road department was introduced, which allowed transport logistics to develop systematically. The company invested actively in employee training, built internal standards for logistics work, and improved both service quality and execution accuracy in international transportation."
       },
       "infrastructure": {
-        "title": "Partner Infrastructure and Technology Shift",
-        "text": "We launched partner warehouses, expanding both geography and delivery speed. The rail freight department was opened as a new line of business that strengthened our multimodal strategy. From a small team and the first clients, we moved toward a fully diversified logistics model."
+        "title": "Strategic transformation",
+        "text": "In 2019, the company shifted from operating its own fleet to a forwarding model. This made it possible to scale logistics services and cover more delivery directions. The Caravan Logistics brand was registered, the company joined CILT, and business processes were rebuilt around a modern forwarding model."
       },
       "digital": {
-        "title": "Technology Development",
-        "text": "The company moved to digital tools and started cooperating with educational institutions, building a talent pipeline and investing in the future of the industry."
+        "title": "Digitalization and process resilience",
+        "text": "In 2020, a CRM system was implemented with support from the European Bank for Reconstruction and Development. The digitalization of transportation and client-management processes helped maintain uninterrupted cargo delivery during the pandemic and enabled social logistics projects, including the supply of medicines."
       },
       "newDirections": {
-        "title": "New Directions",
-        "text": "A separate East Asia lane was launched, including shipments from China to the CIS, which strengthened our position in international logistics. We also built a full air-freight department as an independent business line within Caravan Logistics. We are developing air logistics systematically and moving to a new level: now we operate confidently in the sky as well."
+        "title": "A systematic logistics company",
+        "text": "In 2021, the company updated business processes, introduced an effective motivation system, and developed its corporate culture. It received licenses and confirmed qualifications through CILT. Joining the Chamber of Commerce and Industry of the Kyrgyz Republic strengthened the company’s position in the Kyrgyz logistics market."
       },
       "fullCycle": {
-        "title": "Full Support Cycle",
-        "text": "The launch of the customs-clearance direction allows us to provide businesses with a full-cycle logistics support model."
+        "title": "Development of new business lines and talent base",
+        "text": "In 2022, dual education in logistics was introduced in cooperation with GIZ and BFET, along with a three-level certification system for logisticians and dispatchers. After the Huawei project, a foundation was created for launching customs clearance and customs support services."
+      },
+      "strategy2023": {
+        "title": "Shift to strategic management",
+        "text": "In 2023, a five-year development strategy was formed, the organizational structure was redesigned, and a product approach in logistics was introduced. The company launched cargo delivery from China, strengthened multimodal transportation, and implemented a call center and digital tools for managing customer requests."
+      },
+      "analytics2024": {
+        "title": "Analytics and process efficiency",
+        "text": "In 2024, the company expanded analytics in logistics processes and continued preparations for launching the customs-clearance department. A balanced scorecard system and elements of end-to-end analytics were introduced, Caravan Cargo was launched for SMEs, and a new generation of specialists, logistics 2.0, was developed."
+      },
+      "scale2025": {
+        "title": "Full logistics cycle for business",
+        "text": "In 2025, a customs procedures department was created and the company received customs-carrier status. Customs clearance and turnkey logistics services were expanded, an export company and office in China were opened, international directions were strengthened, and preparations began for entry into the Kazakhstan market."
       }
     }
   },
@@ -416,7 +415,7 @@
   },
   "modal": {
     "title": "Leave a request",
-    "description": "Share your contacts and briefly describe the cargo — we will prepare a proposal and call back within 15 minutes.",
+    "description": "Share your contacts and briefly describe the cargo — we will prepare a proposal and get back to you shortly.",
     "label": {
       "name": "Name",
       "company": "Company",
@@ -448,9 +447,9 @@
       "success": "Looks good!"
     },
     "title": "Free consultation",
-    "text": "Get a freight quote and a proposed route for your cargo — by road, rail or air.",
+    "text": "Get a freight quote and a proposed route for your cargo — by road, rail, or multimodal delivery.",
     "subtitle": "Talk to a specialist",
-    "description": "Leave your contacts and our logistics manager will respond within 5 minutes.",
+    "description": "Leave your contacts and our logistics manager will respond shortly.",
     "placeholder": "Enter email",
     "button": "Send"
   },
@@ -476,9 +475,9 @@
   "hero": {
     "tagline": "Caravan Logistics",
     "title": "We are a logistics company",
-    "line1": "Since 2008 we arrange road, rail and air freight across the CIS and worldwide.",
-    "line2": "Over 10,000 shipments delivered and more than 2,000 wagons each year.",
-    "line3": "We build turnkey routes with full customs support.",
+    "line1": "International logistics across 105 countries worldwide.",
+    "line2": "An average of 10,000 shipments per year.",
+    "line3": "On the market since 2008.",
     "cta": "Request a quote"
   },
   "services": {
@@ -513,7 +512,7 @@
       },
       "multimodal": {
         "title": "Multimodal",
-        "text": "Mix road, rail, air and sea legs for complex projects."
+        "text": "Combine road, rail, and sea legs for complex projects."
       },
       "broker": {
         "title": "Customs brokerage",
@@ -539,8 +538,8 @@
   },
   "big-text": "Why companies trust Caravan Logistics?",
   "banner": {
-    "title": "Certified team",
-    "text": "We handle customs clearance, permits and insurance. Every client gets the optimal route—from long-haul convoys to multimodal schemes with air or sea legs."
+    "title": "Our approach",
+    "text": "For us, logistics is the precise organization of route, timing, and documents. We align shipment terms, select the right transport scheme, and supervise the cargo at key stages. This approach helps the client understand shipment status, plan the next steps, and make decisions based on real information."
   },
   "index": {
     "stats": {
@@ -575,14 +574,14 @@
   },
   "faq": {
     "title": "Popular questions",
-    "text": "Here are quick tips on pricing, timing and documents. Didn’t find the answer? Leave a request and a logistics expert will call you back within minutes.",
+    "text": "This section brings together answers about our working format, shipment support, communication, and process control. If you need a consultation on your task, leave a request and a logistics specialist will contact you shortly.",
     "q1": "Communication and service",
     "q2": "Win - Win",
     "q3": "Personal manager",
     "q4": "Quality control",
     "q5": "Open feedback policy",
     "q6": "Experience",
-    "a1": "We build cooperation on transparency: clear calculations, rate justification, market context explanation, and timely feedback. The client should understand what is happening with the cargo and why each decision is made.",
+    "a1": "For us, clear communication, up-to-date cargo information, and timely feedback matter. At any stage, the client should understand the shipment status and the key decisions made for the delivery.",
     "a2": "We do not operate on short-term gain. Our model is long-term partnership.",
     "a3": "Each project is assigned a personal manager who oversees the shipment from quotation to unloading, coordinates carriers, controls documents, and keeps communication transparent at every stage. Every shipment is calculated individually based on cargo, timing, geography, and budget.",
     "a4": "The company has an internal control system including calculation checks, compliance with agreed terms, and review of non-standard situations. We systematically analyze errors to prevent repeated incidents.",
@@ -682,6 +681,46 @@
     "kumtor": {
       "since": "Partnering since 2017",
       "stats": "We provide logistics support for mining-related supplies."
+    },
+    "sberbank": {
+      "since": "Partnering since 2021",
+      "stats": "We support deliveries of equipment, materials, and related cargo for office and infrastructure needs."
+    },
+    "alinex": {
+      "since": "Partnering since 2022",
+      "stats": "We support food product shipments and ensure stable logistics across agreed routes."
+    },
+    "rakhat": {
+      "since": "Partnering since 2021",
+      "stats": "We organize confectionery shipments and support timely delivery within commercial supply chains."
+    },
+    "schuco": {
+      "since": "Partnering since 2015",
+      "stats": "We provide logistics for profile systems and components used in construction and facade projects."
+    },
+    "modernglass": {
+      "since": "Partnering since 2015",
+      "stats": "We support shipments of glass products and materials for industrial and construction tasks."
+    },
+    "grohe": {
+      "since": "Partnering since 2015",
+      "stats": "We organize deliveries of sanitary products and maintain stable logistics for project and trade channels."
+    },
+    "rzd": {
+      "since": "Joint projects in rail logistics",
+      "stats": "We take part in shipments related to rail infrastructure and coordination across railway routes."
+    },
+    "evergreen": {
+      "since": "Partnering since 2022",
+      "stats": "We support deliveries of construction and industrial materials with clear and reliable logistics."
+    },
+    "ariston": {
+      "since": "Partnering since 2015",
+      "stats": "We organize shipments of household and engineering equipment for project and distribution supplies."
+    },
+    "porcelanosa": {
+      "since": "Partnering since 2022",
+      "stats": "We support deliveries of finishing materials and interior products for commercial and project needs."
     }
   },
   "about": {
@@ -709,7 +748,7 @@
   },
   "contacts": {
     "heroTitle": "Caravan Logistics contact center",
-    "heroText": "We respond 24/7 on road, rail and air freight across the CIS and overseas projects.",
+    "heroText": "We respond to international logistics requests covering road freight, rail, and multimodal projects across the CIS and global routes.",
     "formTitle": "Write to us",
     "formText": "Send a request — we will prepare a quote and answer all questions about documents, timing and tariffs.",
     "labelFirst": "First name",
@@ -720,18 +759,47 @@
     "submit": "Send request",
     "visit": {
       "title": "How to find us",
-      "scheduleWeekday": "The office is open Monday to Friday from 8:00 AM to 6:00 PM.",
-      "scheduleWeekend": "Days off: Saturday and Sunday.",
+      "subtitle": "Three Caravan Logistics offices: Bishkek, Almaty, and Guangzhou. Each office has its own address, contacts, and map.",
       "addressLabel": "Address",
-      "addressValue": "243 Chyngyz Aitmatov St., 3rd floor, Bishkek",
       "phoneLabel": "Phone",
-      "phoneValue": "+996 555 11 33 33",
       "callBtn": "Call us",
       "whatsappBtn": "Message on WhatsApp",
+      "wechatBtn": "WeChat",
       "instagramBtn": "Instagram",
-      "mapTitle": "Caravan Logistics office",
       "mapCardTitle": "Caravan Logistics office",
-      "mapCardAddress": "243 Chyngyz Aitmatov St., 3rd floor, Bishkek"
+      "offices": {
+        "bishkek": {
+          "country": "Bishkek, Kyrgyzstan",
+          "title": "Bishkek, Kyrgyzstan",
+          "schedule": "The office is open Monday to Friday from 8:00 AM to 7:00 PM. Days off: Saturday and Sunday.",
+          "address": "243 Chyngyz Aitmatov St., 3rd floor, Bishkek",
+          "phones": "+996 555 11 33 33",
+          "mapTitle": "Bishkek office map",
+          "mapCardAddress": "243 Chyngyz Aitmatov St., 3rd floor, Bishkek"
+        },
+        "almaty": {
+          "country": "Almaty, Kazakhstan",
+          "title": "Almaty, Kazakhstan",
+          "schedule": "The office is open Monday to Friday from 8:00 AM to 6:00 PM.",
+          "address": "563a Seifullina St., 5th floor, Almaty",
+          "phones": "+7 777 078 08 36<br>+7 777 078 08 76<br>+7 777 078 08 64",
+          "mapTitle": "Almaty office map",
+          "mapCardAddress": "563a Seifullina St., 5th floor, Almaty"
+        },
+        "guangzhou": {
+          "country": "Guangzhou, China",
+          "title": "Guangzhou, China",
+          "schedule": "The office is open Monday to Friday from 8:00 AM to 6:00 PM.",
+          "address": "Fortune Mansion B2, 7th floor, office 711, Xicun Subdistrict, Liwan District, Guangzhou, Guangdong, China",
+          "phones": "+86 18676883097",
+          "wechatLabel": "WeChat ID",
+          "wechatId": "muktarbekov66",
+          "addressOriginalLabel": "Address in Chinese",
+          "addressOriginal": "广东省 广州市 荔湾区 西村街道<br>财富公馆 B2 7楼 711",
+          "mapTitle": "Guangzhou office map",
+          "mapCardAddress": "Fortune Mansion B2, 7th floor, office 711, Xicun Subdistrict, Liwan District, Guangzhou, Guangdong, China"
+        }
+      }
     },
     "placeholderFirst": "Enter first name",
     "placeholderLast": "Enter last name",
@@ -741,12 +809,12 @@
   },
   "breadcrumbs": {
     "home": "Home",
-    "news": "News"
+    "news": "Gallery"
   },
   "portfolio": {
-    "heroTitle": "Logistics news and insights",
-    "heroText": "We share tariffs, routes and technology updates from Caravan Logistics for road, rail and air services.",
-    "search": "Search news",
+    "heroTitle": "Caravan Logistics gallery",
+    "heroText": "Photos from Caravan Logistics projects, team, partners, and day-to-day operations.",
+    "search": "Search gallery",
     "filter": {
       "all": "All",
       "auto": "Road",
@@ -803,10 +871,10 @@
       "text": "Launched a charter flight with components for electronics production."
     },
     "subscribeTitle": "Stay in the loop",
-    "subscribeText": "Subscribe to Caravan Logistics news: tariffs, routes and practical tips for logistics teams.",
+    "subscribeText": "Follow Caravan Logistics updates: projects, routes, and highlights from our logistics operations.",
     "subscribePlaceholder": "Enter email address",
     "subscribeButton": "Subscribe",
-    "pageTitle": "Publications"
+    "pageTitle": "Gallery"
   },
   "common": {
     "servicesMenu": "Services <span class=\"mobile-menu__chev\">▾</span>",
