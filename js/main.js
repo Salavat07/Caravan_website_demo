@@ -479,6 +479,9 @@ document.addEventListener('DOMContentLoaded', () => {
       success: 'Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.',
       error: 'Не удалось отправить заявку. Попробуйте еще раз позже.'
     },
+    footer: {
+      copyright: 'Copyright © {{year}} Caravan Logistics. All rights reserved.'
+    },
     partners: {
       title: 'Наши партнеры'
     },
@@ -522,6 +525,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return path.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), obj);
   };
 
+  const formatDynamicValue = (value) => {
+    if (typeof value !== 'string') return value;
+    return value.replace(/\{\{year\}\}/g, String(new Date().getUTCFullYear()));
+  };
+
   const resolveTranslation = (dict, key) => {
     const serviceKey = document.body.dataset.service;
     if (serviceKey && key.startsWith('service.')) {
@@ -549,10 +557,17 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const translate = (key) => {
-    if (currentLang === DEFAULT_LANG) {
-      return resolveTranslation(ruMessages, key) ?? key;
-    }
-    return resolveTranslation(currentDict, key) ?? resolveTranslation(ruMessages, key) ?? key;
+    const value = currentLang === DEFAULT_LANG
+      ? resolveTranslation(ruMessages, key) ?? key
+      : resolveTranslation(currentDict, key) ?? resolveTranslation(ruMessages, key) ?? key;
+
+    return formatDynamicValue(value);
+  };
+
+  const syncDynamicNodes = () => {
+    document.querySelectorAll('[data-i18n="footer.copyright"]').forEach((node) => {
+      node.textContent = translate('footer.copyright');
+    });
   };
 
   const applyTranslations = async (lang) => {
@@ -1208,6 +1223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       await applyTranslations(targetLang);
     }
+    syncDynamicNodes();
     document.documentElement.lang = targetLang;
     localStorage.setItem('lang', targetLang);
     if (typeof updateLanguageMenu === 'function') {

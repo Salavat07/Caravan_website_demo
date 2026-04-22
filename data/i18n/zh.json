@@ -302,7 +302,7 @@
     "contactsTitle": "联系我们",
     "email": "info@caravan-logistics.com ",
     "phone": "+996 555 11 33 33",
-    "copyright": "Copyright ® Kaliev Salavat All rights Reserved",
+    "copyright": "Copyright © {{year}} Caravan Logistics. All rights reserved.",
     "socialTitle": "我们的社交网络"
   },
   "partners": {
@@ -351,7 +351,7 @@
     "items": {
       "founded": {
         "title": "物流业务启动",
-        "text": "公司在比什凯克开启了自己的发展之路，专注于国际货运以及吉尔吉斯斯坦和中亚地区的货物配送。在这一阶段，公司积累了国际物流实操经验，建立了合作仓库网络，并形成了对货物交付流程的系统理解。"
+        "text": "公司在比什凯克开启发展之路，专注于国际货运以及吉尔吉斯斯坦和中亚地区的货物配送。在这一阶段，公司积累了国际物流实操经验，建立了合作仓库网络，并形成了对货物交付流程的系统理解。"
       },
       "system": {
         "title": "成立 Gruz.kg",
@@ -379,7 +379,7 @@
       },
       "fullCycle": {
         "title": "新方向与人才基础发展",
-        "text": "2022 年，公司与 GIZ 和比什凯克金融经济学院合作推出物流双元制教育，并引入针对物流人员和调度员的三级认证体系。在完成 Huawei 项目后，公司为报关和海关配套服务建立了基础。"
+        "text": "2022 年，公司与 GIZ 和比什凯克财政经济技术学院合作推出物流双元制教育，并引入针对物流人员和调度员的三级认证体系。在完成 Huawei 项目后，公司为报关和海关配套服务建立了基础。"
       },
       "strategy2023": {
         "title": "转向战略管理",
@@ -473,7 +473,7 @@
     }
   },
   "hero": {
-    "tagline": "Caravan Logistics",
+    "tagline": "物流公司",
     "title": "我们是一家物流公司",
     "line1": "覆盖全球 105 个国家的国际物流服务。",
     "line2": "平均每年完成 10,000 票运输。",

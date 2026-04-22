@@ -302,7 +302,7 @@
     "contactsTitle": "Stay in touch",
     "email": "info@caravan-logistics.com ",
     "phone": "+996 555 11 33 33",
-    "copyright": "Copyright ® Kaliev Salavat All rights Reserved",
+    "copyright": "Copyright © {{year}} Caravan Logistics. All rights reserved.",
     "socialTitle": "Our social networks"
   },
   "partners": {
@@ -351,11 +351,11 @@
     "items": {
       "founded": {
         "title": "Launch of the logistics business",
-        "text": "The company began its journey in Bishkek, focusing on international freight transportation and cargo delivery across Kyrgyzstan and Central Asia. During this stage, practical experience in international logistics was formed, partner warehouses were built, and a clear understanding of cargo-delivery processes was developed."
+        "text": "The company began its journey in Bishkek, focusing on international freight transportation and cargo delivery across Kyrgyzstan and Central Asia. During this stage, practical experience in international logistics was built, partner warehouses were established, and a clear understanding of cargo-delivery processes was developed."
       },
       "system": {
         "title": "Creation of Gruz.kg",
-        "text": "In 2013, Gruz.kg was established as a company focused on road freight transportation. This direction became a key element in the development of transport logistics and formed the operational foundation of the group. Joining the Chamber of Commerce and Industry of the Kyrgyz Republic strengthened the company’s position in the Kyrgyz logistics market."
+        "text": "Gruz.kg was established as a company focused on road freight transportation. This direction became a key element in the development of transport logistics and formed the operational foundation of the group. Joining the Chamber of Commerce and Industry of the Kyrgyz Republic strengthened the company’s position in the Kyrgyz logistics market."
       },
       "team": {
         "title": "Formation of the logistics team 1.0",
@@ -379,7 +379,7 @@
       },
       "fullCycle": {
         "title": "Development of new business lines and talent base",
-        "text": "In 2022, dual education in logistics was introduced in cooperation with GIZ and the Bishkek Financial and Economic College, along with a three-level certification system for logisticians and dispatchers. After the Huawei project, a foundation was created for launching customs clearance and customs support services."
+        "text": "In 2022, dual education in logistics was introduced in cooperation with GIZ and the Bishkek Financial and Economic Technical College, along with a three-level certification system for logisticians and dispatchers. After the Huawei project, a foundation was created for launching customs clearance and customs support services."
       },
       "strategy2023": {
         "title": "Shift to strategic management",
@@ -473,7 +473,7 @@
     }
   },
   "hero": {
-    "tagline": "Caravan Logistics",
+    "tagline": "Logistics company",
     "title": "We are a logistics company",
     "line1": "International logistics across 105 countries worldwide.",
     "line2": "An average of 10,000 shipments per year.",

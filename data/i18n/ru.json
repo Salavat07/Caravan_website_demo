@@ -22,6 +22,9 @@
     "labelPhone": "Телефон",
     "placeholderPhone": "+996 ___ ___ ___"
   },
+  "footer": {
+    "copyright": "Copyright © {{year}} Caravan Logistics. All rights reserved."
+  },
   "history": {
     "title": "История и развитие",
     "subtitle": "От небольшой команды до надёжного логистического партнёра.",
