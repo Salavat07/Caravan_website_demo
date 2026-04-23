@@ -36,6 +36,14 @@ $to = (string) ($config['to'] ?? '');
 $fromEmail = (string) ($config['fromEmail'] ?? '');
 $fromName = 'Caravan Logistics Website';
 $subject = 'Новая заявка с сайта Caravan Logistics';
+$bitrixConfigPath = __DIR__ . '/config/bitrix_config.php';
+$bitrixConfig = [];
+if (is_file($bitrixConfigPath)) {
+    $loadedBitrixConfig = require $bitrixConfigPath;
+    if (is_array($loadedBitrixConfig)) {
+        $bitrixConfig = $loadedBitrixConfig;
+    }
+}
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -225,6 +233,135 @@ $sendViaSmtp = static function (
     }
 };
 
+$sendToBitrix = static function (
+    array $config,
+    string $name,
+    string $phone,
+    string $email,
+    string $message,
+    string $source,
+    string $date
+): int {
+    $webhook = rtrim((string) ($config['webhook'] ?? ''), '/');
+    $timeout = (int) ($config['timeout'] ?? 20);
+
+    if ($webhook === '') {
+        throw new RuntimeException('Bitrix24 не настроен: не указан webhook');
+    }
+
+    if (!filter_var($webhook, FILTER_VALIDATE_URL)) {
+        throw new RuntimeException('Некорректный Bitrix24 webhook');
+    }
+
+    $comments = implode("\n", [
+        'Новая заявка с сайта Caravan Logistics',
+        '',
+        'Имя: ' . $name,
+        'Телефон: ' . $phone,
+        'Email: ' . ($email !== '' ? $email : 'Не указан'),
+        'Сообщение: ' . ($message !== '' ? $message : 'Не указано'),
+        'Страница/источник: ' . ($source !== '' ? $source : 'Не указан'),
+        'Дата и время: ' . $date,
+    ]);
+
+    $fields = [
+        'TITLE' => (string) ($config['lead_title'] ?? 'Заявка с сайта Caravan Logistics'),
+        'NAME' => $name,
+        'SOURCE_ID' => (string) ($config['source_id'] ?? 'WEB'),
+        'SOURCE_DESCRIPTION' => (string) ($config['source_description'] ?? 'Сайт Caravan Logistics'),
+        'OPENED' => 'Y',
+        'COMMENTS' => $comments,
+        'PHONE' => [
+            [
+                'VALUE' => $phone,
+                'VALUE_TYPE' => 'WORK',
+            ],
+        ],
+    ];
+
+    if ($email !== '') {
+        $fields['EMAIL'] = [
+            [
+                'VALUE' => $email,
+                'VALUE_TYPE' => 'WORK',
+            ],
+        ];
+    }
+
+    $payload = [
+        'fields' => $fields,
+        'params' => [
+            'REGISTER_SONET_EVENT' => 'Y',
+        ],
+    ];
+
+    $endpoint = $webhook . '/crm.lead.add.json';
+    $postBody = http_build_query($payload);
+    $responseBody = false;
+
+    if (function_exists('curl_init')) {
+        $curl = curl_init($endpoint);
+        if ($curl === false) {
+            throw new RuntimeException('Не удалось инициализировать Bitrix24 запрос');
+        }
+
+        curl_setopt_array($curl, [
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $postBody,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_CONNECTTIMEOUT => $timeout,
+            CURLOPT_TIMEOUT => $timeout,
+            CURLOPT_HTTPHEADER => [
+                'Content-Type: application/x-www-form-urlencoded; charset=UTF-8',
+            ],
+        ]);
+
+        $responseBody = curl_exec($curl);
+        $curlError = curl_error($curl);
+        $httpCode = (int) curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+
+        if ($responseBody === false) {
+            throw new RuntimeException('Bitrix24 запрос не выполнен: ' . $curlError);
+        }
+
+        if ($httpCode < 200 || $httpCode >= 300) {
+            throw new RuntimeException('Bitrix24 вернул HTTP ' . $httpCode);
+        }
+    } else {
+        $context = stream_context_create([
+            'http' => [
+                'method' => 'POST',
+                'header' => "Content-Type: application/x-www-form-urlencoded; charset=UTF-8\r\n",
+                'content' => $postBody,
+                'timeout' => $timeout,
+            ],
+        ]);
+
+        $responseBody = @file_get_contents($endpoint, false, $context);
+        if ($responseBody === false) {
+            throw new RuntimeException('Bitrix24 запрос не выполнен');
+        }
+    }
+
+    $response = json_decode((string) $responseBody, true);
+    if (!is_array($response)) {
+        throw new RuntimeException('Bitrix24 вернул некорректный ответ');
+    }
+
+    if (isset($response['error'])) {
+        $description = (string) ($response['error_description'] ?? $response['error']);
+        throw new RuntimeException('Bitrix24 ошибка: ' . $description);
+    }
+
+    $leadId = (int) ($response['result'] ?? 0);
+    if ($leadId <= 0) {
+        throw new RuntimeException('Bitrix24 не вернул ID лида');
+    }
+
+    return $leadId;
+};
+
 $name = $clean((string) ($_POST['name'] ?? ''));
 $phone = $clean((string) ($_POST['phone'] ?? ''));
 $email = $clean((string) ($_POST['email'] ?? ''));
@@ -258,6 +395,21 @@ $lines = [
 ];
 
 $mailBody = implode("\r\n", $lines);
+$leadId = null;
+$bitrixError = null;
+$smtpError = null;
+
+try {
+    $leadId = $sendToBitrix($bitrixConfig, $name, $phone, $email, $message, $source, $date);
+} catch (Throwable $exception) {
+    $bitrixError = $exception->getMessage();
+}
+
+if ($leadId !== null) {
+    $mailBody .= "\r\n" . 'Bitrix24: создан лид #' . $leadId;
+} elseif ($bitrixError !== null) {
+    $mailBody .= "\r\n" . 'Bitrix24: ошибка создания лида — ' . $bitrixError;
+}
 
 try {
     $sendViaSmtp(
@@ -270,10 +422,15 @@ try {
         $replyTo
     );
 } catch (Throwable $exception) {
-    $sendJsonError(500, 'Не удалось отправить заявку. Проверь Google SMTP и пароль приложения.');
+    $smtpError = $exception->getMessage();
+}
+
+if ($leadId === null && $smtpError !== null) {
+    $sendJsonError(500, 'Не удалось отправить заявку. Проверь Bitrix24 webhook и Google SMTP.');
 }
 
 echo json_encode([
     'success' => true,
-    'message' => 'Заявка успешно отправлена',
+    'message' => $leadId !== null ? 'Заявка успешно отправлена в Bitrix24' : 'Заявка отправлена на почту',
+    'lead_id' => $leadId,
 ], JSON_UNESCAPED_UNICODE);
