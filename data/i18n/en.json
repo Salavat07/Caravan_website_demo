@@ -321,7 +321,7 @@
       },
       "auto": {
         "name": "Meerim Usubalieva",
-        "role": "Head of Road Freight • Experience: 12 years",
+        "role": "Head of Road Freight • Logistics experience: 12 years",
         "text": "Coordinates key business units and is responsible for a stable operating model and service quality."
       },
       "finance": {
@@ -331,13 +331,13 @@
       },
       "china": {
         "name": "Rustam Kadyrkulov",
-        "role": "Head of China and East Asia Direction • Experience: 10 years",
+        "role": "Head of China and East Asia Direction • Experience: 8 years",
         "text": "Provides the full logistics cycle across East Asia, from client work to delivery control and the development of efficient solutions."
       },
       "customs": {
         "name": "Bermet Sultanova",
-        "role": "Head of Customs Department • Experience: 12 years",
-        "text": "Prepares the legal and financial documentation required for lawful cross-border cargo movement while minimizing costs and delay risks."
+        "role": "Head of Customs Department • Experience: 10 years",
+        "text": "Prepares legal and financial documentation for the proper processing of cargo movement across the border, minimizing costs and delay risks."
       }
     }
   },
