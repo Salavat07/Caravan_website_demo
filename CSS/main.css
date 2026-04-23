@@ -1064,20 +1064,26 @@ body[data-page^="service-"] .service-hero .btn-primary{
 .logistics-stats__grid{
     margin-top: 64px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 34px;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: clamp(28px, 2.4vw, 56px);
+    align-items: start;
 }
 
 .logistics-stat-card{
     text-align: center;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logistics-stat-card__value{
-    font-size: clamp(58px, 6.5vw, 126px);
+    font-size: clamp(58px, 5.2vw, 104px);
     line-height: 0.95;
     font-weight: 400;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.045em;
     color: #f4f8ff;
+    white-space: nowrap;
 }
 
 .logistics-stat-card__line{
@@ -1094,6 +1100,22 @@ body[data-page^="service-"] .service-hero .btn-primary{
     color: #d7deea;
     font-size: 18px;
     line-height: 1.45;
+}
+
+@media (min-width: 1440px){
+    .logistics-stats__grid{
+        grid-template-columns: repeat(3, minmax(0, 360px));
+        justify-content: center;
+    }
+
+    .logistics-stat-card__value{
+        font-size: clamp(64px, 4.6vw, 96px);
+    }
+
+    .logistics-stat-card p{
+        max-width: 320px;
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 1024px){
