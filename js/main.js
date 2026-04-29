@@ -1263,6 +1263,193 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const initHsLookup = () => {
+    if (document.body.dataset.page !== 'hs-lookup') return;
+
+    const isLocal = window.location.hostname === 'localhost'
+        || window.location.hostname === '127.0.0.1'
+        || window.location.protocol === 'file:';
+    const API_URL = isLocal
+        ? 'http://localhost:8080/api/lookup'
+        : 'https://suto-hs-lookup-805008980560.us-central1.run.app/api/lookup';
+
+    const form = document.getElementById('hs-lookup-form');
+    const descInput = document.getElementById('hs-description');
+    const urlInput = document.getElementById('hs-url');
+    const imageInput = document.getElementById('hs-image');
+    const dropZone = document.getElementById('hs-drop-zone');
+    const imagePreviewContainer = document.getElementById('hs-image-preview-container');
+    const imagePreview = document.getElementById('hs-image-preview');
+    const removeImageBtn = document.getElementById('hs-remove-image');
+    const submitBtn = document.getElementById('hs-submit-btn');
+
+    const stateInitial = document.getElementById('hs-initial-state');
+    const stateLoading = document.getElementById('hs-loading-state');
+    const stateError = document.getElementById('hs-error-state');
+    const stateResult = document.getElementById('hs-result-state');
+    const errorText = document.getElementById('hs-error-text');
+
+    if (!form || !descInput) return;
+
+    const MAX_FILE_SIZE = 5 * 1024 * 1024;
+
+    function switchState(stateElem) {
+      [stateInitial, stateLoading, stateError, stateResult].forEach(el => {
+        el.classList.add('hs-lookup--hidden');
+        el.classList.remove('hs-lookup__state--active');
+      });
+      stateElem.classList.remove('hs-lookup--hidden');
+      void stateElem.offsetWidth;
+      stateElem.classList.add('hs-lookup__state--active');
+    }
+
+    function handleFile(file) {
+      const fileError = document.getElementById('hs-file-error');
+      fileError.classList.remove('active');
+      if (!file) return;
+      if (!file.type.startsWith('image/')) {
+        fileError.textContent = translate('hsLookup.fileError');
+        fileError.classList.add('active');
+        imageInput.value = '';
+        return;
+      }
+      if (file.size > MAX_FILE_SIZE) {
+        fileError.textContent = translate('hsLookup.fileError');
+        fileError.classList.add('active');
+        imageInput.value = '';
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        imagePreview.src = e.target.result;
+        imagePreviewContainer.classList.remove('hs-lookup--hidden');
+        dropZone.classList.add('hs-lookup--hidden');
+      };
+      reader.readAsDataURL(file);
+    }
+
+    imageInput.addEventListener('change', (e) => handleFile(e.target.files[0]));
+
+    removeImageBtn.addEventListener('click', () => {
+      imageInput.value = '';
+      imagePreview.src = '';
+      imagePreviewContainer.classList.add('hs-lookup--hidden');
+      dropZone.classList.remove('hs-lookup--hidden');
+    });
+
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('dragover'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      if (e.dataTransfer.files.length) {
+        imageInput.files = e.dataTransfer.files;
+        handleFile(e.dataTransfer.files[0]);
+      }
+    });
+
+    function isValidURL(string) {
+      try { const url = new URL(string); return url.protocol === 'http:' || url.protocol === 'https:'; }
+      catch (_) { return false; }
+    }
+
+    function validateForm() {
+      let isValid = true;
+      if (descInput.value.trim().length < 20) {
+        document.getElementById('hs-desc-error').classList.add('active');
+        isValid = false;
+      } else {
+        document.getElementById('hs-desc-error').classList.remove('active');
+      }
+      if (urlInput.value.trim() && !isValidURL(urlInput.value.trim())) {
+        document.getElementById('hs-url-error').classList.add('active');
+        isValid = false;
+      } else {
+        document.getElementById('hs-url-error').classList.remove('active');
+      }
+      return isValid;
+    }
+
+    descInput.addEventListener('input', () => {
+      if (descInput.value.trim().length >= 20) document.getElementById('hs-desc-error').classList.remove('active');
+    });
+
+    document.querySelectorAll('.hs-lookup__example-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        descInput.value = btn.dataset.text;
+        descInput.dispatchEvent(new Event('input'));
+      });
+    });
+
+    function formatHSCode(code) {
+      const clean = code.replace(/\\D/g, '');
+      if (clean.length === 10) return `${clean.substring(0,4)} ${clean.substring(4,6)} ${clean.substring(6,9)} ${clean.substring(9,10)}`;
+      return code;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!validateForm()) return;
+
+      const formData = new FormData();
+      formData.append('description', descInput.value.trim());
+      if (urlInput.value.trim()) formData.append('url', urlInput.value.trim());
+      if (imageInput.files.length > 0) formData.append('image', imageInput.files[0]);
+
+      submitBtn.disabled = true;
+      switchState(stateLoading);
+
+      try {
+        const response = await fetch(API_URL, { method: 'POST', body: formData });
+        const data = await response.json();
+        if (!response.ok) {
+          let errorMsg = translate('hsLookup.errorText');
+          if (data.detail) errorMsg = typeof data.detail === 'string' ? data.detail : data.detail[0]?.msg || errorMsg;
+          throw new Error(errorMsg);
+        }
+        renderResult(data);
+        switchState(stateResult);
+      } catch (error) {
+        errorText.textContent = error.message === 'Failed to fetch'
+            ? translate('hsLookup.networkError') || 'Не удалось подключиться к серверу.'
+            : error.message;
+        switchState(stateError);
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
+    function renderResult(data) {
+      const r = data.result;
+      const p = r.primary;
+      document.getElementById('hs-res-code').textContent = p.code || formatHSCode(p.code_raw);
+      document.getElementById('hs-res-desc').textContent = p.description_ru;
+      document.getElementById('hs-res-confidence').textContent = `${translate('hsLookup.confidencePrefix') || 'Уверенность'}: ${Math.round(p.confidence * 100)}%`;
+      document.getElementById('hs-res-duty-rate').textContent = r.duty?.rate || translate('hsLookup.unknown') || 'Неизвестно';
+      document.getElementById('hs-res-duty-type').textContent = r.duty?.type || translate('hsLookup.unknown') || 'Неизвестно';
+      document.getElementById('hs-res-reasoning').textContent = p.reasoning;
+
+      const altBlock = document.getElementById('hs-alternatives-block');
+      const altList = document.getElementById('hs-res-alternatives');
+      if (r.alternatives && r.alternatives.length > 0) {
+        altList.innerHTML = '';
+        r.alternatives.forEach(alt => {
+          const div = document.createElement('div');
+          div.className = 'hs-lookup__code-card hs-lookup__code-card--alt';
+          div.innerHTML = `
+            <div class="hs-lookup__code-header"><span class="hs-lookup__label">${translate('hsLookup.altCodeLabel') || 'Альтернативный код'}</span><span class="hs-lookup__label">${alt.duty_rate || ''}</span></div>
+            <div class="hs-lookup__code-value">${alt.code || formatHSCode(alt.code_raw)}</div>
+            <div class="hs-lookup__code-desc"><strong>${translate('hsLookup.condition') || 'Условие'}:</strong> ${alt.condition}</div>
+            ${alt.reasoning ? `<div class="hs-lookup__code-desc" style="margin-top:0.5rem">${alt.reasoning}</div>` : ''}`;
+          altList.appendChild(div);
+        });
+        altBlock.classList.remove('hs-lookup--hidden');
+      } else {
+        altBlock.classList.add('hs-lookup--hidden');
+      }
+    }
+  };
+
   initFaqPopups();
   initSnowfall();
   initFeatureThumbHeights();
@@ -1277,6 +1464,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCasesProTabs();
   initLogisticsCounters();
   initRequestForms();
+  initHsLookup();
   collectRuNodes();
   const savedLang = localStorage.getItem('lang') || DEFAULT_LANG;
   setLang(savedLang);

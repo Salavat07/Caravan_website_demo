@@ -562,13 +562,13 @@
         "small": "We are testing formulas and adding AI tips."
       },
       "card2": {
-        "badge": "Coming soon",
+        "badge": "Available",
         "title": "HS code finder",
-        "text": "Enter a product name or industry — the service suggests valid codes, requirements, and supply restrictions.",
+        "text": "Enter a product name or industry — the AI service instantly finds codes, duty, and reasoning.",
         "pill1": "Product name",
         "pill2": "HS codes",
-        "pill3": "Documents",
-        "small": "We will add fast search across a catalog of 10,000 items."
+        "pill3": "Duty",
+        "cta": "Try it →"
       }
     }
   },
@@ -879,5 +879,42 @@
   "common": {
     "servicesMenu": "Services <span class=\"mobile-menu__chev\">▾</span>",
     "servicesMenuList": "Service list <span class=\"mobile-menu__chev\">▾</span>"
+  },
+  "hsLookup": {
+    "title": "Smart HS Code Finder",
+    "subtitle": "AI assistant: finds the code, calculates duty, and explains the logic",
+    "descLabel": "Product description <span class=\"hs-lookup__required\">*</span>",
+    "descPlaceholder": "Describe the product in detail.\nFor example: Steel hex head bolts M12, strength class 8.8, for building structures...",
+    "descError": "Please describe the product in more detail (minimum 20 characters).",
+    "examplesLabel": "Examples:",
+    "example1": "Nike sneakers",
+    "example2": "Steel bolts M12",
+    "example3": "MacBook Pro 14",
+    "urlLabel": "Product link (optional)",
+    "urlPlaceholder": "https://...",
+    "urlError": "Please enter a valid URL.",
+    "imageLabel": "Product photo (optional)",
+    "uploadText": "Click or drag a photo here",
+    "uploadHint": "JPG, PNG, WebP (up to 5 MB)",
+    "fileError": "File is too large or has an invalid format.",
+    "submitBtn": "Find HS code",
+    "waitTitle": "Waiting for your request",
+    "waitText": "Fill in the form on the left to get the HS code, duty rate, and reasoning.",
+    "loadingTitle": "Analyzing data...",
+    "loadingText": "This may take 10-20 seconds. The AI is studying the rules and selecting the right code.",
+    "errorTitle": "An error occurred",
+    "errorText": "Unable to process the request. Please try again.",
+    "networkError": "Could not connect to the server.",
+    "resultBadge": "Code found",
+    "mainCodeLabel": "Primary HS code",
+    "confidencePrefix": "Confidence",
+    "dutyRate": "Import duty",
+    "dutyType": "Rate type",
+    "reasoningTitle": "Classification reasoning",
+    "altTitle": "Alternative options",
+    "altCodeLabel": "Alternative code",
+    "condition": "Condition",
+    "unknown": "Unknown",
+    "disclaimer": "<strong>Disclaimer:</strong> Classification results are provided for reference purposes based on AI technology. The final classification decision is made by customs authorities."
   }
 }

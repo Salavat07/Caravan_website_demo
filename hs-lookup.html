@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Умный подбор кодов ТН ВЭД — AI-сервис Караван логистикс для автоматической классификации товаров.">
+    <title>Караван логистикс — подбор кодов ТН ВЭД</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Icons/favicon-32x32.png?v=20260423">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Icons/favicon-16x16.png?v=20260423">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Icons/apple-touch-icon.png?v=20260423">
+    <link rel="manifest" href="site.webmanifest?v=20260423-2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body data-page="hs-lookup">
+    <div class="wrapper">
+    <header class = "container">
+       <a class = "logo" href="index.html">
+        <img src="img/Caravan/caravan_logo.png" alt="Караван логистикс логотип" width="371" height="261" decoding="async">
+       </a> 
+        <nav>
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+                <li><a href ="about.html" data-i18n="nav.about">О нас</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
+                <li><a href ="gallery.html" data-i18n="nav.news">Галерея</a></li>
+                <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+
+                    <li class="nav-services nav-services--mobile">
+                        <div class="mobile-menu__divider"></div>
+                        <button class="mobile-menu__accordion" type="button" aria-expanded="true" data-accordion="services" data-i18n-html="common.servicesMenu">Услуги <span class="mobile-menu__chev">▾</span></button>
+                        <div class="mobile-menu__submenu is-open" data-submenu="services">
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-auto.html" data-i18n="services.cards.auto.title">Автоперевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-rail.html" data-i18n="services.cards.rail.title">Железнодорожные перевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-multimodal.html" data-i18n="services.cards.multimodal.title">Мультимодальные перевозки</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-broker.html" data-i18n="services.cards.broker.title">Таможенный брокер</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-china.html" data-i18n="services.cards.china.title">Китай</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-warehousing.html" data-i18n="services.cards.warehousing.title">Складские услуги</a>
+                            <a class="mobile-menu__item mobile-menu__item--sub" href="service-insurance.html" data-i18n="services.cards.insurance.title">Страхование</a>
+                        </div>
+                    </li>
+                </ul>
+        </nav>
+        <div class="lang">
+            <button class="lang__btn" id="langBtn" type="button" aria-expanded="false">
+                <span class="lang__current" id="langCurrent">RU</span>
+                <span class="lang__chev">▾</span>
+            </button>
+            <div class="lang__menu" id="langMenu" role="menu">
+                <button class="lang__item" data-lang="ru" role="menuitem" data-i18n="lang.ru">RU</button>
+                <button class="lang__item" data-lang="en" role="menuitem" data-i18n="lang.en">EN</button>
+                <button class="lang__item" data-lang="zh" role="menuitem" data-i18n="lang.zh">中文</button>
+            </div>
+        </div>
+    </header>
+    </div>
+
+    <!-- HS Lookup Section — own dark design -->
+    <section class="hs-lookup">
+        <div class="hs-lookup__bg">
+            <div class="hs-lookup__blob hs-lookup__blob--1"></div>
+            <div class="hs-lookup__blob hs-lookup__blob--2"></div>
+            <div class="hs-lookup__blob hs-lookup__blob--3"></div>
+        </div>
+
+        <div class="hs-lookup__container">
+            <div class="hs-lookup__header">
+                <h1 data-i18n="hsLookup.title">Умный подбор кодов ТН ВЭД</h1>
+                <p class="hs-lookup__subtitle" data-i18n="hsLookup.subtitle">ИИ-ассистент: найдет код, рассчитает пошлину и объяснит логику</p>
+            </div>
+
+            <div class="hs-lookup__grid">
+                <div class="hs-lookup__panel hs-lookup__form-section">
+                    <form id="hs-lookup-form" novalidate>
+                        <div class="hs-lookup__form-group">
+                            <label for="hs-description" data-i18n-html="hsLookup.descLabel">Описание товара <span class="hs-lookup__required">*</span></label>
+                            <textarea id="hs-description" name="description" required minlength="20"
+                                placeholder="Опишите товар максимально подробно. &#10;Например: Стальные болты с шестигранной головкой M12, класс прочности 8.8, для строительных конструкций..."
+                                data-i18n-placeholder="hsLookup.descPlaceholder"></textarea>
+                            <div class="hs-lookup__error" id="hs-desc-error" data-i18n="hsLookup.descError">Опишите товар подробнее (минимум 20 символов).</div>
+                            <div class="hs-lookup__examples">
+                                <span class="hs-lookup__examples-label" data-i18n="hsLookup.examplesLabel">Примеры:</span>
+                                <button type="button" class="hs-lookup__example-btn" data-text="Кроссовки Nike Air Max 90 мужские, верх из текстиля и кожи, резиновая подошва" data-i18n="hsLookup.example1">Кроссовки Nike</button>
+                                <button type="button" class="hs-lookup__example-btn" data-text="Стальные болты с шестигранной головкой M12, класс прочности 8.8, для строительных конструкций" data-i18n="hsLookup.example2">Болты стальные M12</button>
+                                <button type="button" class="hs-lookup__example-btn" data-text="Ноутбук Apple MacBook Pro 14, процессор M3, 16 ГБ RAM, 512 ГБ SSD" data-i18n="hsLookup.example3">MacBook Pro 14</button>
+                            </div>
+                        </div>
+
+                        <div class="hs-lookup__form-group">
+                            <label for="hs-url" data-i18n-html="hsLookup.urlLabel">Ссылка на товар (опционально)</label>
+                            <input type="url" id="hs-url" name="url" placeholder="https://..." data-i18n-placeholder="hsLookup.urlPlaceholder">
+                            <div class="hs-lookup__error" id="hs-url-error" data-i18n="hsLookup.urlError">Пожалуйста, введите корректную ссылку.</div>
+                        </div>
+
+                        <div class="hs-lookup__form-group">
+                            <label data-i18n-html="hsLookup.imageLabel">Фотография товара (опционально)</label>
+                            <div class="hs-lookup__file-upload" id="hs-drop-zone">
+                                <input type="file" id="hs-image" name="image" accept="image/*">
+                                <div class="hs-lookup__upload-content">
+                                    <svg class="hs-lookup__upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                    <span data-i18n="hsLookup.uploadText">Нажмите или перетащите фото сюда</span>
+                                    <small data-i18n="hsLookup.uploadHint">JPG, PNG, WebP (до 5 МБ)</small>
+                                </div>
+                            </div>
+                            <div id="hs-image-preview-container" class="hs-lookup__preview hs-lookup--hidden">
+                                <img id="hs-image-preview" src="" alt="Превью">
+                                <button type="button" id="hs-remove-image" class="hs-lookup__btn-icon" title="Удалить фото">×</button>
+                            </div>
+                            <div class="hs-lookup__error" id="hs-file-error" data-i18n="hsLookup.fileError">Файл слишком большой или имеет неверный формат.</div>
+                        </div>
+
+                        <button type="submit" class="hs-lookup__submit" id="hs-submit-btn">
+                            <span data-i18n="hsLookup.submitBtn">Подобрать код</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="hs-lookup__panel hs-lookup__result-section">
+                    <div id="hs-initial-state" class="hs-lookup__state hs-lookup__state--active">
+                        <div class="hs-lookup__illustration">🔍</div>
+                        <h3 data-i18n="hsLookup.waitTitle">Ждем ваш запрос</h3>
+                        <p data-i18n="hsLookup.waitText">Заполните форму слева, чтобы получить код ТН ВЭД, ставку пошлины и обоснование.</p>
+                    </div>
+
+                    <div id="hs-loading-state" class="hs-lookup__state hs-lookup--hidden">
+                        <div class="hs-lookup__spinner"></div>
+                        <h3 data-i18n="hsLookup.loadingTitle">Анализируем данные...</h3>
+                        <p data-i18n="hsLookup.loadingText">Это может занять 10-20 секунд. ИИ изучает правила и подбирает точный код.</p>
+                        <div class="hs-lookup__skeleton">
+                            <div class="hs-lookup__skeleton-line hs-lookup__skeleton-line--title"></div>
+                            <div class="hs-lookup__skeleton-line"></div>
+                            <div class="hs-lookup__skeleton-line"></div>
+                        </div>
+                    </div>
+
+                    <div id="hs-error-state" class="hs-lookup__state hs-lookup--hidden">
+                        <div class="hs-lookup__illustration hs-lookup__illustration--error">⚠️</div>
+                        <h3 data-i18n="hsLookup.errorTitle">Произошла ошибка</h3>
+                        <p id="hs-error-text">Не удалось обработать запрос. Попробуйте еще раз.</p>
+                    </div>
+
+                    <div id="hs-result-state" class="hs-lookup__state hs-lookup__result hs-lookup--hidden">
+                        <div class="hs-lookup__result-header">
+                            <span class="hs-lookup__badge" data-i18n="hsLookup.resultBadge">Код подобран</span>
+                        </div>
+                        
+                        <div class="hs-lookup__code-card hs-lookup__code-card--main">
+                            <div class="hs-lookup__code-header">
+                                <span class="hs-lookup__label" data-i18n="hsLookup.mainCodeLabel">Основной код ТН ВЭД</span>
+                                <span class="hs-lookup__confidence" id="hs-res-confidence">Уверенность: 95%</span>
+                            </div>
+                            <div class="hs-lookup__code-value" id="hs-res-code">7318 15 900 0</div>
+                            <div class="hs-lookup__code-desc" id="hs-res-desc">Винты и болты, снабженные резьбой, из черных металлов...</div>
+                        </div>
+
+                        <div class="hs-lookup__duty-card">
+                            <div class="hs-lookup__duty-item">
+                                <span class="hs-lookup__duty-label" data-i18n="hsLookup.dutyRate">Пошлина (импорт)</span>
+                                <span class="hs-lookup__duty-value" id="hs-res-duty-rate">10%</span>
+                            </div>
+                            <div class="hs-lookup__duty-item">
+                                <span class="hs-lookup__duty-label" data-i18n="hsLookup.dutyType">Тип ставки</span>
+                                <span class="hs-lookup__duty-value" id="hs-res-duty-type">Адвалорная</span>
+                            </div>
+                        </div>
+
+                        <div class="hs-lookup__reasoning">
+                            <h4 data-i18n="hsLookup.reasoningTitle">Обоснование классификации</h4>
+                            <p id="hs-res-reasoning">Товар классифицируется в данной товарной позиции согласно Основным правилам интерпретации...</p>
+                        </div>
+
+                        <div id="hs-alternatives-block" class="hs-lookup--hidden">
+                            <h4 data-i18n="hsLookup.altTitle">Альтернативные варианты</h4>
+                            <div class="hs-lookup__alternatives" id="hs-res-alternatives"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hs-lookup__footer">
+                <p data-i18n-html="hsLookup.disclaimer"><strong>Disclaimer:</strong> Результаты классификации предоставляются в справочных целях на основе технологий искусственного интеллекта. Окончательное решение о классификации товара принимает таможенный орган.</p>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="blocks container">
+        <div>
+          <a class="logo footer-logo" href="index.html">
+            <img loading="lazy" src="img/Caravan/caravan logo.png" alt="Caravan Logistics" width="371" height="260" decoding="async">
+          </a>
+          <p data-i18n="footer.description">Мы организуем автомобильные, железнодорожные, морские и мультимодальные перевозки, подбирая логистическое решение под задачу клиента. Работаем через проверенную партнёрскую сеть, чтобы груз прибывал в согласованные сроки и в надлежащем состоянии.</p>
+        </div>
+             <div>
+                <h4 data-i18n="footer.addressTitle">Наш адрес</h4>
+                <ul>
+                    <li data-i18n="footer.addressLine1">Бишкек, Кыргызстан</li>
+                    <li data-i18n="footer.addressLine2">ул. Чынгыза Айтматова 243, 3 этаж</li>
+                    <li data-i18n="footer.addressLine3">+996 555 11 33 33</li>
+                    <li class="footer-address-separator" data-i18n="footer.addressLine4">Алматы, Казахстан</li>
+                    <li data-i18n="footer.addressLine5">Сейфуллина 563а, 5 этаж</li>
+                    <li data-i18n="footer.addressLine6">+7 777 078 08 36</li>
+                    <li class="footer-address-separator" data-i18n="footer.addressLine7">Гуанчжоу, Китай</li>
+                    <li data-i18n="footer.addressLine8">Fortune Mansion B2, 7 этаж, офис 711</li>
+                    <li data-i18n="footer.addressLine9">+86 18676883097</li>
+                </ul>
+             </div>
+             <div>
+                <div class="footer-social">
+                  <h3 class="footer-social__title" data-i18n="footer.socialTitle">Наши социальные сети</h3>
+                  <div class="footer-social__icons">
+                    <a class="footer-social__icon" href="https://wa.me/996555113333" target="_blank" rel="noopener" aria-label="WhatsApp">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-8.78 14.79L2 22l5.36-1.18A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.07-1.11l-.29-.17-3.18.7.68-3.1-.19-.31A8 8 0 1 1 12 20Zm4.29-5.6c-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06a6.56 6.56 0 0 1-1.93-1.19 7.24 7.24 0 0 1-1.34-1.67c-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.79-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.1.15 1.51.09.46-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28Z" />
+                      </svg>
+                    </a>
+                    <a class="footer-social__icon" href="https://t.me/+996555113333" target="_blank" rel="noopener" aria-label="Telegram">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21.5 4.84a1.5 1.5 0 0 0-1.57-.2L3.1 11.52a1.5 1.5 0 0 0 .1 2.82l4.34 1.45 1.5 4.82a1.5 1.5 0 0 0 2.52.65l2.42-2.34 3.94 2.9a1.5 1.5 0 0 0 2.36-.9l2.18-14.5a1.5 1.5 0 0 0-.47-1.48ZM9.02 15.12l8.68-5.32-6.93 6.68-.27 2.44-1.48-3.8Zm2.95 3.01.18-1.64 6.8-6.56-5.88 7.01-1.1 1.19Z" />
+                      </svg>
+                    </a>
+                    <a class="footer-social__icon" href="https://www.instagram.com/caravan_logistics_com?igsh=dWprNTB4MnB4MjVp" target="_blank" rel="noopener" aria-label="Instagram">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" />
+                      </svg>
+                    </a>
+                  </div>
+                  <a class="footer-social__email" href="mailto:info@caravan-logistics.com">info@caravan-logistics.com</a>
+                  <div class="footer-social__bitrix">
+                    <a href="https://crm.caravan-logistics.com" target="_blank" rel="noopener">
+                      <img src="img/Logos/bitrix24.svg" alt="Bitrix24">
+                    </a>
+                  </div>
+                </div>
+             </div>
+    </div>
+    <hr>
+    <p data-i18n="footer.copyright">Copyright © 2026 Caravan Logistics. All rights reserved.</p>
+  </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
