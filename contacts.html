@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRNEDJTZPY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", "G-YRNEDJTZPY");
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Свяжитесь с Караван логистикс: поддержка по автоперевозкам, железнодорожной логистике и мультимодальным проектам по СНГ и международным направлениям.">
@@ -13,6 +22,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/main.css">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wqddb6p917");
+    </script>
 </head>
 
 <body data-page="contacts">
@@ -166,6 +182,7 @@
             </div>
             <div class="contact-visit__map">
               <iframe title="Guangzhou office map" data-i18n-title="contacts.visit.offices.guangzhou.mapTitle" loading="lazy" src="https://maps.google.com/maps?q=%E5%B9%BF%E4%B8%9C%E7%9C%81%20%E5%B9%BF%E5%B7%9E%E5%B8%82%20%E8%8D%94%E6%B9%BE%E5%8C%BA%20%E8%A5%BF%E6%9D%91%E8%A1%97%E9%81%93%20%E8%B4%A2%E5%AF%8C%E5%85%AC%E9%A6%86%20B2%207%E6%A5%BC%20711&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+              <a class="contact-visit__map-link" href="https://maps.app.goo.gl/LpiNNXPLiMXMAcDH9" target="_blank" rel="noopener" aria-label="Открыть офис Гуанчжоу в Google Maps"></a>
               <div class="contact-visit__mini">
                 <h4 data-i18n="contacts.visit.mapCardTitle">Офис Караван логистикс</h4>
                 <p data-i18n="contacts.visit.offices.guangzhou.mapCardAddress">Китай, г. Гуанчжоу, район Ливань, микрорайон Сицунь, Fortune Mansion B2, 7 этаж, офис 711</p>
@@ -199,6 +216,11 @@
             <textarea name="message" class = "one-line" data-i18n-placeholder="contacts.placeholderMessage" placeholder="Кратко опишите ваш запрос"></textarea>
 
             <input type="text" name="company" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+            <label class="form-consent">
+              <input type="checkbox" name="privacy_consent" required>
+              <span data-i18n-html="forms.privacyConsent">Я согласен(на) на обработку персональных данных и принимаю <a href="privacy.html" target="_blank" rel="noopener">Политику конфиденциальности</a>.</span>
+            </label>
 
             <button type="submit" data-i18n="contacts.submit">Отправить заявку</button>
             <p class="form-status" aria-live="polite"></p>
@@ -284,6 +306,7 @@
                     </a>
                   </div>
                   <a class="footer-social__email" href="mailto:info@caravan-logistics.com">info@caravan-logistics.com</a>
+                  <a class="footer-social__privacy" href="privacy.html" data-i18n="footer.privacy">Политика конфиденциальности</a>
                   <div class="footer-social__bitrix">
                     <a href="https://crm.caravan-logistics.com" target="_blank" rel="noopener">
                       <img src="img/Logos/bitrix24.svg" alt="Bitrix24">

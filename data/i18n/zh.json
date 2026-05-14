@@ -303,7 +303,8 @@
     "email": "info@caravan-logistics.com ",
     "phone": "+996 555 11 33 33",
     "copyright": "Copyright © {{year}} Caravan Logistics. All rights reserved.",
-    "socialTitle": "我们的社交网络"
+    "socialTitle": "我们的社交网络",
+    "privacy": "隐私政策"
   },
   "partners": {
     "eyebrow": "合作伙伴",
@@ -401,13 +402,16 @@
     "stars": "5 星评分（满分 5 星）",
     "moreLabel": "在 2GIS 查看更多评价",
     "moreButton": "打开",
+    "names": {
+      "item6": "Myrzash Davletalieva"
+    },
     "items": {
       "item1": "这是一家认真负责的公司，非常懂业务。",
       "item2": "交付速度非常快，真正的专业团队，我还会继续合作。",
       "item3": "非常棒的货运服务，送货快，货物完好无损。",
       "item4": "优秀且可靠的货运公司，态度礼貌，做事负责。",
       "item5": "在吉尔吉斯斯坦最可靠、最优秀的公司之一，团队非常专业。",
-      "item6": "非常出色的团队，都是行家里手。",
+      "item6": "交付速度很快。我们一直使用贵公司的服务，已经不再考虑其他货运公司。感谢你们的高效响应。",
       "item7": "公司很好，尤其是员工都很专业。",
       "item8": "一家非常优秀的物流公司。",
       "item9": "可靠、运输快，我推荐它作为吉尔吉斯斯坦最好的公司之一。"
@@ -438,7 +442,13 @@
   "forms": {
     "sending": "发送中...",
     "success": "谢谢！您的申请已发送，我们会尽快与您联系。",
-    "error": "申请发送失败，请稍后再试。"
+    "error": "申请发送失败，请稍后再试。",
+    "consentRequired": "提交申请前需要接受隐私政策。",
+    "privacyConsent": "我同意处理个人数据，并接受 <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">隐私政策</a>。"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lead": "本政策说明我们通过网站收集哪些个人数据、如何使用这些数据处理申请，以及哪些服务可能参与数据处理。"
   },
   "email": {
     "validation": {

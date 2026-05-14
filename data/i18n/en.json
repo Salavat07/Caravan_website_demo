@@ -303,7 +303,8 @@
     "email": "info@caravan-logistics.com ",
     "phone": "+996 555 11 33 33",
     "copyright": "Copyright © {{year}} Caravan Logistics. All rights reserved.",
-    "socialTitle": "Our social networks"
+    "socialTitle": "Our social networks",
+    "privacy": "Privacy Policy"
   },
   "partners": {
     "eyebrow": "Our partners",
@@ -401,13 +402,16 @@
     "stars": "Rated 5 out of 5",
     "moreLabel": "More reviews on 2GIS",
     "moreButton": "Open",
+    "names": {
+      "item6": "Myrzash Davletalieva"
+    },
     "items": {
       "item1": "A conscientious company that truly knows its work.",
       "item2": "Delivered in the shortest possible time. Real professionals. I will continue working with them.",
       "item3": "Excellent cargo service. They deliver quickly and keep the goods safe and intact.",
       "item4": "Excellent and reliable cargo service. Polite and responsible people.",
       "item5": "The best and most reliable company in Kyrgyzstan. A team of professionals.",
-      "item6": "Excellent team, true masters of their craft.",
+      "item6": "Fast delivery times. We use your services regularly and no longer consider other cargo providers. Thank you for your responsiveness.",
       "item7": "A very good company, especially the staff, who are real professionals.",
       "item8": "An excellent logistics company.",
       "item9": "A reliable company with fast deliveries. I recommend it as one of the best in Kyrgyzstan."
@@ -438,7 +442,13 @@
   "forms": {
     "sending": "Sending...",
     "success": "Thank you! Your request has been sent. We will contact you shortly.",
-    "error": "We could not send your request. Please try again later."
+    "error": "We could not send your request. Please try again later.",
+    "consentRequired": "To send a request, you need to accept the Privacy Policy.",
+    "privacyConsent": "I agree to the processing of personal data and accept the <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a>."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lead": "This Policy explains what personal data we collect through the website, how we use it to process requests, and which services may take part in the processing."
   },
   "email": {
     "validation": {

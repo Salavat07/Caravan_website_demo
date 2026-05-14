@@ -386,8 +386,11 @@ document.addEventListener('DOMContentLoaded', () => {
               ></textarea>
             </label>
             <input type="text" name="company" class="form-honeypot" tabindex="-1" autocomplete="off">
+            <label class="form-consent">
+              <input type="checkbox" name="privacy_consent" required>
+              <span data-i18n-html="forms.privacyConsent">Я согласен(на) на обработку персональных данных и принимаю <a href="privacy.html" target="_blank" rel="noopener">Политику конфиденциальности</a>.</span>
+            </label>
             <button type="submit" data-i18n="modal.submit">Отправить</button>
-            <p class="modal-hint" data-i18n="modal.hint">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
             <p class="modal-success form-status" aria-live="polite"></p>
           </form>
         </div>
@@ -477,10 +480,17 @@ document.addEventListener('DOMContentLoaded', () => {
     forms: {
       sending: 'Отправка...',
       success: 'Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.',
-      error: 'Не удалось отправить заявку. Попробуйте еще раз позже.'
+      error: 'Не удалось отправить заявку. Попробуйте еще раз позже.',
+      consentRequired: 'Для отправки заявки нужно согласиться с политикой конфиденциальности.',
+      privacyConsent: 'Я согласен(на) на обработку персональных данных и принимаю <a href="privacy.html" target="_blank" rel="noopener">Политику конфиденциальности</a>.'
+    },
+    privacy: {
+      title: 'Политика конфиденциальности',
+      lead: 'Настоящая Политика описывает, какие персональные данные мы собираем через сайт, как используем их для обработки заявок и какие сервисы могут участвовать в обработке.'
     },
     footer: {
-      copyright: 'Copyright © {{year}} Caravan Logistics. All rights reserved.'
+      copyright: 'Copyright © {{year}} Caravan Logistics. All rights reserved.',
+      privacy: 'Политика конфиденциальности'
     },
     partners: {
       title: 'Наши партнеры'
@@ -517,7 +527,16 @@ document.addEventListener('DOMContentLoaded', () => {
   evergreen: { since: 'Сотрудничаем с 2022 года', stats: 'Поддерживаем поставки строительных и промышленных материалов, обеспечивая понятную и устойчивую логистику.' },
   ariston: { since: 'Сотрудничаем с 2015 года', stats: 'Организуем перевозки бытового и инженерного оборудования для проектных и дистрибуционных поставок.' },
   porcelanosa: { since: 'Сотрудничаем с 2022 года', stats: 'Сопровождаем поставки отделочных материалов и интерьерной продукции для торговых и проектных задач.' }
-}
+},
+    hsLookup: {
+      networkError: 'Не удалось подключиться к серверу. Проверьте соединение и попробуйте снова.',
+      errorText: 'Не удалось обработать запрос. Попробуйте еще раз.',
+      fileError: 'Файл слишком большой или имеет неверный формат.',
+      confidencePrefix: 'Уверенность',
+      unknown: 'Неизвестно',
+      altCodeLabel: 'Альтернативный код',
+      condition: 'Условие'
+    }
   };
 
   const getNested = (obj, path) => {
@@ -1135,6 +1154,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const submitRequestForm = async (targetForm) => {
     setFormStatus(targetForm, null, '');
+
+    const consentField = targetForm.querySelector('[name="privacy_consent"]');
+    if (consentField && !consentField.checked) {
+      setFormStatus(targetForm, 'error', translate('forms.consentRequired'));
+      consentField.focus();
+      if (typeof consentField.reportValidity === 'function') {
+        consentField.reportValidity();
+      }
+      return;
+    }
+
     setSubmitState(targetForm, true);
 
     try {
@@ -1269,13 +1299,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const isLocal = window.location.hostname === 'localhost'
         || window.location.hostname === '127.0.0.1'
         || window.location.protocol === 'file:';
-    const API_URL = isLocal
-        ? 'http://localhost:8080/api/lookup'
-        : 'https://suto-hs-lookup-805008980560.us-central1.run.app/api/lookup';
+    const API_BASE = isLocal
+        ? 'http://localhost:8080'
+        : 'https://suto-hs-lookup-805008980560.us-central1.run.app';
+    const API_URL = API_BASE + '/api/lookup';
+    const FEEDBACK_URL = API_BASE + '/api/feedback';
 
     const form = document.getElementById('hs-lookup-form');
     const descInput = document.getElementById('hs-description');
-    const urlInput = document.getElementById('hs-url');
     const imageInput = document.getElementById('hs-image');
     const dropZone = document.getElementById('hs-drop-zone');
     const imagePreviewContainer = document.getElementById('hs-image-preview-container');
@@ -1286,21 +1317,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const stateInitial = document.getElementById('hs-initial-state');
     const stateLoading = document.getElementById('hs-loading-state');
     const stateError = document.getElementById('hs-error-state');
+    const stateMaintenance = document.getElementById('hs-maintenance-state');
     const stateResult = document.getElementById('hs-result-state');
     const errorText = document.getElementById('hs-error-text');
 
     if (!form || !descInput) return;
 
     const MAX_FILE_SIZE = 5 * 1024 * 1024;
+    let lastQuery = '';
 
     function switchState(stateElem) {
-      [stateInitial, stateLoading, stateError, stateResult].forEach(el => {
+      [stateInitial, stateLoading, stateError, stateMaintenance, stateResult].forEach(el => {
         el.classList.add('hs-lookup--hidden');
         el.classList.remove('hs-lookup__state--active');
       });
       stateElem.classList.remove('hs-lookup--hidden');
       void stateElem.offsetWidth;
       stateElem.classList.add('hs-lookup__state--active');
+    }
+
+    function isMaintenanceError(response, error) {
+      if (error && error.message === 'Failed to fetch') return true;
+      if (response && [502, 503, 504].includes(response.status)) return true;
+      return false;
     }
 
     function handleFile(file) {
@@ -1348,11 +1387,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    function isValidURL(string) {
-      try { const url = new URL(string); return url.protocol === 'http:' || url.protocol === 'https:'; }
-      catch (_) { return false; }
-    }
-
     function validateForm() {
       let isValid = true;
       if (descInput.value.trim().length < 20) {
@@ -1360,12 +1394,6 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = false;
       } else {
         document.getElementById('hs-desc-error').classList.remove('active');
-      }
-      if (urlInput.value.trim() && !isValidURL(urlInput.value.trim())) {
-        document.getElementById('hs-url-error').classList.add('active');
-        isValid = false;
-      } else {
-        document.getElementById('hs-url-error').classList.remove('active');
       }
       return isValid;
     }
@@ -1382,52 +1410,117 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function formatHSCode(code) {
-      const clean = code.replace(/\\D/g, '');
+      const clean = code.replace(/\D/g, '');
       if (clean.length === 10) return `${clean.substring(0,4)} ${clean.substring(4,6)} ${clean.substring(6,9)} ${clean.substring(9,10)}`;
       return code;
     }
 
+    // --- Submit ---
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!validateForm()) return;
 
       const formData = new FormData();
       formData.append('description', descInput.value.trim());
-      if (urlInput.value.trim()) formData.append('url', urlInput.value.trim());
       if (imageInput.files.length > 0) formData.append('image', imageInput.files[0]);
 
+      lastQuery = descInput.value.trim();
       submitBtn.disabled = true;
       switchState(stateLoading);
 
+      let response;
       try {
-        const response = await fetch(API_URL, { method: 'POST', body: formData });
-        const data = await response.json();
+        response = await fetch(API_URL, { method: 'POST', body: formData });
+
+        if (isMaintenanceError(response, null)) {
+          switchState(stateMaintenance);
+          return;
+        }
+
+        let data;
+        try {
+          data = await response.json();
+        } catch (jsonError) {
+          console.error('JSON parse error:', jsonError);
+          switchState(stateMaintenance);
+          return;
+        }
+
         if (!response.ok) {
-          let errorMsg = translate('hsLookup.errorText');
-          if (data.detail) errorMsg = typeof data.detail === 'string' ? data.detail : data.detail[0]?.msg || errorMsg;
+          if (data.detail && typeof data.detail === 'object' && data.detail.error_type) {
+            showClassificationError(data.detail);
+            switchState(stateError);
+            return;
+          }
+          let errorMsg = typeof data.detail === 'string' ? data.detail : 'Произошла непредвиденная ошибка.';
           throw new Error(errorMsg);
         }
+
         renderResult(data);
         switchState(stateResult);
       } catch (error) {
-        errorText.textContent = error.message === 'Failed to fetch'
-            ? translate('hsLookup.networkError') || 'Не удалось подключиться к серверу.'
-            : error.message;
+        console.error('Error:', error);
+        if (isMaintenanceError(response, error)) {
+          switchState(stateMaintenance);
+          return;
+        }
+        errorText.textContent = error.message;
+        document.getElementById('hs-error-suggestions').classList.add('hs-lookup--hidden');
+        document.getElementById('hs-error-example').classList.add('hs-lookup--hidden');
         switchState(stateError);
       } finally {
         submitBtn.disabled = false;
       }
     });
 
+    function showClassificationError(detail) {
+      errorText.textContent = detail.user_message;
+      const sugList = document.getElementById('hs-error-suggestions');
+      if (detail.suggestions && detail.suggestions.length > 0) {
+        sugList.innerHTML = detail.suggestions.map(s => `<li>${s}</li>`).join('');
+        sugList.classList.remove('hs-lookup--hidden');
+      } else {
+        sugList.classList.add('hs-lookup--hidden');
+      }
+      const exBlock = document.getElementById('hs-error-example');
+      if (detail.example) {
+        exBlock.innerHTML = `<strong>Пример хорошего запроса:</strong><br>«${detail.example}»`;
+        exBlock.classList.remove('hs-lookup--hidden');
+      } else {
+        exBlock.classList.add('hs-lookup--hidden');
+      }
+    }
+
     function renderResult(data) {
       const r = data.result;
       const p = r.primary;
+
+      resetInlineFeedback();
+
       document.getElementById('hs-res-code').textContent = p.code || formatHSCode(p.code_raw);
       document.getElementById('hs-res-desc').textContent = p.description_ru;
       document.getElementById('hs-res-confidence').textContent = `${translate('hsLookup.confidencePrefix') || 'Уверенность'}: ${Math.round(p.confidence * 100)}%`;
       document.getElementById('hs-res-duty-rate').textContent = r.duty?.rate || translate('hsLookup.unknown') || 'Неизвестно';
       document.getElementById('hs-res-duty-type').textContent = r.duty?.type || translate('hsLookup.unknown') || 'Неизвестно';
       document.getElementById('hs-res-reasoning').textContent = p.reasoning;
+
+      // Missing info
+      const existingMissing = document.getElementById('hs-missing-info-block');
+      if (r.missing_info && r.missing_info.length > 0) {
+        const missingHtml = r.missing_info.map(item => `<li>${item}</li>`).join('');
+        const reasoningBlock = document.querySelector('.hs-lookup__reasoning');
+        if (existingMissing) {
+          existingMissing.innerHTML = `<h4>Для уточнения укажите:</h4><ul>${missingHtml}</ul>`;
+        } else {
+          const missingDiv = document.createElement('div');
+          missingDiv.id = 'hs-missing-info-block';
+          missingDiv.innerHTML = `<h4>Для уточнения укажите:</h4><ul>${missingHtml}</ul>`;
+          missingDiv.style.cssText = 'margin-top:1rem; color: rgba(255,255,255,0.6); font-size:0.95rem;';
+          reasoningBlock.after(missingDiv);
+        }
+      } else if (existingMissing) {
+        existingMissing.remove();
+      }
 
       const altBlock = document.getElementById('hs-alternatives-block');
       const altList = document.getElementById('hs-res-alternatives');
@@ -1448,6 +1541,185 @@ document.addEventListener('DOMContentLoaded', () => {
         altBlock.classList.add('hs-lookup--hidden');
       }
     }
+
+    // --- Retry buttons ---
+    document.getElementById('hs-retry-btn')?.addEventListener('click', () => {
+      switchState(stateInitial);
+      descInput.focus();
+    });
+
+    document.getElementById('hs-maintenance-retry-btn')?.addEventListener('click', () => {
+      switchState(stateInitial);
+      descInput.focus();
+    });
+
+    // =====================================================
+    // FEEDBACK WIDGET
+    // =====================================================
+
+    const feedbackFab = document.getElementById('hs-feedback-fab');
+    const feedbackModal = document.getElementById('hs-feedback-modal');
+    const feedbackOverlay = document.getElementById('hs-feedback-overlay');
+    const feedbackClose = document.getElementById('hs-feedback-close');
+    const feedbackSubmit = document.getElementById('hs-feedback-submit');
+    const feedbackComment = document.getElementById('hs-feedback-comment');
+    const feedbackSuccess = document.getElementById('hs-feedback-success');
+    const feedbackError = document.getElementById('hs-feedback-error');
+    const ratingLabel = document.getElementById('hs-rating-label');
+    const stars = document.querySelectorAll('#hs-star-rating .star');
+
+    const inlineStars = document.querySelectorAll('#hs-inline-stars .inline-star');
+    const inlineRatingLabel = document.getElementById('hs-inline-rating-label');
+    const inlineAddComment = document.getElementById('hs-inline-add-comment');
+    const inlineFeedbackSent = document.getElementById('hs-inline-feedback-sent');
+
+    let selectedRating = 0;
+    let inlineRatingValue = 0;
+    let inlineFeedbackAlreadySent = false;
+
+    const RATING_LABELS = { 1: 'Плохо', 2: 'Неудовлетворительно', 3: 'Удовлетворительно', 4: 'Хорошо', 5: 'Отлично' };
+
+    function resetInlineFeedback() {
+      inlineRatingValue = 0;
+      inlineFeedbackAlreadySent = false;
+      inlineStars.forEach(s => s.classList.remove('active'));
+      inlineRatingLabel.textContent = '';
+      inlineAddComment.classList.add('hs-lookup--hidden');
+      inlineFeedbackSent.classList.add('hs-lookup--hidden');
+      document.getElementById('hs-inline-stars').style.pointerEvents = '';
+    }
+
+    // Inline stars
+    inlineStars.forEach(star => {
+      star.addEventListener('click', () => {
+        inlineRatingValue = parseInt(star.dataset.value);
+        inlineRatingLabel.textContent = RATING_LABELS[inlineRatingValue];
+        inlineStars.forEach(s => {
+          s.classList.toggle('active', parseInt(s.dataset.value) <= inlineRatingValue);
+        });
+        if (!inlineFeedbackAlreadySent) {
+          inlineFeedbackAlreadySent = true;
+          sendFeedback(inlineRatingValue, '', lastQuery);
+          setTimeout(() => {
+            inlineFeedbackSent.classList.remove('hs-lookup--hidden');
+            inlineAddComment.classList.remove('hs-lookup--hidden');
+            document.getElementById('hs-inline-stars').style.pointerEvents = 'none';
+          }, 200);
+        }
+      });
+      star.addEventListener('mouseenter', () => {
+        if (inlineFeedbackAlreadySent) return;
+        const hoverVal = parseInt(star.dataset.value);
+        inlineStars.forEach(s => s.classList.toggle('hover', parseInt(s.dataset.value) <= hoverVal));
+      });
+      star.addEventListener('mouseleave', () => inlineStars.forEach(s => s.classList.remove('hover')));
+    });
+
+    inlineAddComment?.addEventListener('click', () => {
+      selectedRating = inlineRatingValue;
+      openFeedback(true);
+    });
+
+    // Modal
+    function openFeedback(preFilled = false) {
+      feedbackModal.classList.remove('hs-lookup--hidden');
+      feedbackOverlay.classList.remove('hs-lookup--hidden');
+      feedbackComment.value = '';
+      feedbackSuccess.classList.add('hs-lookup--hidden');
+      feedbackError.classList.add('hs-lookup--hidden');
+      feedbackSubmit.style.display = '';
+      feedbackComment.style.display = '';
+      document.getElementById('hs-star-rating').style.pointerEvents = '';
+
+      if (preFilled && selectedRating > 0) {
+        ratingLabel.textContent = RATING_LABELS[selectedRating];
+        feedbackSubmit.disabled = false;
+        stars.forEach(s => s.classList.toggle('active', parseInt(s.dataset.value) <= selectedRating));
+      } else {
+        selectedRating = 0;
+        feedbackSubmit.disabled = true;
+        ratingLabel.textContent = '';
+        stars.forEach(s => s.classList.remove('active'));
+      }
+    }
+
+    function closeFeedback() {
+      feedbackModal.classList.add('hs-lookup--hidden');
+      feedbackOverlay.classList.add('hs-lookup--hidden');
+    }
+
+    feedbackFab?.addEventListener('click', () => openFeedback(false));
+    feedbackClose?.addEventListener('click', closeFeedback);
+    feedbackOverlay?.addEventListener('click', closeFeedback);
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        selectedRating = parseInt(star.dataset.value);
+        ratingLabel.textContent = RATING_LABELS[selectedRating];
+        feedbackSubmit.disabled = false;
+        stars.forEach(s => s.classList.toggle('active', parseInt(s.dataset.value) <= selectedRating));
+      });
+      star.addEventListener('mouseenter', () => {
+        const hoverVal = parseInt(star.dataset.value);
+        stars.forEach(s => s.classList.toggle('hover', parseInt(s.dataset.value) <= hoverVal));
+      });
+      star.addEventListener('mouseleave', () => stars.forEach(s => s.classList.remove('hover')));
+    });
+
+    async function sendFeedback(rating, comment, query) {
+      try {
+        await fetch(FEEDBACK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ rating, comment, last_query: query })
+        });
+      } catch (err) {
+        console.error('Feedback send error:', err);
+      }
+    }
+
+    feedbackSubmit?.addEventListener('click', async () => {
+      if (selectedRating === 0) return;
+      feedbackSubmit.disabled = true;
+      feedbackSubmit.textContent = 'Отправка...';
+      feedbackError.classList.add('hs-lookup--hidden');
+
+      try {
+        const resp = await fetch(FEEDBACK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ rating: selectedRating, comment: feedbackComment.value.trim(), last_query: lastQuery })
+        });
+        if (!resp.ok) throw new Error('Server error');
+        feedbackSuccess.classList.remove('hs-lookup--hidden');
+        feedbackSubmit.style.display = 'none';
+        feedbackComment.style.display = 'none';
+        document.getElementById('hs-star-rating').style.pointerEvents = 'none';
+        ratingLabel.textContent = '';
+        setTimeout(closeFeedback, 2000);
+      } catch (err) {
+        console.error('Feedback error:', err);
+        feedbackError.classList.remove('hs-lookup--hidden');
+        feedbackSubmit.disabled = false;
+        feedbackSubmit.textContent = 'Отправить отзыв';
+      }
+    });
+  };
+
+  const initPrivacyTabs = () => {
+    const panels = Array.from(document.querySelectorAll('[data-privacy-panel]'));
+    if (!panels.length) return;
+
+    const activate = (lang) => {
+      panels.forEach((panel) => {
+        panel.classList.toggle('is-active', panel.dataset.privacyPanel === lang);
+      });
+    };
+
+    activate(currentLang);
+    window.addEventListener('caravan:languagechange', (event) => {
+      activate(event.detail?.lang || DEFAULT_LANG);
+    });
   };
 
   initFaqPopups();
@@ -1465,6 +1737,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLogisticsCounters();
   initRequestForms();
   initHsLookup();
+  initPrivacyTabs();
   collectRuNodes();
   const savedLang = localStorage.getItem('lang') || DEFAULT_LANG;
   setLang(savedLang);

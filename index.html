@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRNEDJTZPY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", "G-YRNEDJTZPY");
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Караван логистикс — автомобильные, железнодорожные и мультимодальные перевозки по СНГ и миру с полным сопровождением.">
@@ -13,6 +22,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/main.css">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wqddb6p917");
+    </script>
 </head>
 <body data-page="index">
     <div class="wrapper">
@@ -165,17 +181,6 @@
 
         <div class="team__timeline">
           <div class="team__line" aria-hidden="true"></div>
-
-          <article class="team__item">
-            <div class="team__photo">
-              <img loading="lazy" src="img/О%20нас_сотрудники/Сыргак.png" alt="Сыргак, CEO Caravan Logistics">
-            </div>
-            <div class="team__content">
-              <h3 data-i18n="team.members.ceo.name">Сыргак Орозалиев</h3>
-              <span class="team__role" data-i18n="team.members.ceo.role">CEO • Опыт работы: 20 лет</span>
-              <p data-i18n="team.members.ceo.text">Определяет стратегию развития компании, ключевые направления роста и партнёрские отношения.</p>
-            </div>
-          </article>
 
           <article class="team__item">
             <div class="team__photo">
@@ -334,14 +339,41 @@
   </div>
 
   <div class="wrapper">
-    <section class="upcoming-tools container">
+    <section class="upcoming-tools container" id="digital-services">
         <div class="upcoming-tools__intro">
             <p class="upcoming-tools__eyebrow" data-i18n="index.upcoming.eyebrow">Цифровые сервисы</p>
             <h3 data-i18n="index.upcoming.title">Мы готовим к запуску умные инструменты</h3>
             <p data-i18n="index.upcoming.text">Автоматизируем расчёт таможни и поиск кодов ТН ВЭД, чтобы вы получали ответ за секунды прямо на сайте.</p>
         </div>
         <div class="upcoming-tools__grid">
-            <article class="tool-card">
+            <a href="hs-lookup.html" class="tool-card tool-card--active tool-card--featured" aria-label="Открыть поиск кодов ТН ВЭД">
+                <div class="tool-card__shine" aria-hidden="true"></div>
+                <div class="tool-card__content">
+                    <span class="tool-card__badge tool-card__badge--live" data-i18n="index.upcoming.card2.badge">Доступно</span>
+                    <h4 data-i18n="index.upcoming.card2.title">Поиск кодов ТН ВЭД</h4>
+                    <p class="tool-card__lead">
+                        <span>Введите название товара или отрасль</span>
+                        <span>AI-сервис мгновенно подберёт коды, пошлину и обоснование.</span>
+                    </p>
+                    <span class="tool-card__cta" data-i18n="index.upcoming.card2.cta">Попробовать →</span>
+                </div>
+                <div class="tool-card__visual" aria-hidden="true">
+                    <div class="tool-card__flow-card tool-card__flow-card--query">
+                        <span class="tool-card__flow-label">Запрос</span>
+                        <strong>Стальные болты M12</strong>
+                    </div>
+                    <div class="tool-card__flow-card tool-card__flow-card--result">
+                        <span class="tool-card__flow-label">Результат</span>
+                        <strong>7318 15 900 0</strong>
+                        <small>Пошлина: 10%</small>
+                    </div>
+                    <div class="tool-card__flow-card tool-card__flow-card--reason">
+                        <span class="tool-card__flow-label">Обоснование</span>
+                        <p>Материал, резьба и назначение крепежа.</p>
+                    </div>
+                </div>
+            </a>
+            <article class="tool-card tool-card--secondary">
                 <span class="tool-card__badge" data-i18n="index.upcoming.card1.badge">Скоро</span>
                 <h4 data-i18n="index.upcoming.card1.title">Калькулятор — таможенный ассистент</h4>
                 <p data-i18n="index.upcoming.card1.text">Укажите страну отправления, тип груза и дополнительные услуги, а система моментально оценит пошлины и выдаст готовый чек-лист.</p>
@@ -352,17 +384,6 @@
                 </div>
                 <small data-i18n="index.upcoming.card1.small">Мы тестируем формулы и подключаем AI-подсказки.</small>
             </article>
-            <a href="hs-lookup.html" class="tool-card tool-card--active" style="text-decoration:none;color:inherit;">
-                <span class="tool-card__badge tool-card__badge--live" data-i18n="index.upcoming.card2.badge">Доступно</span>
-                <h4 data-i18n="index.upcoming.card2.title">Поиск кодов ТН ВЭД</h4>
-                <p data-i18n="index.upcoming.card2.text">Введите название товара или отрасль — AI-сервис мгновенно подберёт коды, пошлину и обоснование.</p>
-                <div class="tool-card__placeholder">
-                    <div class="pill" data-i18n="index.upcoming.card2.pill1">Название товара</div>
-                    <div class="pill" data-i18n="index.upcoming.card2.pill2">Коды ТН ВЭД</div>
-                    <div class="pill" data-i18n="index.upcoming.card2.pill3">Пошлина</div>
-                </div>
-                <span class="btn-primary" style="display:inline-block;margin-top:12px;padding:10px 28px;border-radius:999px;font-size:15px;font-weight:600;background:var(--gradient-pill);color:#fff;text-align:center;" data-i18n="index.upcoming.card2.cta">Попробовать →</span>
-            </a>
         </div>
     </section>
 
@@ -443,6 +464,7 @@
                     </a>
                   </div>
                   <a class="footer-social__email" href="mailto:info@caravan-logistics.com">info@caravan-logistics.com</a>
+                  <a class="footer-social__privacy" href="privacy.html" data-i18n="footer.privacy">Политика конфиденциальности</a>
                   <div class="footer-social__bitrix">
                     <a href="https://crm.caravan-logistics.com" target="_blank" rel="noopener">
                       <img src="img/Logos/bitrix24.svg" alt="Bitrix24">
